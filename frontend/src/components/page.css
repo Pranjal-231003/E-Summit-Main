@@ -1,13 +1,33 @@
 .Page_container{
     height: 100vh;
     width: 100%;
-    background-image: url("./landingpage.png");
+    background: url("./landingpage.png") ;
    
     background-repeat: no-repeat;
-    background-position: center;
+   
     
     object-fit: fill;
-    background-size:cover;
+    background-size:100% 100vh;
     overflow: hidden;
-    background-position: 0px -65px;
+    
+}
+.Page_container h1{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+font-size: 160px;
+font-style: normal;
+font-weight: 800;
+line-height: normal;
+position: relative;
+text-align: center;
+top: 20%;
+background: linear-gradient(180deg, #00E0FF 0%, #0BC4FF 100%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+mix-blend-mode: exclusion;
+}
+
+.menu_option{
+ width: 100%;
+ position: relative;
 }
