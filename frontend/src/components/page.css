@@ -28,6 +28,27 @@ mix-blend-mode: exclusion;
 }
 
 .menu_option{
- width: 100%;
+ width: 45%;
+ height: 10vh;
  position: relative;
+ text-align: right;
+ top: 10rem;
+ left: 4rem;
+    transform: rotate(13deg);
+    display: flex;
+    justify-content: space-around;
+}
+.menu_option a{
+    width: 140px;
+height: 57px;
+font-family: Nico Moji;
+font-size: 32px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+flex-shrink: 0;
+background: linear-gradient(180deg, #418AEB 0%, #FFF 100%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
 }
