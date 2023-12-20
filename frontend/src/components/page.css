@@ -26,15 +26,20 @@ background-clip: text;
 -webkit-text-fill-color: transparent;
 mix-blend-mode: exclusion;
 }
-
+.Page_container img{
+    position:absolute;
+    width: 25%;
+    left: -4rem;
+    top: -7rem;
+}
 .menu_option{
  width: 45%;
  height: 10vh;
  position: relative;
  text-align: right;
- top: 10rem;
+ top: 10.3rem;
  left: 4rem;
-    transform: rotate(13deg);
+    transform: rotate(12.9deg);
     display: flex;
     justify-content: space-around;
 }
