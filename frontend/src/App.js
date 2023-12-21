@@ -5,7 +5,7 @@ import Preloader from "./components/Preloader/Preloader";
 function App() {
   return (
     <>
-    {/* <Preloader/> */}
+   
     <LandingPage></LandingPage>
     </>
   );
