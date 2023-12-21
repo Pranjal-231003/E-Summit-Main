@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_3" data-name="Layer 3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2057 1651">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: Montserrat-Bold, Montserrat;
+        font-size: 153.55px;
+        font-weight: 700;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        font-family: EthnocentricRg-Regular, Ethnocentric;
+        font-size: 110px;
+      }
+    </style>
+  </defs>
+  <path class="cls-2" d="M753.49,771.94h-156.13s2.84,21.29,31.23,31.23h124.91v-31.23Z"/>
+  <path class="cls-2" d="M753.49,819.36h-112.85s3.83,22.44,27.69,28.39h85.16"/>
+  <text class="cls-3" transform="translate(771.55 859.56)"><tspan x="0" y="0">-</tspan></text>
+  <path class="cls-2" d="M906.44,815.7c16.65,0,25.63,9.62,25.63,28.87,0,21.61-8.48,34.55-29.31,34.55l-57.16-1.47,.59-27.23,58.2,1.57c5,0,7.25-2.21,7.25-7.73s-2.25-7.57-7.25-7.57h-37.17c-17.56,0-25.63-12.15-25.63-30.29,0-19.88,8.58-32.82,29.31-32.82l53.87,.03-.93,27.39-54.58,.04c-4.9,0-7.25,1.89-7.25,7.26s2.35,7.41,7.25,7.41h37.17Z"/>
+  <text class="cls-1" transform="translate(846.56 883.19)"><tspan x="0" y="0" xml:space="preserve">  UMMIT</tspan></text>
+</svg>
