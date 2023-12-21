@@ -5,13 +5,21 @@ function LandingPage() {
   return (
     <>
         <div className='Page_container'>
-            <img src={logo} alt="" srcset="" />
-            <h1>E-SUMMIT</h1>
-            <div className='menu_option'>
+            <nav className='navbar'>
+              <img src={logo} alt="" />
+              <div className='option'>
                 <a href='#'>FIGURES</a>
                 <a href='#'>EVENTS</a>
                 <a href='#'>ABOUT</a>
+              </div>
+            </nav>
+            <h1>E-SUMMIT</h1>
+            <div className='menu'>
+              <div className="line"></div>
+              <div className="text">menu</div>
+              <div className="line"></div>
             </div>
+
         </div>
     </>
   )

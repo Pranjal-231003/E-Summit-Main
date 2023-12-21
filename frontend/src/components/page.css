@@ -11,6 +11,7 @@
     overflow: hidden;
     
 }
+
 .Page_container h1{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 font-size: 160px;
@@ -19,41 +20,84 @@ font-weight: 800;
 line-height: normal;
 position: relative;
 text-align: center;
-top: 20%;
+top: 14%;
 background: linear-gradient(180deg, #00E0FF 0%, #0BC4FF 100%);
 background-clip: text;
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
 mix-blend-mode: exclusion;
 }
-.Page_container img{
-    position:absolute;
-    width: 25%;
-    left: -4rem;
-    top: -7rem;
+@font-face {
+    font-family: nico moji;
+    src: url("./NicoMoji-Regular.ttf");
 }
-.menu_option{
- width: 45%;
- height: 10vh;
- position: relative;
- text-align: right;
- top: 10.3rem;
- left: 4rem;
-    transform: rotate(12.9deg);
+.navbar{
+    
+height: 10vh;
+display: flex;
+justify-content: space-between;
+}
+.option{
+    width: 50%;
     display: flex;
     justify-content: space-around;
+    position: relative;
+    left: -8rem;
 }
-.menu_option a{
-    width: 140px;
-height: 57px;
-font-family: Nico Moji;
+.option a{
+    margin: 15px;
+    padding: 1px;
+    
+  
+    transform: rotate(0.283deg);
+    flex-shrink: 0;
+    font-family: nico moji;
 font-size: 32px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
-flex-shrink: 0;
-background: linear-gradient(180deg, #418AEB 0%, #FFF 100%);
+background: linear-gradient(180deg, #D5D5D5 0%, #FFF 100%);
 background-clip: text;
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
+}
+.navbar img{
+    margin: 15px;
+    padding: 1px;
+    width: 16%;
+ 
+}
+.menu{
+    position: absolute;
+    right:20px;
+    top: 0;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    width:7%;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    font-family: nico moji;
+    color: white;
+    font-size: 20px;
+}
+.menu .line{
+    width: 3px;
+    height: 200px;
+    background: linear-gradient(270deg, #FAFAFA 0%, rgba(255, 255, 255, 0.65) 51.56%, rgba(255, 255, 255, 0.00) 100%);
+}
+.menu .text{
+    width: 102px;
+height: 39px;
+flex-shrink: 0;
+display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    border-radius: 50px;
+border: 1px solid rgba(255, 255, 255, 0.40);
+margin: 10px;
 }
