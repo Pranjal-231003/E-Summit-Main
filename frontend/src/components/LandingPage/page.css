@@ -26,6 +26,7 @@ background-clip: text;
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
 mix-blend-mode: exclusion;
+z-index: 10;
 }
 @font-face {
     font-family: nico moji;
@@ -100,4 +101,11 @@ display: flex;
     border-radius: 50px;
 border: 1px solid rgba(255, 255, 255, 0.40);
 margin: 10px;
+}
+.rectangle{
+    position: absolute;
+    width: 50%;
+    height: 100vh;
+    right: 0;
+    background: linear-gradient(180deg, #2800C8 5%, rgba(0, 0, 0, 0.44) 100%);
 }
