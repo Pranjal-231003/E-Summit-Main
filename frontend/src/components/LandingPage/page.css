@@ -27,6 +27,7 @@ background-clip: text;
 -webkit-text-fill-color: transparent;
 mix-blend-mode: exclusion;
 z-index: 10;
+
 }
 @font-face {
     font-family: nico moji;
@@ -39,28 +40,35 @@ display: flex;
 justify-content: space-between;
 }
 .option{
-    width: 50%;
+    width: 100%;
+    height: 5%;
     display: flex;
     justify-content: space-around;
-    position: relative;
-    left: -8rem;
+ 
+    
+    text-decoration: none;
+    color: inherit;
 }
 .option a{
-    margin: 15px;
-    padding: 1px;
+    margin: 2px;
     
-  
+    text-decoration: none;
+    font-size: 15px;
     transform: rotate(0.283deg);
     flex-shrink: 0;
     font-family: nico moji;
-font-size: 32px;
+
 font-style: normal;
-font-weight: 400;
+
 line-height: normal;
 background: linear-gradient(180deg, #D5D5D5 0%, #FFF 100%);
 background-clip: text;
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
+
+}
+.option  :hover{
+    font-size: 16px;
 }
 .navbar img{
     margin: 15px;
@@ -71,7 +79,7 @@ background-clip: text;
 .menu{
     position: absolute;
     right:20px;
-    top: 0;
+    top: 2rem;
     height: 70%;
     display: flex;
     flex-direction: column;
@@ -81,18 +89,19 @@ background-clip: text;
     justify-content: center;
     font-family: nico moji;
     color: white;
-    font-size: 20px;
+   z-index: 100;
 }
 .menu .line{
     width: 3px;
     height: 200px;
     background: linear-gradient(270deg, #FAFAFA 0%, rgba(255, 255, 255, 0.65) 51.56%, rgba(255, 255, 255, 0.00) 100%);
 }
-.menu .text{
+.menu .text a{
     width: 102px;
 height: 39px;
 flex-shrink: 0;
 display: flex;
+font-size: 20px;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -101,6 +110,36 @@ display: flex;
     border-radius: 50px;
 border: 1px solid rgba(255, 255, 255, 0.40);
 margin: 10px;
+color: inherit;
+text-decoration: none;
+}
+.eclipse_container{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    height: 3%;
+    flex-direction: column;
+}
+.eclipse_container:nth-child(2){
+    top: 5px;
+}
+.eclipse_container:nth-child(4){
+    top: -5px;
+}
+.eclipse{
+    width: 5px;
+    height: 5px;
+    background-color: rgba(217, 217, 217, 0.36);
+    border-radius: 1000rem;
+}
+.eclipse1{
+    width: 4px;
+    height: 4px;
+    background-color: rgba(217, 217, 217, 0.36);
+    border-radius: 1000rem;
 }
 .rectangle{
     position: absolute;
