@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import LandingPage from "./components/LandingPage/LandingPage";
 import Preloader from "./components/Preloader/Preloader";
 
+import About from "./components/About/About";
+
 function App() {
   const [loader, setLoader] = useState(true);
 
@@ -16,7 +18,12 @@ function App() {
 
   return (
     <>
-      {loader ? <Preloader /> : <LandingPage />}
+      {loader ? <Preloader /> :
+       <>
+      <LandingPage/>
+      <About></About>
+      </>
+  }
     </>
   );
 }

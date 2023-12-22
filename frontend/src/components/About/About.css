@@ -1,0 +1,90 @@
+.about_about {
+  font-family: Nico Moji;
+  font-size: 4rem;
+  font-weight: 400;
+  white-space: nowrap;
+  color: white;
+  /* background: linear-gradient(180deg, #5A708D 0%, #FFF 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+  background: linear-gradient(90deg, #002358 0.02%, #000 98.61%);
+  display: flex;
+  justify-content: center;
+}
+
+.about_box {
+  background: linear-gradient(180deg, #000821 24.33%, #001072 100%);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.about_boxes {
+  display: flex;
+}
+
+.about_box1 {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.about_box2 {
+  background: linear-gradient(180deg, #2800C8 0%, rgba(0, 0, 0, 0.44) 100%);
+  width: 50%;
+}
+
+.about_img img {
+  height: 60rem;
+  width: 60rem;
+}
+
+.about_text {
+  color: #FFF;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.4rem;
+  padding: 8rem;
+  margin-top: 7rem;
+}
+
+
+.figures_box {
+  border-radius: 2rem;
+  opacity: 0.6;
+  background: linear-gradient(90deg, #002F46 0.17%, #000 99.82%);
+  box-shadow: 30px 6px 4px 0px rgba(0, 0, 0, 0.50);
+  display: flex;
+  padding: 2rem;
+  justify-content: space-evenly; 
+}
+
+.figures_box1 {
+  padding: 1rem;
+}
+
+.figures_img img{
+  height: 5rem;
+  width: 5rem;
+}
+
+.figures_heading {
+  color: #00eeff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+.figures_text {
+  color: white;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.875rem;
+  font-weight: 700;
+}
+
+.figures_line {
+  background: rgba(255, 255, 255, 0.50);
+  height: 17rem;
+  width: 0.2rem;
+}
