@@ -77,7 +77,8 @@ background-clip: text;
  
 }
 .menu{
-    position: absolute;
+    position: fixed;
+    
     right:20px;
     top: 2rem;
     height: 70%;
@@ -146,5 +147,5 @@ text-decoration: none;
     width: 50%;
     height: 100vh;
     right: 0;
-    background: linear-gradient(180deg, #2800C8 5%, rgba(0, 0, 0, 0.44) 100%);
+    background: linear-gradient(180deg, #2800c8d4 10%, rgba(0, 0, 0, 0.44) 100%);
 }
