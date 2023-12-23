@@ -2,6 +2,12 @@ import React from 'react'
 import "./page.css"
 import logo from "../images/logo.png"
 function LandingPage() {
+  const onclick=()=>{
+
+  }
+  window.addEventListener("scroll",(event)=>{
+    
+  })
   return (
     <>
         <div className='Page_container'>
@@ -27,6 +33,7 @@ function LandingPage() {
               <div className="option"><a href="#">About</a></div>
               <div className="line"></div>
             </div>
+            <div className="about"></div>
 
         </div>
         
