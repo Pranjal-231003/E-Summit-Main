@@ -2,83 +2,75 @@
     height: 100vh;
     width: 100%;
     background: url("../images/landingpage.png") ;
-   
     background-repeat: no-repeat;
-   
-    
     object-fit: fill;
     background-size:100% 100vh;
-    overflow: hidden;
-    
+    overflow: hidden; 
 }
 
 .Page_container h1{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-font-size: 160px;
-font-style: normal;
-font-weight: 800;
-line-height: normal;
-position: relative;
-text-align: center;
-top: 14%;
-background: linear-gradient(180deg, #00E0FF 0%, #0BC4FF 100%);
-background-clip: text;
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-mix-blend-mode: exclusion;
-z-index: 2;
-
+    font-size: 160px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    position: relative;
+    text-align: center;
+    top: 14%;
+    background: linear-gradient(180deg, #00E0FF 0%, #0BC4FF 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    mix-blend-mode: exclusion;
+    z-index: 10;
 }
 @font-face {
     font-family: nico moji;
     src: url("./NicoMoji-Regular.ttf");
 }
-.navbar{
-    
-height: 10vh;
-display: flex;
-justify-content: space-between;
+
+.navbar{  
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
 }
+
 .option{
     width: 100%;
     height: 5%;
     display: flex;
     justify-content: space-around;
- 
-    
     text-decoration: none;
     color: inherit;
 }
+
 .option a{
-    margin: 2px;
-    
+    margin: 2px; 
     text-decoration: none;
     font-size: 15px;
     transform: rotate(0.283deg);
     flex-shrink: 0;
     font-family: nico moji;
-
-font-style: normal;
-
-line-height: normal;
-background: rgba(255, 255, 255, 0.70);;
-background-clip: text;
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-
+    font-style: normal;
+    line-height: normal;
+    background: rgba(255, 255, 255, 0.70);;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
+
 .option  :hover{
     font-size: 16px;
 }
+
 .navbar img{
     margin: 15px;
     padding: 1px;
     width: 16%;
- 
 }
+
 .menu{
     position: fixed;
-    
     right:20px;
     top: 2rem;
     height: 70%;
@@ -92,28 +84,31 @@ background-clip: text;
     color: white;
    z-index: 100;
 }
+
 .menu .line{
     width: 3px;
     height: 200px;
     background: linear-gradient(270deg, #FAFAFA 0%, rgba(255, 255, 255, 0.65) 51.56%, rgba(255, 255, 255, 0.00) 100%);
 }
+
 .menu .text a{
     width: 102px;
-height: 39px;
-flex-shrink: 0;
-display: flex;
-font-size: 20px;
+    height: 39px;
+    flex-shrink: 0;
+    display: flex;
+    font-size: 20px;
     text-align: center;
     justify-content: center;
     align-items: center;
     align-content: center;
     justify-items: center;
     border-radius: 50px;
-border: 1px solid rgba(255, 255, 255, 0.40);
-margin: 10px;
-color: inherit;
-text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.40);
+    margin: 10px;
+    color: inherit;
+    text-decoration: none;
 }
+
 .eclipse_container{
     position: relative;
     width: 100%;
@@ -124,24 +119,29 @@ text-decoration: none;
     height: 3%;
     flex-direction: column;
 }
+
 .eclipse_container:nth-child(2){
     top: 5px;
 }
+
 .eclipse_container:nth-child(4){
     top: -5px;
 }
+
 .eclipse{
     width: 5px;
     height: 5px;
     background-color: rgba(217, 217, 217, 0.36);
     border-radius: 1000rem;
 }
+
 .eclipse1{
     width: 4px;
     height: 4px;
     background-color: rgba(217, 217, 217, 0.36);
     border-radius: 1000rem;
 }
+
 .rectangle{
     position: absolute;
     width: 50%;
