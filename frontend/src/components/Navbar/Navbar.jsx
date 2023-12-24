@@ -2,9 +2,32 @@ import React,{useEffect,useState} from 'react'
 import Text from './Text'
 //css in page.css
 function Navbar() {
-    const values=['Compitition','Sponsors','Contact us','menu','About','Figures','talks','Workshop']
+  const items = [
+    { name: 'Compitition', container: '#compitition_Container' },
+    { name: 'Sponsors', container: '#Sponsors_Container' },
+    { name: 'Contact us', container: '#Contact_Container' },
+    { name: 'Home', container: '#Page_container' },
+    { name: 'About', container: '#about_container' },
+    { name: 'Figures', container: '#Figures_container' },
+    { name: 'talks', container: '#talks_container' },
+    { name: 'Workshop', container: '#Workshop_container' },
+  ];
+
+  const hScroll = (containerId) => {
+    const targetContainer = document.querySelector(containerId);
+
+    if (targetContainer) {
+      targetContainer.scrollIntoView({
+        behavior: 'smooth',
+      });
+    }
+  };
+  const handleLinkClick = (containerId) => () => {
+    // Returning a function to be executed onClick
+    hScroll(containerId);
+  };
     const middleIndex = 3;
-    const [rotatedValues, setRotatedValues] = useState(values);
+    const [rotatedValues, setRotatedValues] = useState(items);
     const [rotationOccurred, setRotationOccurred] = useState(false);
   function rotationdownFunction(arr) { 
     if (arr.length <= 1) { 
@@ -21,15 +44,28 @@ function Navbar() {
   
     return arr.map((_, index, array) => array[(index - 1 + array.length) % array.length]);
   }
-
+  const rotateArrayToTarget = (arr, target) => {
+    const targetIndex = arr.findIndex((item) => item.name === target);
+  
+    // Calculate the number of rotations needed to bring the target to the 4th position
+    const rotations = (targetIndex - 3 + arr.length) % arr.length;
+  
+    // Rotate the array
+    const rotatedArray = [...arr.slice(rotations), ...arr.slice(0, rotations)];
+    setRotationOccurred(true);
+    return rotatedArray;
+  };
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
+      if (scrollY < 500 ) {
+        setRotatedValues(rotateArrayToTarget(items,'Home'));
 
-      // Check if the scroll position is in the range of 140 to 160
-      if (scrollY >= 530 && scrollY <= 550 && !rotationOccurred) {
-        setRotatedValues(rotationdownFunction(rotatedValues));
-        setRotationOccurred(true);
+      }
+          // Check if the scroll position is in the range of 140 to 160
+      if (scrollY >= 500 ) {
+        setRotatedValues(rotateArrayToTarget(items,'About'));
+
       }
   
     };
@@ -42,20 +78,22 @@ function Navbar() {
   }, [rotatedValues]);
   return (
    <>
-   <div className='menu'>
+   <div className={`menu ${rotationOccurred ? 'rotate-container' : ''}`} >
               <div className="line"></div>
               {rotatedValues.slice(0, middleIndex).map((value, index) => (
           <Text
             key={index}
-            value={value}
-            style={{ fontSize: `${12 +index * 2}px` }}
+            value={value.name}
+            container={value.container}
+            onClick={handleLinkClick(value.container)}
+            style={{ fontSize: `${12+index *3}px` }}
           />
         ))}
               <div className="eclipse_container">
                 <div className="eclipse"></div>
                 <div className="eclipse1"></div>
               </div>
-              <div className="text hf"><Text value={rotatedValues[3]}></Text></div>
+              <div className="text hf"><Text value={rotatedValues[3].name}></Text></div>
               <div className="eclipse_container">
                 <div className="eclipse1"></div>
                 <div className="eclipse"></div>
@@ -63,8 +101,10 @@ function Navbar() {
               {rotatedValues.slice (middleIndex+1,8).map((value, index) => (
           <Text
             key={index}
-            value={value}
-            style={{ fontSize: `${17 - index * 2}px` }}
+            value={value.name}
+            container={value.container}
+            onClick={handleLinkClick(value.container)}
+            style={{ fontSize: `${17 - index * 3}px` }}
           />
         ))}
               

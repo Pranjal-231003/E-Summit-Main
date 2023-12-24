@@ -1,4 +1,4 @@
-.Page_container{
+#Page_container{
     height: 100vh;
     width: 100%;
     background: url("../images/landingpage.png") ;
@@ -8,7 +8,7 @@
     overflow: hidden; 
 }
 
-.Page_container h1{
+#Page_container h1{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 160px;
     font-style: normal;
@@ -36,8 +36,7 @@
 }
 
 .option{
-    width: 100%;
-    height: 5%;
+
     display: flex;
     justify-content: space-around;
     text-decoration: none;
@@ -46,7 +45,8 @@
 }
 
 .option a{
-    margin: 3.5px; 
+    margin: 3.5px;
+    padding: 2px; 
     text-decoration: none;
   
     transform: rotate(0.283deg);
@@ -58,12 +58,13 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    
 }
 .option a :nth-child(1){
     font-size: 1px;
 }
 .option  :hover{
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .navbar img{
@@ -79,13 +80,14 @@
     height: 75%;
     display: flex;
     flex-direction: column;
-    width:7%;
+    width:10%;
     align-items: center;
     align-content: center;
     justify-content: center;
     font-family: nico moji;
     color: white;
    z-index: 100;
+   transition: transform 0.5s ease;
 }
 
 .menu .line{
@@ -93,13 +95,13 @@
     height: 200px;
     background: linear-gradient(270deg, #FAFAFA 0%, rgba(255, 255, 255, 0.65) 51.56%, rgba(255, 255, 255, 0.00) 100%);
 }
-
-.menu .text .option a{
-    width: 102px;
-    height: 39px;
-    flex-shrink: 0;
+.text{
+    width: auto;
+    height: auto;
+}
+.text{
     display: flex;
-    font-size: 20px;
+    
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -110,6 +112,11 @@
     margin: 10px;
     color: inherit;
     text-decoration: none;
+
+}
+.menu .text .option a{
+    
+    font-size: 22px;
     
 }
 
@@ -160,3 +167,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+  .rotate-container {
+    transition: transform 0.5s ease-in-out;
+  }

@@ -10,7 +10,7 @@ function LandingPage() {
   })
   return (
     <>
-        <div className='Page_container'>
+        <div id='Page_container'>
             <div className='rectangle'></div>
             <nav className='navbar'>
               <img src={logo} alt="" />
