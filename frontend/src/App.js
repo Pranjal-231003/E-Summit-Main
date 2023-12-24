@@ -3,6 +3,7 @@ import LandingPage from "./components/LandingPage/LandingPage";
 import Preloader from "./components/Preloader/Preloader";
 
 import About from "./components/About/About";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   const [loader, setLoader] = useState(true);
@@ -20,6 +21,7 @@ function App() {
     <>
       {loader ? <Preloader /> :
        <>
+      <Navbar></Navbar>
       <LandingPage/>
       <About></About>
       </>

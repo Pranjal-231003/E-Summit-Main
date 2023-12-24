@@ -10,6 +10,7 @@ import people from "../images/people.png";
 const About = () => {
   return (
     <>
+    <div className="about_container" >
       <div className='about_about'>ABOUT E-SUMMIT</div>
 
         <div className='about_box'>
@@ -50,6 +51,7 @@ const About = () => {
           </div>
 
         </div>
+      </div>
       </div>
     </>
   )
