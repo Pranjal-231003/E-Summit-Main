@@ -25,7 +25,18 @@ const About = () => {
             </div>
           </div>
 
+        <div className="figures">
+        <div className="clips">
+            <img src={clip} alt="" srcset="" />
+            
+            <img src={clip} alt="" srcset="" />
+            
+            <img src={clip} alt="" srcset="" />
+            
+            <img src={clip} alt="" srcset="" />
+          </div>
         <div className='figures_box'>
+
           <div className='figures_box1'>
             <div className='figures_img'><img src={ coin } alt="img" /></div>
             <div className='figures_heading'>25L+</div>
@@ -51,6 +62,7 @@ const About = () => {
           </div>
 
         </div>
+      </div>
       </div>
       </div>
     </>
