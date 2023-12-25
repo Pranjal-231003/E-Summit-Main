@@ -105,7 +105,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  top: -7.7rem;
+  top: -6.6rem;
   z-index: 1;
   height: 22.5rem;
 }
@@ -113,12 +113,35 @@
   width: 100%;
  z-index: 10;
 
-  top: 3.8rem;
+  top: 3.5rem;
 
   position: relative;
  
   display: flex;
   justify-content: space-around;
+  animation: lev 2.1s infinite;
+  transition: all linear;
+}
+.clips img{
+ background-color:  lightgray 50% / cover no-repeat;
+
+
+
+ 
+}
+@keyframes lev {
+  0%{
+    top: 3.2rem;
+  }
+  50%{
+    top: 3.7rem;
+  }
+  100%{
+    top: 3.2rem;
+  }
+}
+.clips img{
+  width: 6.5rem;
 }
 .clips img:nth-child(1){
   position: relative;
