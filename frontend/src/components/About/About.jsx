@@ -1,11 +1,12 @@
 import React from 'react';
 import "./About.css";
-import crystal from "../images/crystal.png";
+import crystal from "../images/modified_logo.png";
 import calendar from "../images/calendar.png";
 import clip from "../images/clip.png";
 import coin from "../images/coin.png";
 import money from "../images/money.png";
 import people from "../images/people.png";
+
 
 const About = () => {
   return (
@@ -15,9 +16,7 @@ const About = () => {
 
         <div className='about_box'>
           <div className='about_boxes'>
-            <div className='about_box1'>
-              <div className='about_img'><img src={ crystal } alt="img" /></div>
-            </div>
+            <div className='about_box1'><img src={ crystal } alt="img" className='about_img'/></div>
             <div className='about_box2'>
               <div className='about_text'>Lorem ipsum dolor sit amet consectetur. Velit ac pharetra tincidunt.
               Lorem ipsum dolor sit  pharetra tincidunt.Lorem ipsum dolor sit amet consectetur. Velit ac pharetra tincidunt.Lorem ipsum dolor sit amet consectetur. Velit ac pharetra tincidunt.
@@ -28,11 +27,8 @@ const About = () => {
         <div className="figures">
         <div className="clips">
             <img src={clip} alt="" srcset="" />
-            
             <img src={clip} alt="" srcset="" />
-            
             <img src={clip} alt="" srcset="" />
-            
             <img src={clip} alt="" srcset="" />
           </div>
         <div className='figures_box'>
