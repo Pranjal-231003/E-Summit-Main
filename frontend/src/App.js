@@ -25,7 +25,7 @@ function App() {
       <Navbar></Navbar>
       <LandingPage/>
       <About></About>
-      <Events />
+      {/* <Events /> */}
       </>
   }
     </>

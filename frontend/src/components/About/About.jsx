@@ -19,8 +19,7 @@ const About = () => {
             <div className='about_box1'><img src={ crystal } alt="img" className='about_img'/></div>
             <div className='about_box2'>
               <div className='about_text'>Lorem ipsum dolor sit amet consectetur. Velit ac pharetra tincidunt.
-              Lorem ipsum dolor sit  pharetra tincidunt.Lorem ipsum dolor sit amet consectetur. Velit ac pharetra tincidunt.Lorem ipsum dolor sit amet consectetur. Velit ac pharetra tincidunt.
-              </div>
+              Lorem ipsum dolor sit  pharetra tincidunt.Lorem ipsum dolor sit amet consectetur. Velit ac pharetra tincidunt.Lorem ipsum dolor sit amet consectetur. Velit ac pharetra tincidunt.</div>
             </div>
           </div>
 

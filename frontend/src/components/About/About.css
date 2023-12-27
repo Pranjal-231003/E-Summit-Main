@@ -58,12 +58,6 @@
   }
 }
 
-.about_img:hover {
-  /* transition: all 2s ease-in-out; */
-  /* transform: rotate(360deg) */
-}
-
-
 .about_text {
   color: #FFF;
   font-family: 'Poppins', sans-serif;
@@ -90,11 +84,13 @@
   justify-content: center;
   flex-direction: column;
 }
+
 .figures_img{
   display: flex;
   justify-content: center;
   align-self: center;
 }
+
 .figures_img img{
   height: 5rem;
   width: 5rem;
@@ -143,7 +139,7 @@
 }
 
 .clips img{
- background-color:  lightgray 50% / cover no-repeat;
+ background-color: lightgray 50% / cover no-repeat;
  width: 6.5rem;
 }
 
@@ -174,4 +170,40 @@
 .clips img:nth-child(4){
   position: relative;
   left: -1rem;
+}
+
+@media (max-width: 520px) {
+  .about_about {
+    font-size: 2.5rem;
+  }  
+  .about_img {
+    height: 0;
+    width: 0;
+  }
+  .about_text {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    right: 8rem;
+    margin-bottom: 2rem;
+    text-align: justify;
+  }
+  
+  .figures_box {
+    flex-direction: column;
+    background: 0;
+    box-shadow: 0;
+  }
+  .figures_line{
+    height: 0.2rem;
+    width: 23rem;
+  }
+  .clips {
+    animation: none;
+    height: 0;
+    width: 0;
+  }
+  
 }
