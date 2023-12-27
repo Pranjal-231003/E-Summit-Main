@@ -11,7 +11,7 @@ const withCursor = (WrappedComponent) => {
     }
 
     setupCursor() {
-      const textElements = document.querySelectorAll('.text-element'); // Change the selector to match your text elements
+      const textElements = document.querySelectorAll('.text_s'); // Change the selector to match your text elements
       const cursor = document.querySelector('.cursor');
 
       const animateIt = function (e) {

@@ -13,7 +13,7 @@ class LandingPage extends React.Component {
           <nav className='navbar'>
             <img src={logo} alt="" />
           </nav>
-          <h1 className='text-element'>E-SUMMIT</h1>
+          <h1 className='text-element'><span className='text_s'>E-SUMMIT</span></h1>
           
           {/* Add other text elements as needed */}
           <div className="cursor"></div>
