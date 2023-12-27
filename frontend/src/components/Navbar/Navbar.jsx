@@ -29,21 +29,7 @@ function Navbar() {
     const middleIndex = 3;
     const [rotatedValues, setRotatedValues] = useState(items);
     const [rotationOccurred, setRotationOccurred] = useState(false);
-  function rotationdownFunction(arr) { 
-    if (arr.length <= 1) { 
-      return arr; 
-    } 
 
-    return arr.map((_, index, array) => 
-      array[(index + 1) % array.length]); 
-  }  
-  function rotationupFunction(arr) {
-    if (arr.length <= 1) {
-      return arr;
-    }
-  
-    return arr.map((_, index, array) => array[(index - 1 + array.length) % array.length]);
-  }
   const rotateArrayToTarget = (arr, target) => {
     const targetIndex = arr.findIndex((item) => item.name === target);
   

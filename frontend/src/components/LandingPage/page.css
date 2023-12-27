@@ -16,7 +16,7 @@
     line-height: normal;
     position: relative;
     text-align: center;
-    top: 14%;
+    top: 10%;
     background: linear-gradient(180deg, #00E0FF 0%, #0BC4FF 100%);
     background-clip: text;
     -webkit-background-clip: text;
@@ -30,7 +30,7 @@
 }
 
 .navbar{  
-    height: 10vh;
+    height: 12vh;
     display: flex;
     justify-content: space-between;
 }
@@ -68,9 +68,9 @@
 }
 
 .navbar img{
-    margin: 15px;
-    padding: 1px;
-    width: 16%;
+    margin: 20px;
+    padding: 4px;
+    width: 11%;
 }
 
 .menu{
