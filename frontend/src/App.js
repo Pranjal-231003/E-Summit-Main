@@ -8,7 +8,7 @@ import "./App.css"
 
 function App() {
   const [loader, setLoader] = useState(true);
-  
+
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -27,7 +27,7 @@ function App() {
       <Navbar></Navbar>
       <LandingPage/>
       <About></About>
-      {/* <Events /> */}
+      <Events />
       </>
   }
     </>
