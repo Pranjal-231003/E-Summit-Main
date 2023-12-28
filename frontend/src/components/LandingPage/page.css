@@ -36,6 +36,9 @@
     justify-content: space-between;
 }
 
+
+
+
 .option{
 
     display: flex;
@@ -68,12 +71,29 @@
     font-size: 18px;
 }
 
-.navbar img{
+.navbar{
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+}
+.logo{
     margin: 20px;
     padding: 4px;
-    width: 11%;
+    width: 50%;
+  
 }
-
+.onclick{
+    height: 75%;
+    width: auto;
+    z-index: 10; 
+    position: relative;
+   
+    margin: 5px;
+    margin-right: 12px;
+    padding: 4px;
+    display: none;
+    cursor: pointer; 
+}
 .menu{
     position: fixed;
     right:20px;
@@ -174,3 +194,78 @@
     transition: transform 0.5s ease-in-out;
   }
   
+  @media (max-width:950px) {
+    .onclick{
+        display: block;
+    }
+    .logo{
+        width: 14%;
+    }
+    .menu{
+        display: none;
+    }
+    .navbar{
+        background-color: rgba(255, 255, 255, 0.105);
+    }
+
+  }
+  @media (max-width:400px) {
+        #Page_container{
+            background: linear-gradient(180deg, #000821 0%, #001072 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .navbar{
+            height: 5rem;
+            width: 100%;
+        }
+        .logo{
+            width: 30%;
+            height: 40%;
+        }
+        .logo_container{
+            height:40vh;
+            width: 80%;
+            background-image: url("../images/logo2.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-position-y: center;
+         
+            position: relative;
+            top: 5rem;
+            right: 12px;
+            
+        }
+        #Page_container h1{
+            margin: 0;
+          
+            font-family: Montserrat;
+    font-size: 60px;
+    font-style: normal; 
+    font-weight: 800;
+    line-height: normal;
+    background: linear-gradient(180deg, #00E0FF 0%, #0BC4FF 100%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+mix-blend-mode: hard-light;
+        }
+        .text-element{
+            width: 10   0%;
+            height: 20vh;
+        }
+        .design_container{
+            width: 100%;
+            height: 50vh;
+            background: url("../images/landingpage.png") ;
+            background-repeat: no-repeat;
+            object-fit: fill;
+            background-size:100%50vh;
+        }
+        #Events{
+            display: none;
+        }
+  }
