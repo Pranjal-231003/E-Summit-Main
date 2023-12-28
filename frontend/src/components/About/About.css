@@ -1,4 +1,7 @@
-
+#about_container
+{
+  cursor: none;
+}
 .about_about {
   font-family: Nico Moji;
   font-size: 3.7rem;
