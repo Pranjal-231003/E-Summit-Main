@@ -23,7 +23,7 @@ const About = () => {
   return (
     <>
       <div id="about_container">
-        <div className='about_about'><p className='text-element'>ABOUT E-SUMMIT</p></div>
+        <div className='about_about'><p className='text-element'><span className='text_s'>ABOUT E-SUMMIT</span></p></div>
 
         <div className='about_box'>
           <div className='about_boxes'>
