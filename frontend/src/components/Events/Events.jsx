@@ -45,7 +45,7 @@ function Events() {
 
   return (
     <div id='Events'>
-        <h1 className='evh'>EVENTS</h1>
+        <h1 className='evh'><span className="text_s">EVENTS</span></h1>
         <div className="events-grid">
       {eventsData.map((event, index) => (
         <Card

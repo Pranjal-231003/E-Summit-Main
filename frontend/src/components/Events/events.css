@@ -113,4 +113,5 @@
 
   #Events {
     background: linear-gradient(180deg, rgb(0, 35.4, 88.5) 0%, rgb(0, 0, 0) 100%);
+    cursor: none;
   }
