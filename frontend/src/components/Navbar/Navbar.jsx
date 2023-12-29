@@ -3,7 +3,7 @@ import Text from './Text'
 //css in page.css
 function Navbar() {
   const items = [
-    { name: 'Compitition', container: '#compitition_Container' },
+    { name: 'Competition', container: '#competition_Container' },
     { name: 'Sponsors', container: '#Sponsors_Container' },
     { name: 'Contact us', container: '#Contact_Container' },
     { name: 'Home', container: '#Page_container' },
