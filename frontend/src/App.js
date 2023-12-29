@@ -40,7 +40,6 @@ function App() {
                 path="/"
                 element={
                   <div id="home">
-                    <Navbar></Navbar>
                     <LandingPage/>
                     <About></About>
                     <Events/>
