@@ -6,7 +6,7 @@ import About from "./components/About/About";
 import Navbar from "./components/Navbar/Navbar";
 import Sponsors from "./components/Sponsors/Sponsors";
 import Competitions from "./components/Competitions/Competitions";
-import CompetitionsLoader from "./components/Competitions/Preloader/preloader"
+import CompetitionsLoader from "./components/Competitions/Preloader/preloader";
 import Footer from "./components/Footer/footer";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
@@ -35,41 +35,38 @@ function App() {
 
   return (
     <>
-          <Router>{loader ? (
-                    <Preloader />
-                  ) : (
-            <Navbar />)}
-            <Routes>
-              <Route
-                path="/"
-                element={
-                  loader ? (
-                    <Preloader />
-                  ) : (
-                  <div id="home">
-                    <LandingPage />
-                    <About></About>
-                    <Events />
-                    <Footer />
-                  </div>
-                  )
-                }
-              />
+      <Router>
+        {!loader && <Navbar />}
+        <Routes>
+          <Route
+            path="/"
+            element={
+              loader ? (
+                <Preloader />
+              ) : (
+                <div id="home">
+                  <LandingPage />
+                  <About></About>
+                  <Events />
+                  <Footer />
+                </div>
+              )
+            }
+          />
 
-              <Route
-                path="/Competitions"
-                element={
-                  competitionsLoader ? (
-                    <CompetitionsLoader />
-                  ) : (
-                    <Competitions />
-                  )
-                }
-              />
-              <Route path="/Sponsors" element={<Sponsors />} />
-            </Routes>
-          </Router>
-      
+          <Route
+            path="/Competitions"
+            element={
+              competitionsLoader ? (
+                <CompetitionsLoader />
+              ) : (
+                <Competitions />
+              )
+            }
+          />
+          <Route path="/Sponsors" element={<Sponsors />} />
+        </Routes>
+      </Router>
     </>
   );
 }

@@ -3,6 +3,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh; /* Set the height based on your design */
+    background-color: black;
   }
   
   .loader {
