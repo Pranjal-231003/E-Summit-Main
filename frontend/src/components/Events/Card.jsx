@@ -4,7 +4,7 @@ import "./events.css";
 export default function Card({ imageUrl, title, description1, description2 }) {
     
   return (
-    <div className="card">
+    <div className="card-container">
       <img alt="" className="card-img" src={imageUrl} />
       <div className="corner-image top-left"></div>
       <div className="corner-image top-right"></div>

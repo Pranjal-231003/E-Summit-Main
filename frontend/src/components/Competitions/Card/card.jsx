@@ -22,7 +22,7 @@ const Card = ({ imageUrl, title, time, venue }) => {
         <p className="desc">{time} <br /><br /> {venue}</p>
         <a href="" className="register">
           Register &nbsp;
-          <MdArrowOutward className="arrow" style={{ color: 'inear-gradient(90deg, #FFF 4.15%, #00FFF0 90.91%)' }} />
+          <MdArrowOutward className="arrow"/>
         </a>
       </div>
     </div>

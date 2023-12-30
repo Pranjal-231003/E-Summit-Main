@@ -4,16 +4,65 @@ import React from 'react';
 import './Competitions.css'; // Import your CSS file for rocket styles
 import Spline from '@splinetool/react-spline';
 
-
+import Card from './Card/card';
+import ash from "../images/ashneer.png";
 const Competitions = () => {
+  const competitionsData = [
+    {
+      imageUrl: ash,
+      title: "ASHNEER GROVER TALK",
+      time: "TIME-6PM",
+      venue: "VENUE-OAT",
+    },
+    {
+        imageUrl: ash,
+        title: "ASHNEER GROVER TALK",
+        time: "TIME-6PM",
+        venue: "VENUE-OAT",
+      },
+      {
+        imageUrl: ash,
+        title: "ASHNEER GROVER TALK",
+        time: "TIME-6PM",
+        venue: "VENUE-OAT",
+      },
+      {
+        imageUrl: ash,
+        title: "ASHNEER GROVER TALK",
+        time: "TIME-6PM",
+        venue: "VENUE-OAT",
+      },
+      {
+        imageUrl: ash,
+        title: "ASHNEER GROVER TALK",
+        time: "TIME-6PM",
+        venue: "VENUE-OAT",
+      },
+      {
+        imageUrl: ash,
+        title: "ASHNEER GROVER TALK",
+        time: "TIME-6PM",
+        venue: "VENUE-OAT",
+      }
+  ];
+
   return (
     <div className='main'>
         <div className='splinemodel' >
         <Spline className='splines' scene="https://prod.spline.design/5d1cMbEhisQ1tPpS/scene.splinecode" />
     </div>
-    {/* <div className='heading'> */}
-        {/* <h1>comp</h1> */}
-    {/* </div> */}
+    <div className="competition-container">
+
+    {competitionsData.map((competition, index) => (
+        <Card
+          key={index}
+          imageUrl={competition.imageUrl}
+          title={competition.title}
+          time={competition.time}
+          venue={competition.venue}
+        />
+      ))}
+      </div>
     </div>
     
 

@@ -4,8 +4,9 @@ import Preloader from "./components/Preloader/Preloader";
 import Events from "./components/Events/Events";
 import About from "./components/About/About";
 import Navbar from "./components/Navbar/Navbar";
-import Competition from "./components/Competition/competition";
-import "./App.css"
+
+import Competitions from "./components/Competitions/Competitions";
+import "./App.css";
 import { Toaster } from "react-hot-toast";
 import {
   BrowserRouter as Router,
@@ -48,7 +49,7 @@ function App() {
                 }
               />
 
-              <Route path="/Competitions" element={<Competition/>} />
+              <Route path="/Competitions" element={<Competitions/>} />
             </Routes>
           </Router>
         </>

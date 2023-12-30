@@ -19,3 +19,16 @@
     color: aliceblue;
 }
   
+/* Competition.css */
+.competition-container {
+    display: flex;
+    justify-content: space-around; /* Adjust as needed */
+    align-items: center;
+    flex-wrap: wrap; /* Allow cards to wrap to the next line if needed */
+    padding: 20px; 
+    background: linear-gradient(180deg, #000821 24.33%, #001072 100%);
+    min-height: 100vh; /* Ensure a minimum height to cover the viewport */
+padding-top: 5rem;
+    padding-right: 5rem;
+  }
+  
