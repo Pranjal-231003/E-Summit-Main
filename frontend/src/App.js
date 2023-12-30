@@ -35,8 +35,10 @@ function App() {
 
   return (
     <>
-          <Router>
-            <Navbar />
+          <Router>{loader ? (
+                    <Preloader />
+                  ) : (
+            <Navbar />)}
             <Routes>
               <Route
                 path="/"

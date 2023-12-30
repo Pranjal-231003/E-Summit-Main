@@ -4,10 +4,12 @@ import React from 'react';
 import './footer.css';
 import { FaLocationDot } from "react-icons/fa6";
 import logo from "../images/logo.png"
+import building from "../images/footer.png"
 import SocialButton from './Button/socialIcons';
 
 const Footer = () => (
     <div className="footer-container">
+        <img src={building} alt='building' />
         <div className="footer-content">
             <div className="quick-links">
                 <h3>QUICK LINK</h3>
@@ -31,7 +33,7 @@ const Footer = () => (
             </div>
         </div>
         <div className="footer-bottom">
-            <p>© 2022 All Rights Reserved. Ecell®</p>
+            <p>© 2024 All Rights Reserved. Ecell®</p>
         </div>
     </div>
 );
