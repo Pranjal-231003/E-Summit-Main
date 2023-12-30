@@ -1,5 +1,5 @@
 import React from 'react'
-
+import {Link} from "react-router-dom"
 function Text(props) {
   const handleClick = () => {
     if (props.onClick) {
@@ -10,7 +10,7 @@ function Text(props) {
     
 
     <>
-    <div style={props.style}className="option"><a href={props.container} onClick={handleClick}>{props.value}</a></div>
+    <div style={props.style}className="option"><Link to={props.container} onClick={handleClick}>{props.value}</Link></div>
 
     </>
     

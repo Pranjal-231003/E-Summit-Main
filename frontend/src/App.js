@@ -7,7 +7,7 @@ import Navbar from "./components/Navbar/Navbar";
 
 import Competitions from "./components/Competitions/Competitions";
 import "./App.css";
-import { Toaster } from "react-hot-toast";
+import { Toaster } from "react-router-dom";
 import {
   BrowserRouter as Router,
   Route,
@@ -34,7 +34,7 @@ function App() {
       ) : (
         <>
           <Router>
-            <Toaster />
+         
 
             <Navbar />
             <Routes>
