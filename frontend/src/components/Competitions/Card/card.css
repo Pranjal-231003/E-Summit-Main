@@ -9,7 +9,7 @@
   color: white;
   -webkit-box-shadow: -3px 4px 41px 18px rgba(62,199,190,0.68);
   -moz-box-shadow: -3px 4px 41px 18px rgba(62,199,190,0.68);
-  box-shadow: -3px 1px 21px 14px rgba(62,199,190,0.68); 
+  box-shadow: -3px 1px 20px 4px rgba(62,199,190,0.68); 
   font-family: New Rocker;
   text-align: justify;
   cursor: pointer;
@@ -51,51 +51,11 @@
   font-size: 28px;
 }
 
-.card .card-stats {
-  grid-area: stats;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-  background: rgb(255, 7, 110);
-}
+.card-text a{
 
-.card .card-stats .stat {
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  color: white;
-}
-
-.card .card-stats .border {
-  border-left: 1px solid rgb(172, 26, 87);
-  border-right: 1px solid rgb(172, 26, 87);
-}
-
-.card .card-stats .value {
-  font-size: 22px;
-  font-weight: 500;
-}
-
-.card .card-stats .value sup {
-  font-size: 12px;
-}
-
-.card .card-stats .type {
-  font-size: 11px;
-  font-weight: 300;
-  text-transform: uppercase;
-}
-
-.card-text a.register {
-  display: inline-block;
   padding: 10px 20px;
-  color: white;
-  text-decoration: none;
   border-radius: 32px;
+  text-decoration: none;
   border: 1px solid #1BF6F6;
   transition: background-color 0.3s ease;
   font-family: Mabry Pro;
@@ -110,6 +70,8 @@
 }
 .card-text a.register:hover {
   background: linear-gradient(90deg, #FFF 0%, #1BC1F6 100%);
+  -webkit-text-fill-color: black;
+
 }
 
 .card-text a.register .arrow {

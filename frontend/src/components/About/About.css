@@ -44,8 +44,9 @@
   height: 50rem;
   width: 50rem;
   margin-bottom: 5rem;
-  /* animation: levitate 2s infinite;
-  transition: all linear; */
+  /* -webkit-box-shadow: -3px 4px 41px 18px rgba(62,199,190,0.68);
+  -moz-box-shadow: -3px 4px 41px 18px rgba(62,199,190,0.68);
+  box-shadow: -3px 1px 20px 4px rgba(62,199,190,0.68);  */
 }
 /*
 @keyframes levitate {

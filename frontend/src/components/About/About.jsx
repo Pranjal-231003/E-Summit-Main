@@ -7,8 +7,8 @@ import clip from "../images/clip.png";
 import coin from "../images/coin.png";
 import money from "../images/money.png";
 import people from "../images/people.png";
-import withCursor from '../Cursor/Cursor'; // Import the withCursor HOC
-
+import withCursor from '../Cursor/Cursor'; 
+import VanillaTilt from 'vanilla-tilt';
 const About = () => {
   useEffect(() => {
     // Any additional setup code you might need for the About component
@@ -19,7 +19,14 @@ const About = () => {
       // ...
     };
   }, []); // Empty dependency array for componentDidMount behavior
-
+  useEffect(() => {
+    const tiltOptions = {
+      glare: true,
+      reverse: true,
+      'max-glare': 0.15,
+    };
+    VanillaTilt.init(document.querySelectorAll('.about_img'), tiltOptions);
+  }, []);
   return (
     <>
       <div id="about_container">
