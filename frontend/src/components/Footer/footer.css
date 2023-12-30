@@ -1,0 +1,76 @@
+/* footer.css */
+
+.footer-container {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* width: 70%; */
+  }
+  
+  .quick-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  
+  .quick-links a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #fff;
+    color: rgba(255, 255, 255, 0.70);
+font-family: Mabry Pro;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 28px; /* 140% */
+  }
+  
+  .logo-and-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .elogo {
+    width: 20rem;
+  }
+  
+  .social-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  
+  .address {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: rgba(255, 255, 255, 0.70);
+font-family: Mabry Pro;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 28px; 
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 0.70);
+font-family: Mabry Pro;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 28px; /* 140% */
+  }
+  

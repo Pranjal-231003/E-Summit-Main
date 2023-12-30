@@ -6,26 +6,35 @@
    /* transform: translateX(150%); */
     z-index: 1;
 }
-  
-  .overlay-text1 , .overlay-text2 {
-    position: absolute;
-    top: 30%;
-    left: 30%;
-    z-index: -1;
-    transform: translateX(-50%);
-    color: #00E0FF;
-
-font-family: Montserrat;
-font-size: 4rem;
-font-style: bold;
-font-weight: 800;
-line-height: normal;
-letter-spacing: 0.18rem;
-opacity: 0.8;
-mix-blend-mode: exclusion;
+.overlay-text1, .overlay-text2, .overlay-text3 {
+  position: absolute;
+  top: 17%;
+  left: 26%;
+  z-index: -1;
+  transform: translateX(-50%);
+  font-family: Montserrat;
+  font-size: 4rem;
+  font-style: bold;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: 0.18rem;
+  text-shadow: 
+    -1px -1px 0 #00E0FF,  
+     1px -1px 0 #00E0FF,
+    -1px 1px 0 #00E0FF,
+     1px 1px 0 #00E0FF;
+  mix-blend-mode: exclusion;
 }
+
+
   .overlay-text2 {
-    top: 27%;   
+    top: 30%;  
+    opacity: 1; 
+      color: #00E0FF;
+
+}
+  .overlay-text3 {
+    top: 43%;   
 }
   
 .main{

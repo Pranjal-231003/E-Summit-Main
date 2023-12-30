@@ -55,6 +55,9 @@ const Competitions = () => {
       <div className='overlay-text2'>
         <h1>COMPET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ITIONS</h1>
       </div>
+      <div className='overlay-text3'>
+        <h1>COMPET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ITIONS</h1>
+      </div>
       <Spline className='splines' scene="https://prod.spline.design/5d1cMbEhisQ1tPpS/scene.splinecode" />
     </div>
       <div className="competition-container">
