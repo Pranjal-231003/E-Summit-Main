@@ -4,7 +4,7 @@ import Preloader from "./components/Preloader/Preloader";
 import Events from "./components/Events/Events";
 import About from "./components/About/About";
 import Navbar from "./components/Navbar/Navbar";
-
+import Sponsors from "./components/Sponsors/Sponsors";
 import Competitions from "./components/Competitions/Competitions";
 import "./App.css";
 import { Toaster } from "react-router-dom";
@@ -50,6 +50,7 @@ function App() {
               />
 
               <Route path="/Competitions" element={<Competitions/>} />
+              <Route path="/Sponsors" element={<Sponsors/>} />
             </Routes>
           </Router>
         </>
