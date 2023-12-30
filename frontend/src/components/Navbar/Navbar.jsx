@@ -4,7 +4,7 @@ import Text from './Text'
 function Navbar() {
   const items = [
     { name: 'Competition', container: 'Competitions' },
-    { name: 'Sponsors', container: '#Sponsors_Container' },
+    { name: 'Sponsors', container: 'Sponsors' },
     { name: 'Contact us', container: '#Contact_Container' },
     { name: 'Home', container: '' },
     { name: 'About', container: '#about_container' },
