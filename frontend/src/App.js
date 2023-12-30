@@ -4,6 +4,7 @@ import Preloader from "./components/Preloader/Preloader";
 import Events from "./components/Events/Events";
 import About from "./components/About/About";
 import Navbar from "./components/Navbar/Navbar";
+import Competition from "./components/Competition/competition";
 import "./App.css"
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
       <LandingPage/>
       <About></About>
       <Events />
+      <Competition />
       </>
   }
     </>
