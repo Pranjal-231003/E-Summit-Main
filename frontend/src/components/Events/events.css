@@ -42,6 +42,7 @@
     flex-direction: column;
     justify-content: space-around;
     text-align: center;
+    width: 100%;
   }
   .desc {
     color: #ffffff;
@@ -96,7 +97,7 @@
   .events-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 5%; /* Adjust as needed */
+    gap: 10%; /* Adjust as needed */
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 2.5%;
@@ -115,4 +116,11 @@
     background: linear-gradient(180deg, rgb(0, 35.4, 88.5) 0%, rgb(0, 0, 0) 100%);
     height: 160vh;
     cursor: none;
+  }
+
+  @media (max-width: 600px) {
+    .events-grid {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 2.5%;
+    }
   }
