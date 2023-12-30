@@ -44,7 +44,7 @@ function App() {
                   <div id="home">
                     <LandingPage/>
                     <About></About>
-                    <Events/>
+                    <Events/> 
                   </div>
                 }
               />

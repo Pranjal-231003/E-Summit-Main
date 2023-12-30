@@ -4,7 +4,7 @@
 }
 .about_about {
   font-family: Nico Moji;
-  font-size: 3.7rem;
+  font-size: 3.5rem;
   font-weight: 400;
   white-space: nowrap;
   color: white;
@@ -43,9 +43,9 @@
 .about_img {
   height: 50rem;
   width: 50rem;
-  margin-bottom: 9rem;
-  animation: levitate 2s infinite;
-  transition: all linear;
+  margin-bottom: 5rem;
+  /* animation: levitate 2s infinite;
+  transition: all linear; */
 }
 /*
 @keyframes levitate {
@@ -67,6 +67,10 @@
   font-size: 2.1rem;
   padding: 8rem;
   margin-top: 7rem;
+}
+
+.about_fig {
+  margin-bottom: 1rem;
 }
 
 
@@ -175,10 +179,25 @@
   left: -1rem;
 }
 
-@media (max-width: 520px) {
+@media (min-width: 521px) and (max-width: 720px) {
+  .about_img {
+    height: 37rem;
+    width: 37rem;
+    margin-left: 3rem;
+  }
+  .about_text {
+    margin-top: 0rem;
+    padding-top: 0  ;
+  }
+}
+
+@media (min-width: 401px) and (max-width: 520px) {
   .about_about {
     font-size: 2.5rem;
-  }  
+  } 
+  .about_box {
+    height: 113rem;
+  } 
   .about_img {
     height: 0;
     width: 0;
@@ -187,11 +206,12 @@
     position: relative;
     align-items: center;
     justify-content: center;
-    margin-top: 2rem;
+    text-align: justify;
+    margin-top: 1rem;
     padding: 1rem;
     right: 8rem;
     margin-bottom: 2rem;
-    text-align: justify;
+    font-size: 1.5rem;
   }
   
   .figures_box {
@@ -208,5 +228,50 @@
     height: 0;
     width: 0;
   }
+  .about_fig {
+    margin-bottom: 7rem;
+  }  
+}
+
+@media (max-width: 400px) {
+  .about_about {
+    font-size: 2.5rem;
+  } 
+  .about_box {
+    height: 119rem;
+  } 
+  .about_img {
+    height: 0;
+    width: 0;
+  }
+  .about_text {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    margin-top: 1rem;
+    padding: 1rem;
+    right: 8rem;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+  }
   
+  .figures_box {
+    flex-direction: column;
+    background: 0;
+    box-shadow: 0;
+  }
+  .figures_line{
+    height: 0.2rem;
+    width: 23rem;
+  }
+  .clips {
+    animation: none;
+    height: 0;
+    width: 0;
+  }
+  .about_fig {
+    margin-bottom: 7rem;
+    margin-top: 27rem;
+  }  
 }
