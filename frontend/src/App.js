@@ -9,7 +9,7 @@ import Competitions from "./components/Competitions/Competitions";
 import CompetitionsLoader from "./components/Competitions/Preloader/preloader";
 import Footer from "./components/Footer/footer";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-
+import "./App.css"
 function App() {
   const [loader, setLoader] = useState(true);
   const [competitionsLoader, setCompetitionsLoader] = useState(true);
@@ -19,7 +19,6 @@ function App() {
       setLoader(false);
     }, 7000);
 
-    // Clear the timeout to avoid memory leaks
     return () => clearTimeout(timeout);
   }, []);
 
@@ -29,7 +28,6 @@ function App() {
       setCompetitionsLoader(false);
     }, 5000);
 
-    // Clear the timeout to avoid memory leaks
     return () => clearTimeout(competitionsTimeout);
   }, []);
 
