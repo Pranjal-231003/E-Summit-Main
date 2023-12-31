@@ -1,48 +1,43 @@
-import React,{useEffect,useState} from 'react'
-import Text from './Text'
-//css in page.css
+import React, { useEffect, useState } from 'react';
+import Text from './Text';
+
 function Navbar() {
   const items = [
-    { name: 'Competition', container: 'Competitions' },
-    { name: 'Sponsors', container: 'Sponsors' },
-    { name: 'Contact us', container: '#Contact_Container' },
-    { name: 'Home', container: '' },
-    { name: 'About', container: '#about_container' },
-    { name: 'Figures', container: '#Figures_container' },
-    { name: 'talks', container: '#talks_container' },
-    { name: 'Workshop', container: '#Workshop_container' },
+    { name: 'Competition', container: 'Competitions', another: 1 },
+    { name: 'Sponsors', container: 'Sponsors', another: 2 },
+    { name: 'Contact us', container: '#Contact_Container', another: 0 },
+    { name: 'Home', container: '', another: 0 },
+    { name: 'About', container: '#about_container', another: 0 },
+    { name: 'Figures', container: '#Figures_container', another: 0 },
+    { name: 'talks', container: '#talks_container', another: 0 },
+    { name: 'Workshop', container: '#Workshop_container', another: 0 },
   ];
 
+  const middleIndex = 3;
+  const [rotatedValues, setRotatedValues] = useState(items);
+  const [rotationOccurred, setRotationOccurred] = useState(false);
 
-
-    const middleIndex = 3;
-    const [rotatedValues, setRotatedValues] = useState(items);
-    const [rotationOccurred, setRotationOccurred] = useState(false);
+  const handleonclick = (value) => {
+    setRotatedValues(rotateArrayToTarget(items, value));
+    console.log(value);
+  };
 
   const rotateArrayToTarget = (arr, target) => {
     const targetIndex = arr.findIndex((item) => item.name === target);
-  
+
     // Calculate the number of rotations needed to bring the target to the 4th position
     const rotations = (targetIndex - 3 + arr.length) % arr.length;
-  
+
     // Rotate the array
     const rotatedArray = [...arr.slice(rotations), ...arr.slice(0, rotations)];
     setRotationOccurred(true);
     return rotatedArray;
   };
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      if (scrollY < 500 ) {
-        setRotatedValues(rotateArrayToTarget(items,'Home'));
 
-      }
-          // Check if the scroll position is in the range of 140 to 160
-      if (scrollY >= 500 ) {
-        setRotatedValues(rotateArrayToTarget(items,'About'));
-
-      }
-  
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -51,43 +46,44 @@ function Navbar() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, [rotatedValues]);
+
   return (
-   <>
-   <div className={`menu ${rotationOccurred ? 'rotate-container' : ''}`} >
-              <div className="line"></div>
-              {rotatedValues.slice(0, middleIndex).map((value, index) => (
+    <>
+      <div className={`menu ${rotationOccurred ? 'rotate-container' : ''}`}>
+        <div className="line"></div>
+        {rotatedValues.slice(0, middleIndex).map((value, index) => (
           <Text
             key={index}
             value={value.name}
             container={value.container}
-            
-            style={{ fontSize: `${12+index *3}px` }}
+            onClick={() => handleonclick(value.name) }
+            style={{ fontSize: `${12 + index * 3}px` }}
           />
         ))}
-              <div className="eclipse_container">
-                <div className="eclipse"></div>
-                <div className="eclipse1"></div>
-              </div>
-              <div className="text hf"><Text  container={rotatedValues[3].container} value={rotatedValues[3].name}></Text></div>
-              <div className="eclipse_container">
-                <div className="eclipse1"></div>
-                <div className="eclipse"></div>
-              </div>
-              {rotatedValues.slice (middleIndex+1,8).map((value, index) => (
+        <div className="eclipse_container">
+          <div className="eclipse"></div>
+          <div className="eclipse1"></div>
+        </div>
+        <div className="text hf">
+          <Text container={rotatedValues[3].container} value={rotatedValues[3].name}></Text>
+        </div>
+        <div className="eclipse_container">
+          <div className="eclipse1"></div>
+          <div className="eclipse"></div>
+        </div>
+        {rotatedValues.slice(middleIndex + 1, 8).map((value, index) => (
           <Text
             key={index}
             value={value.name}
             container={value.container}
- 
+            onClick={() => handleonclick(value.name)}
             style={{ fontSize: `${17 - index * 3}px` }}
           />
         ))}
-              
-              <div className="line"></div>
-              
-            </div>
-   </>
-  )
+        <div className="line"></div>
+      </div>
+    </>
+  );
 }
 
-export default Navbar
+export default Navbar;
