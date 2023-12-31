@@ -9,7 +9,9 @@ import money from "../images/money.png";
 import people from "../images/people.png";
 import withCursor from '../Cursor/Cursor'; 
 import VanillaTilt from 'vanilla-tilt';
-const About = () => {
+import { forwardRef } from "react";
+const About =forwardRef( (props,ref) => {
+  
   useEffect(() => {
     // Any additional setup code you might need for the About component
     // ...
@@ -29,7 +31,7 @@ const About = () => {
   }, []);
   return (
     <>
-      <div id="about_container">
+      <div id="about_container" ref={ref}>
         <div className='about_about'>ABOUT E-SUMMIT</div>
 
         <div className='about_box'>
@@ -80,6 +82,6 @@ const About = () => {
       </div>
     </>
   );
-}
+})
 
 export default withCursor(About); // Wrap the component with the withCursor HOC

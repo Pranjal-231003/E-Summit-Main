@@ -9,8 +9,10 @@ import Competitions from "./components/Competitions/Competitions";
 import CompetitionsLoader from "./components/Competitions/Preloader/preloader";
 import Footer from "./components/Footer/footer";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { useRef } from "react";
 import "./App.css"
 function App() {
+  const AboutRef = useRef(null);
   const [loader, setLoader] = useState(true);
   const [competitionsLoader, setCompetitionsLoader] = useState(true);
 
@@ -34,7 +36,7 @@ function App() {
   return (
     <>
       <Router>
-        {!loader && <Navbar />}
+        {!loader && <Navbar Aboutref={AboutRef}/>}
         <Routes>
           <Route
             path="/"
@@ -44,7 +46,7 @@ function App() {
               ) : (
                 <div id="home">
                   <LandingPage />
-                  <About></About>
+                  <About ref={AboutRef}></About>
                   <Events />
                   <Footer />
                 </div>

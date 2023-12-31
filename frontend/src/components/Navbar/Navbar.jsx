@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Text from './Text';
 
-function Navbar() {
+function Navbar({Aboutref}) {
   const items = [
     { name: 'Competition', container: 'Competitions', another: 1 },
     { name: 'Sponsors', container: 'Sponsors', another: 2 },
@@ -26,7 +26,11 @@ function Navbar() {
       // If the user clicks on any other option, rotate the array to the target
       setRotatedValues(rotateArrayToTarget(items, value));
     }
+    
+    Aboutref.current.scrollIntoView({ behavior: "smooth" });
+
   };
+
 
   const rotateArrayToTarget = (arr, target) => {
     const targetIndex = arr.findIndex((item) => item.name === target);
@@ -105,6 +109,7 @@ function Navbar() {
             container={value.container}
             onClick={() => handleonclick(value.name) }
             style={{ fontSize: `${12 + index * 3}px` }}
+           
           />
         ))}
         <div className="eclipse_container">
@@ -112,7 +117,7 @@ function Navbar() {
           <div className="eclipse1"></div>
         </div>
         <div className="text hf">
-          <Text container={rotatedValues[3].container} value={rotatedValues[3].name}></Text>
+          <Text container={rotatedValues[3].container} value={rotatedValues[3].name} ></Text>
         </div>
         <div className="eclipse_container">
           <div className="eclipse1"></div>
@@ -125,6 +130,7 @@ function Navbar() {
             container={value.container}
             onClick={() => handleonclick(value.name)}
             style={{ fontSize: `${17 - index * 3}px` }}
+        
           />
         ))}
         <div className="line"></div>
