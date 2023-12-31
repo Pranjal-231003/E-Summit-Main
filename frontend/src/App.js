@@ -62,7 +62,11 @@ function App() {
               )
             }
           />
-          <Route path="/Sponsors" element={<Sponsors />} />
+          <Route path="/Sponsors" element={competitionsLoader ? (
+                <CompetitionsLoader />
+              ) : (
+                <Sponsors />
+              )} />
         </Routes>
       </Router>
     </>
