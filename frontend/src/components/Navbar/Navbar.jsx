@@ -18,8 +18,14 @@ function Navbar() {
   const [rotationOccurred, setRotationOccurred] = useState(false);
 
   const handleonclick = (value) => {
-    setRotatedValues(rotateArrayToTarget(items, value));
-    console.log(value);
+    if (value === 'Home') {
+      // If the user clicks on "Home", reset the state to its initial values
+      setRotatedValues(items);
+      setRotationOccurred(false);
+    } else {
+      // If the user clicks on any other option, rotate the array to the target
+      setRotatedValues(rotateArrayToTarget(items, value));
+    }
   };
 
   const rotateArrayToTarget = (arr, target) => {
@@ -37,15 +43,56 @@ function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
+      if(scrollY<400){
+        if(rotatedValues[3].another===0){
+          setRotatedValues(rotateArrayToTarget(items, 'Home'));
+        }
+      }
+      if(scrollY>400 && scrollY<1300 ){
+        if(rotatedValues[3].another===0){
+          setRotatedValues(rotateArrayToTarget(items, 'About'));
+        }
+      }
+      if(scrollY>1300 && scrollY<1900 ){
+        if(rotatedValues[3].another===0){
+          setRotatedValues(rotateArrayToTarget(items, 'Figures'));
+        }
+      }
+      if(scrollY>1900 && scrollY<3350 ){
+        if(rotatedValues[3].another===0){
+          setRotatedValues(rotateArrayToTarget(items, 'talks'));
+        }
+      }
+      if(scrollY>3350  ){
+        if(rotatedValues[3].another===0){
+          setRotatedValues(rotateArrayToTarget(items, 'Contact us'));
+        }
+      }
+
+      // Check if the user has scrolled to the top of the page
 
     };
 
+    const handlePopstate = () => {
+      // Reset to initial state
+      setRotatedValues(items);
+    
+      // Use a setTimeout to ensure that the state is updated before handling the scroll
+      setTimeout(() => {
+        handleScroll();
+        setRotationOccurred(false);
+      }, 0);
+    };
+    
+
     window.addEventListener('scroll', handleScroll);
+    window.addEventListener('popstate', handlePopstate);
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('popstate', handlePopstate);
     };
-  }, [rotatedValues]);
+  }, [items]);
 
   return (
     <>
