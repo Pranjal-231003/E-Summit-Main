@@ -5,6 +5,7 @@ import Events from "./components/Events/Events";
 import About from "./components/About/About";
 import Navbar from "./components/Navbar/Navbar";
 import Sponsors from "./components/Sponsors/Sponsors";
+import Contact from "./components/Contact/Contact";
 import Competitions from "./components/Competitions/Competitions";
 import CompetitionsLoader from "./components/Competitions/Preloader/preloader";
 import Footer from "./components/Footer/footer";
@@ -48,6 +49,7 @@ function App() {
                   <LandingPage />
                   <About ref={AboutRef}></About>
                   <Events />
+                  <Contact />
                   <Footer />
                 </div>
               )
