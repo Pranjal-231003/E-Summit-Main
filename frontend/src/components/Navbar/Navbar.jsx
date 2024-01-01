@@ -27,7 +27,7 @@ function Navbar({Aboutref}) {
       setRotatedValues(rotateArrayToTarget(items, value));
     }
     
-    Aboutref.current.scrollIntoView({ behavior: "smooth" });
+    
 
   };
 
