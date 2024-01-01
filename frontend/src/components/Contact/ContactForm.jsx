@@ -1,5 +1,6 @@
 // ContactForm.js
 import React, { useEffect } from 'react';
+import "./Contact.css"
 
 const ContactForm = () => {
   useEffect(() => {

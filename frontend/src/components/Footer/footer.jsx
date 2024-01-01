@@ -15,8 +15,8 @@ const Footer = () => (
                 <h3>QUICK LINK</h3>
                 <a href="#">About</a>
                 <a href="#">Contact us</a>
-                <a href="#">Roadmap</a>
-                <a href="#">FAQs</a>
+                {/* <a href="#">Roadmap</a> */}
+                {/* <a href="#">FAQs</a> */}
             </div>
             <div className="logo-and-icons">
                 <img src={logo} className='elogo' alt="E-SUMMIT logo" />
