@@ -3,7 +3,6 @@
     width: 15%;
     height: 100vh;
     left: 40%;
-   /* transform: translateX(150%); */
     z-index: 1;
 }
 .overlay-text1, .overlay-text2, .overlay-text3 {
@@ -38,7 +37,6 @@
 }
   
 .main{
-    width: 100%;
     height: 100vh;
     position: relative;
     background: black;
@@ -54,3 +52,158 @@
     background: black;
   }
   
+  @media screen and (max-width: 1270px) {
+    .overlay-text1,
+    .overlay-text2,
+    .overlay-text3 {
+        font-size: 3rem;
+    }
+}
+  @media screen and (max-width: 1130px) {
+    .overlay-text1,
+    .overlay-text2,
+    .overlay-text3 {
+        font-size: 2.8rem;
+    }
+}
+  @media screen and (max-width: 1060px) {
+    .overlay-text1,
+    .overlay-text2,
+    .overlay-text3 {
+        font-size: 2.6rem;
+    }
+}
+  @media screen and (max-width: 990px) {
+    .splinemodel{
+      width: 16%;
+     
+  }
+    .overlay-text1,
+    .overlay-text2,
+    .overlay-text3 {
+        font-size: 2.4rem;
+    }
+}
+  @media screen and (max-width: 950px) {
+    .splinemodel{
+      width: 18%;
+      left: 45%;
+     
+  }
+    .overlay-text1,
+    .overlay-text2,
+    .overlay-text3 {
+        font-size: 2.5rem;
+        left: 29%;
+    }
+    .competition-container {
+    padding-right: 0rem;
+    }
+}
+  @media screen and (max-width: 870px) {
+    .splinemodel{
+      width: 20%;
+      left: 45%;
+     
+  }
+    .overlay-text1,
+    .overlay-text2,
+    .overlay-text3 {
+        font-size: 2.3rem;
+        top: 24%;
+        left: 29%;
+    }
+    .overlay-text2{
+      top: 35%;
+    }
+    .overlay-text3{
+      top: 46%;
+    }
+}
+  
+  @media screen and (max-width: 810px) {
+    .splinemodel{
+      width: 21%;
+      left: 44%;  
+  }
+    .overlay-text1,
+    .overlay-text2,
+    .overlay-text3 {
+        font-size: 2.1rem;
+    }
+
+}
+
+  
+@media screen and (max-width: 745px) {
+  .splinemodel{
+    width: 20%;
+    left: 44%;  
+}
+  .overlay-text1,
+  .overlay-text2,
+  .overlay-text3 {
+      font-size: 1.9rem;
+      letter-spacing: 0.25rem;
+      left: 30%;
+  }
+}
+@media screen and (max-width: 685px) {
+  .splinemodel{
+    width: 21%;
+    left: 43%;
+}
+  .overlay-text1,
+  .overlay-text2,
+  .overlay-text3 {
+      font-size: 1.7rem;
+      letter-spacing: 0.3rem;
+      left: 34%;
+  }
+}
+@media screen and (max-width: 640px) {
+  .splinemodel{
+    position: relative;
+    width: 100%;
+    top: 15%;
+    left: 0%;
+    height: 50%;
+}
+.overlay-text2{
+  top: -30%;
+  left: 51%;
+}
+  .overlay-text1,
+  .overlay-text3 {
+      display: none;
+  }
+  .competition-container{
+    margin-top: 10rem;
+  }
+}
+
+@media screen and (max-width: 530px) {
+
+.overlay-text2{
+  top: -30%;
+  left: 51%;
+  font-size: 1.4rem;
+}
+}
+
+@media screen and (max-width: 460px) {
+
+.overlay-text2{
+  top: -30%;
+  left: 51%;
+  font-size: 1rem;
+}
+}
+@media screen and (max-width: 355px) {
+
+.overlay-text2{
+  top: -30%;
+  left: 51%;
+  font-size: 0.8rem;
+}
+}

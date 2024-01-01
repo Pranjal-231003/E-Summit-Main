@@ -2,7 +2,7 @@
 .card {
   width: 20%;
   display: grid;
-  grid-template-rows: 210px 300px 0px;
+  grid-template-rows: 42% 40% 6%;
   grid-template-areas: "image" "text" "stats";
   border-radius: 18px;
   background: #1d1d1d;
@@ -31,35 +31,35 @@
 
 .card .card-text {
   grid-area: text;
-  margin: 2rem 0.5rem 1rem 0.5rem;
+  margin: 2rem 0.5rem 0rem 0rem;
   transform: translateZ(30px);
 }
 
 .card .card-text .date {
   color: rgb(255, 7, 110);
-  font-size: 13px;
+  font-size: 1em;
 }
 
 .card .card-text p {
   color: grey;
-  font-size: 14px;
+  font-size: 1em;
   font-weight: 300;
 }
 
 .card .card-text h2 {
   margin-top: 0px;
-  font-size: 28px;
+  font-size: 1.7em;
 }
 
 .card-text a{
 
   padding: 10px 20px;
-  border-radius: 32px;
+  border-radius: 2rem;
   text-decoration: none;
   border: 1px solid #1BF6F6;
   transition: background-color 0.3s ease;
   font-family: Mabry Pro;
-  font-size: 22px;
+  font-size: 1.5em;
   font-style: normal;
   font-weight: 700;
   background: linear-gradient(90deg, #FFF 4.15%, #00FFE0 90.91%);
@@ -93,4 +93,66 @@
   text-align: center;
   top: 0;
 }
+@media screen and (max-width: 1200px) {
+  .card {
+    width: 26%;
+    margin: 2rem;
+  }
+  .card .card-text h2 {
+    margin-top: 0px;
+    font-size: 1.5em;
+  }
+}
 
+@media screen and (max-width: 1000px) {
+  .card {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 810px) {
+  .card {
+    width: 35%;
+    margin: 2rem;
+  }
+}
+@media screen and (max-width: 730px) {
+  .card {
+    width: 38%;
+    margin: 2rem;
+  }
+}
+@media screen and (max-width: 635px) {
+  .card .card-text h2 {
+    margin-top: 0px;
+    font-size: 1.25em;
+  }
+  .card-text a{
+    font-size: 1.3em;
+    }
+}
+@media screen and (max-width: 525px) {
+  .card {
+    width: 50%;
+    margin: 2rem;
+    grid-template-rows: 40% 40% 8%;
+  }
+  .card .card-text h2 {
+    margin-top: 0px;
+    font-size: 1.3em;
+  }
+  .card-text a{
+  font-size: 1em;
+  }
+}
+@media screen and (max-width: 425px) {
+  .card {
+    width: 50%;
+    margin: 2rem;
+    grid-template-rows: 38% 35% 8%;
+  }
+  .card .card-text h2 {
+    margin-top: 0px;
+    font-size: 1.1em;
+  }
+}
