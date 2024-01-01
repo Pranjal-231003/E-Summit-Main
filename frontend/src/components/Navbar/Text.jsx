@@ -1,22 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 function Text(props) {
-  
+  const [set, setS] = useState(false);
+
   const handleClick = (event) => {
     if (props.container) {
       const targetElement = document.querySelector(props.container);
-
       if (targetElement) {
-        // Scroll to the target container
         targetElement.scrollIntoView({ behavior: 'smooth' });
         event.preventDefault();
-
       }
     }
 
     if (props.onClick) {
       props.onClick();
+    }
+    console.log(props.page);
+    if (props.page && props.value !== 'Competition' && props.value !== 'Sponsors') {
+      setS(true);
     }
   };
 

@@ -11,28 +11,28 @@ function Navbar() {
     { name: 'About', container: '#about_container', another: 0 },
     { name: 'Figures', container: '#figures_container', another: 0 },
     { name: 'Events', container: '#Events_container', another: 0 },
+    { name: 'Team', container: '#Events_container', another: 0 },
     
   ];
 
   const middleIndex = 3;
   const [rotatedValues, setRotatedValues] = useState(items);
   const [Items, setItems] = useState(items);
- 
+  
   const [rotationOccurred, setRotationOccurred] = useState(false);
-
+ 
   const handleonclick = (value) => {
-    if (value === 'Home') {
-      // If the user clicks on "Home", reset the state to its initial values
-      setRotatedValues(items);
-      setRotationOccurred(false);
-    } 
+
+
       if(rotatedValues[3].another===0 ||rotatedValues[3].another===5){
       setRotatedValues(rotateArrayToTarget(items, value));
     
       }
+     
     
 
   };
+
 
 
   const rotateArrayToTarget = (arr, target) => {
@@ -48,12 +48,20 @@ function Navbar() {
   };
   const [page,SetPage]=useState(false);
   useEffect(() => {
-    if(rotatedValues[3].another===1 || rotatedValues===2){
+    if(rotatedValues[3].another===1 || rotatedValues[3].another===2){
+
       SetPage(true);
+
     }
     else{
       SetPage(false)
+      
+     
+      
+     
     }
+
+
     const arr=[];
     if(items[3].another!=2 && items[3].another!=1)
     if(rotatedValues[3].another===0 || rotatedValues[3].another===5){
@@ -136,7 +144,7 @@ function Navbar() {
       window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('popstate', handlePopstate);
     };
-  }, [items]);
+  }, [items ]);
   
   return (
     <>
