@@ -74,8 +74,10 @@
 }
 .logo {
   margin: 20px;
-  padding: 4px;
-  width: 50%;
+  margin-left: 10px;
+  padding: 2px;
+  /* width: 50%; */
+  scale: 80%;
 }
 .onclick {
   height: 75%;
@@ -259,9 +261,7 @@
     object-fit: fill;
     background-size: 100%50vh;
   }
-  #Events {
-    display: none;
-  }
+
 }
 .inactive-link {
   cursor: not-allowed; /* Change cursor to indicate it's not clickable */

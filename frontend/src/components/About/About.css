@@ -71,12 +71,12 @@
 }
 
 .about_fig {
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
 }
 
 
 .figures_box {
-  border-radius: 2rem;
+  /* border-radius: 2rem; */
   opacity: 0.6;
   background: linear-gradient(90deg, #002F46 0.17%, #000 99.82%);
   box-shadow: 30px 6px 4px 0px rgba(0, 0, 0, 0.50);
