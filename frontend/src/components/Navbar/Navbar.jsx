@@ -9,8 +9,8 @@ function Navbar({Aboutref}) {
     { name: 'Home', container: '', another: 0 },
     { name: 'About', container: '#about_container', another: 0 },
     { name: 'Figures', container: '#Figures_container', another: 0 },
-    { name: 'talks', container: '#talks_container', another: 0 },
-    { name: 'Workshop', container: '#Workshop_container', another: 0 },
+    { name: 'Events', container: '#talks_container', another: 0 },
+    
   ];
 
   const middleIndex = 3;
@@ -64,7 +64,7 @@ function Navbar({Aboutref}) {
       }
       if(scrollY>1900 && scrollY<3350 ){
         if(rotatedValues[3].another===0){
-          setRotatedValues(rotateArrayToTarget(items, 'talks'));
+          setRotatedValues(rotateArrayToTarget(items, 'Events'));
         }
       }
       if(scrollY>3350  ){
