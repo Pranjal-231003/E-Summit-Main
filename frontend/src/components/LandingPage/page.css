@@ -263,3 +263,8 @@
     display: none;
   }
 }
+.inactive-link {
+  cursor: not-allowed; /* Change cursor to indicate it's not clickable */
+  color: #888; /* Change text color to indicate it's inactive */
+  pointer-events: none; /* Disable pointer events to make it unclickable */
+}

@@ -3,9 +3,10 @@ import Text from './Text';
 
 function Navbar({Aboutref}) {
   const items = [
+    { name: 'Contact us', container: '#Contact_Container', another: 0 },
     { name: 'Competition', container: 'Competitions', another: 1 },
     { name: 'Sponsors', container: 'Sponsors', another: 2 },
-    { name: 'Contact us', container: '#Contact_Container', another: 0 },
+  
     { name: 'Home', container: '', another: 5 },
     { name: 'About', container: '#about_container', another: 0 },
     { name: 'Figures', container: '#figures_container', another: 0 },
@@ -24,11 +25,11 @@ function Navbar({Aboutref}) {
       // If the user clicks on "Home", reset the state to its initial values
       setRotatedValues(items);
       setRotationOccurred(false);
-    } else {
-      // If the user clicks on any other option, rotate the array to the target
+    } 
+      if(rotatedValues[3].another===0 ||rotatedValues[3].another===5){
       setRotatedValues(rotateArrayToTarget(items, value));
-    }
     
+      }
     
 
   };
@@ -45,10 +46,17 @@ function Navbar({Aboutref}) {
     setRotationOccurred(true);
     return rotatedArray;
   };
-
+  const [page,SetPage]=useState(false);
   useEffect(() => {
+    if(rotatedValues[3].another===1 || rotatedValues===2){
+      SetPage(true);
+    }
+    else{
+      SetPage(false)
+    }
     const arr=[];
-    if(rotatedValues[3].another===0){
+    if(items[3].another!=2 && items[3].another!=1)
+    if(rotatedValues[3].another===0 || rotatedValues[3].another===5){
     
     let j=0;
     for(let i =0 ; i<7;i++){
@@ -76,26 +84,32 @@ function Navbar({Aboutref}) {
       if(scrollY<Arr[1]){
         if(rotatedValues[3].another===0||rotatedValues[3].another===5){
           setRotatedValues(rotateArrayToTarget(items, 'Home'));
+          
         }
       }
       if(scrollY>Arr[1] && scrollY<Arr[2] ){
         if(rotatedValues[3].another===0||rotatedValues[3].another===5){
           setRotatedValues(rotateArrayToTarget(items, 'About'));
+          
         }
       }
       if(scrollY>Arr[2] && scrollY<Arr[3] ){
         if(rotatedValues[3].another===0||rotatedValues[3].another===5){
           setRotatedValues(rotateArrayToTarget(items, 'Figures'));
+          
         }
+
       }
       if(scrollY>Arr[3]&& scrollY<Arr[0] ){
         if(rotatedValues[3].another===0||rotatedValues[3].another===5){
           setRotatedValues(rotateArrayToTarget(items, 'Events'));
+        
         }
       }
       if(scrollY>Arr[0]  ){
         if(rotatedValues[3].another===0||rotatedValues[3].another===5){
           setRotatedValues(rotateArrayToTarget(items, 'Contact us'));
+          
         }
       }
 
@@ -123,7 +137,7 @@ function Navbar({Aboutref}) {
       window.removeEventListener('popstate', handlePopstate);
     };
   }, [items]);
-
+  
   return (
     <>
       <div className={`menu ${rotationOccurred ? 'rotate-container' : ''}`}>
@@ -133,6 +147,7 @@ function Navbar({Aboutref}) {
             key={index}
             value={value.name}
             container={value.container}
+            page={page}
             onClick={() => handleonclick(value.name) }
             style={{ fontSize: `${12 + index * 3}px` }}
            
@@ -154,6 +169,7 @@ function Navbar({Aboutref}) {
             key={index}
             value={value.name}
             container={value.container}
+            
             onClick={() => handleonclick(value.name)}
             style={{ fontSize: `${17 - index * 3}px` }}
         
