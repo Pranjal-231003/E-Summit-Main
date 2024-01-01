@@ -44,6 +44,8 @@ function Events() {
   ];
 
   return (
+    <>
+    <div id="Events_container">
     <div id='Events'>
         <h1 className='evh'><span className="text_s">EVENTS</span></h1>
         <div className="events-grid">
@@ -58,6 +60,8 @@ function Events() {
       ))}
     </div>
     </div>
+    </div>
+    </>
   );
 }
 

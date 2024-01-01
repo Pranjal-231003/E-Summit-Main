@@ -4,10 +4,14 @@ import ContactForm from './ContactForm';
 
 const Contact = () => {
   return (
+    <>
+    <div id="Contact_Container">
     <div className="contact">
         <h1 className='contact-head'><span className="text_s">Contact Us</span></h1>
         <ContactForm />
     </div>
+    </div>
+    </>
   )
 }
 

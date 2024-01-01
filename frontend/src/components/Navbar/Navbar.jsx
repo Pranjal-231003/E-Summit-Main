@@ -6,15 +6,17 @@ function Navbar({Aboutref}) {
     { name: 'Competition', container: 'Competitions', another: 1 },
     { name: 'Sponsors', container: 'Sponsors', another: 2 },
     { name: 'Contact us', container: '#Contact_Container', another: 0 },
-    { name: 'Home', container: '', another: 0 },
+    { name: 'Home', container: '', another: 5 },
     { name: 'About', container: '#about_container', another: 0 },
-    { name: 'Figures', container: '#Figures_container', another: 0 },
-    { name: 'Events', container: '#talks_container', another: 0 },
+    { name: 'Figures', container: '#figures_container', another: 0 },
+    { name: 'Events', container: '#Events_container', another: 0 },
     
   ];
 
   const middleIndex = 3;
   const [rotatedValues, setRotatedValues] = useState(items);
+  const [Items, setItems] = useState(items);
+ 
   const [rotationOccurred, setRotationOccurred] = useState(false);
 
   const handleonclick = (value) => {
@@ -45,30 +47,54 @@ function Navbar({Aboutref}) {
   };
 
   useEffect(() => {
+    const arr=[];
+    if(rotatedValues[3].another===0){
+    
+    let j=0;
+    for(let i =0 ; i<7;i++){
+      
+      if(Items[i].another===0){
+      
+        const about = document.getElementById(items[i].container.replace(/^#/, ''));
+        const a=about.offsetTop;
+        arr[j]=a;
+        j++
+      }
+     
+    }
+  
+   
+    console.log(arr);
+    
+    }
+    const Arr = arr.map((element) => element - 300);
     const handleScroll = () => {
+      
       const scrollY = window.scrollY;
-      if(scrollY<400){
-        if(rotatedValues[3].another===0){
+
+     
+      if(scrollY<Arr[1]){
+        if(rotatedValues[3].another===0||rotatedValues[3].another===5){
           setRotatedValues(rotateArrayToTarget(items, 'Home'));
         }
       }
-      if(scrollY>400 && scrollY<1300 ){
-        if(rotatedValues[3].another===0){
+      if(scrollY>Arr[1] && scrollY<Arr[2] ){
+        if(rotatedValues[3].another===0||rotatedValues[3].another===5){
           setRotatedValues(rotateArrayToTarget(items, 'About'));
         }
       }
-      if(scrollY>1300 && scrollY<1900 ){
-        if(rotatedValues[3].another===0){
+      if(scrollY>Arr[2] && scrollY<Arr[3] ){
+        if(rotatedValues[3].another===0||rotatedValues[3].another===5){
           setRotatedValues(rotateArrayToTarget(items, 'Figures'));
         }
       }
-      if(scrollY>1900 && scrollY<3350 ){
-        if(rotatedValues[3].another===0){
+      if(scrollY>Arr[3]&& scrollY<Arr[0] ){
+        if(rotatedValues[3].another===0||rotatedValues[3].another===5){
           setRotatedValues(rotateArrayToTarget(items, 'Events'));
         }
       }
-      if(scrollY>3350  ){
-        if(rotatedValues[3].another===0){
+      if(scrollY>Arr[0]  ){
+        if(rotatedValues[3].another===0||rotatedValues[3].another===5){
           setRotatedValues(rotateArrayToTarget(items, 'Contact us'));
         }
       }

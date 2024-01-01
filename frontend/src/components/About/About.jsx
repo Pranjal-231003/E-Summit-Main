@@ -42,9 +42,9 @@ const About =forwardRef( (props,ref) => {
               Lorem ipsum dolor sit  pharetra tincidunt.Lorem ipsum dolor sit amet consectetur. Velit ac pharetra tincidunt.Lorem ipsum dolor sit amet consectetur. Velit ac pharetra tincidunt.</p></div>
             </div>
           </div>
-
+          <div id="figures_container">
         <div className='about_about about_fig'>FIGURES</div>
-
+      
           <div className="figures">
             <div className="clips">
               <img src={clip} alt="" srcset="" />
@@ -78,6 +78,7 @@ const About =forwardRef( (props,ref) => {
               </div>
             </div>
           </div>
+       </div>
         </div>
       </div>
     </>
