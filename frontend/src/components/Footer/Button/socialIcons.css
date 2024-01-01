@@ -9,7 +9,7 @@
 }
 
 .social .social-item {
-  margin: 0 30px;
+  margin: 1rem 2rem 0rem 2rem;
   width: 40px;
   height: 40px;
   display: flex;
@@ -127,4 +127,10 @@
 .social .social-item .social-link:hover {
   color: #ffffff;
 }
+@media screen and (max-width: 400px) {
 
+.social .social-item {
+  margin: 1rem 1.5rem 0rem 1.5rem;
+
+}
+}

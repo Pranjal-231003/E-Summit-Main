@@ -9,14 +9,12 @@ import SocialButton from './Button/socialIcons';
 
 const Footer = () => (
     <div className="footer-container">
-        <img src={building} alt='building' />
+        <img src={building} className='building' alt='building' />
         <div className="footer-content">
             <div className="quick-links">
                 <h3>QUICK LINK</h3>
                 <a href="#">About</a>
                 <a href="#">Contact us</a>
-                {/* <a href="#">Roadmap</a> */}
-                {/* <a href="#">FAQs</a> */}
             </div>
             <div className="logo-and-icons">
                 <img src={logo} className='elogo' alt="E-SUMMIT logo" />
