@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Text from './Text';
 
-function Navbar({Aboutref}) {
+function Navbar() {
   const items = [
     { name: 'Contact us', container: '#Contact_Container', another: 0 },
     { name: 'Competition', container: 'Competitions', another: 1 },
