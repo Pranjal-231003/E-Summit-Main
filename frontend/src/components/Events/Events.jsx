@@ -28,6 +28,51 @@ function Events() {
           description2={event.description2}
         />
       ))}
+      {eventsData.map((event, index) => (
+        <Card
+          key={index}
+          imageUrl={event.imageUrl}
+          title={event.title}
+          description1={event.description1}
+          description2={event.description2}
+        />
+      ))}
+      {eventsData.map((event, index) => (
+        <Card
+          key={index}
+          imageUrl={event.imageUrl}
+          title={event.title}
+          description1={event.description1}
+          description2={event.description2}
+        />
+      ))}
+      {eventsData.map((event, index) => (
+        <Card
+          key={index}
+          imageUrl={event.imageUrl}
+          title={event.title}
+          description1={event.description1}
+          description2={event.description2}
+        />
+      ))}
+      {eventsData.map((event, index) => (
+        <Card
+          key={index}
+          imageUrl={event.imageUrl}
+          title={event.title}
+          description1={event.description1}
+          description2={event.description2}
+        />
+      ))}
+      {eventsData.map((event, index) => (
+        <Card
+          key={index}
+          imageUrl={event.imageUrl}
+          title={event.title}
+          description1={event.description1}
+          description2={event.description2}
+        />
+      ))}
     </div>
     </div>
     </div>

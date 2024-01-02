@@ -177,7 +177,7 @@
 
 @media (min-width: 401px) and (max-width: 520px) {
   .about_about {
-    font-size: 2.5rem;
+    font-size: 2rem;
   } 
   .about_box {
     height: 113rem;
@@ -220,7 +220,7 @@
 
 @media (max-width: 400px) {
   .about_about {
-    font-size: 2.5rem;
+    font-size: 2rem;
   } 
   .about_box {
     height: 132rem;
