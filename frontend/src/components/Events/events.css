@@ -1,7 +1,8 @@
 .card-container {
     transform-style: preserve-3d;
     position: relative;
-    padding: 25px 0;
+    width: 100%;
+    padding: 2rem 0;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     display: flex;
@@ -99,12 +100,17 @@
   .events-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10%; /* Adjust as needed */
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-top: 2.5%;
+    gap: 5rem;
+    margin: 3% 5%;
+
     
   }
+  .events-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
 
   .evh {
     text-align: center;
@@ -118,21 +124,55 @@
   }
 
   #Events {
+      height: auto !important;
     background: linear-gradient(180deg, rgb(0, 35.4, 88.5) 0%, rgb(0, 0, 0) 100%);
     height: 195vh;
     cursor: none;
     
   }
+  @media (max-width: 1000px) {
+    .events-grid {
+      width: 80%;
+
+      grid-template-columns: repeat(2, 1fr);
+      gap: 5rem;
+    }
+    
+  }
+
+  @media (max-width: 720px) {
+    .events-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3rem;
+    }
+    .events-container{
+transform: translateX(-2%);
+    }
+  }
+  @media (max-width: 660px) {
+    .events-grid {
+      gap: 2rem;
+    }
+    .events-container{
+transform: translateX(-3%);
+    }
+  }
+  @media (max-width: 620px) {
+    .events-grid {
+      gap: 2rem;
+    }
+    .events-container{
+transform: translateX(-5%);
+    }
+  }
 
   @media (max-width: 600px) {
     .events-grid {
+      width: 70%;
       grid-template-columns: repeat(1, 1fr);
-      gap: 2.5%;
+      gap: 5rem;
     }
-    #Events {
-      position: relative;
-      height: auto !important;
-    }
+ 
     .figures {
       height: auto !important;
     }
