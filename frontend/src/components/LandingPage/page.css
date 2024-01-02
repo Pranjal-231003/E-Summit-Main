@@ -12,7 +12,7 @@
 #Page_container h1 {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  font-size: 160px;
+  font-size: 10rem;
   font-style: normal;
   font-weight: 800;
   line-height: normal;
@@ -206,6 +206,24 @@
   .navbar {
     width: 100%;
     background-color: rgba(255, 255, 255, 0.105);
+  }
+}
+@media (max-width: 800px) {
+  #Page_container h1 {
+  font-size: 8rem;
+  top: 25%;
+  }
+}
+@media (max-width: 600px) {
+  #Page_container h1 {
+  font-size: 6rem;
+  top: 30%;
+  }
+}
+@media (max-width: 500px) {
+  #Page_container h1 {
+  font-size: 5rem;
+  top: 35%;
   }
 }
 @media (max-width: 400px) {

@@ -5,7 +5,7 @@
     left: 40%;
     z-index: 1;
 }
-.overlay-text1, .overlay-text2, .overlay-text3 {
+.overlay-text0 , .overlay-text1, .overlay-text2, .overlay-text3 {
   position: absolute;
   top: 17%;
   left: 26%;
@@ -24,7 +24,9 @@
      1px 1px 0 #00E0FF;
   mix-blend-mode: exclusion;
 }
-
+ .overlay-text0{
+  display: none;
+ }
 
   .overlay-text2 {
     top: 30%;  
@@ -169,11 +171,13 @@
     left: 0%;
     height: 50%;
 }
-.overlay-text2{
+.overlay-text0{
+  display: block;
   top: -30%;
   left: 51%;
 }
   .overlay-text1,
+  .overlay-text2
   .overlay-text3 {
       display: none;
   }

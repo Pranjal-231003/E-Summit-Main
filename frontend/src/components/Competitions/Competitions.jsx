@@ -49,14 +49,17 @@ const Competitions = () => {
   return (
     <div className='main'>
      <div className='splinemodel'>
+      <div className='overlay-text0'>
+      <h1> 'COMPETITIONS'</h1>
+      </div>
       <div className='overlay-text1'>
-      <h1>{window.innerWidth > 745 ? 'COMPET\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0ITIONS' : 'COMPET\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0ITIONS'}</h1>
+      {/* <h1> 'COMPET\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0ITIONS'</h1> */}
       </div>
       <div className='overlay-text2'>
-      <h1>{window.innerWidth > 745 ? 'COMPET\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0ITIONS' : window.innerWidth > 640 ? 'COMPET\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0ITIONS' : 'COMPETITIONS'}</h1>
-      </div>
+      {/* <h1> 'COMPET\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0ITIONS'</h1> */}
+</div>
       <div className='overlay-text3'>
-      <h1>{window.innerWidth > 745 ? 'COMPET\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0ITIONS' : 'COMPET\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0ITIONS'}</h1>
+      {/* <h1> 'COMPET\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0ITIONS'</h1> */}
       </div>
       <Spline className='splines' scene="https://prod.spline.design/5d1cMbEhisQ1tPpS/scene.splinecode" />
     </div>
