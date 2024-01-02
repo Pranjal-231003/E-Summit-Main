@@ -38,8 +38,7 @@ const About =forwardRef( (props,ref) => {
           <div className='about_boxes'>
             <div className='about_box1'><img src={crystal} alt="img" className='about_img' /></div>
             <div className='about_box2'>
-              <div className='about_text'><p className='text-element'>Lorem ipsum dolor sit amet consectetur. Velit ac pharetra tincidunt.
-              Lorem ipsum dolor sit  pharetra tincidunt.Lorem ipsum dolor sit amet consectetur. Velit ac pharetra tincidunt.Lorem ipsum dolor sit amet consectetur. Velit ac pharetra tincidunt.</p></div>
+              <div className='about_text'><p className='text-element'>Get ready for the pulse of creativity and ingenuity at the upcoming E-Summit, the second edition of Rajasthan's premier business conclave! Mark your calendars for February 2nd to 4th, 2024, as the Entrepreneurship Cell at LNMIIT Jaipur transforms into the epicenter of originality and innovation. This flagship event is not just a gathering; it's a dynamic pivot in the vibrant entrepreneurship ecosystem, connecting eager students with disruptive founders. Don't miss out on the heartbeat of entrepreneurial spirit!</p></div>
             </div>
           </div>
           <div id="figures_container">

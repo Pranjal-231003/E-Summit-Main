@@ -52,9 +52,10 @@
 .about_text {
   color: #FFF;
   font-family: 'Poppins', sans-serif;
-  font-size: 2.1rem;
+  font-size: 1.5rem;
   padding: 8rem;
-  margin-top: 7rem;
+  margin-top: 5rem;
+  align-content: center;
 }
 
 
@@ -173,11 +174,14 @@
     margin-top: 0rem;
     padding-top: 0  ;
   }
+  .figures_box {
+    box-shadow: none;
+  }
 }
 
 @media (min-width: 401px) and (max-width: 520px) {
   .about_about {
-    font-size: 2.5rem;
+    font-size: 2rem;
   } 
   .about_box {
     height: 113rem;
@@ -195,7 +199,7 @@
     padding: 1rem;
     right: 8rem;
     margin-bottom: 2rem;
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   
   .figures_box {
@@ -220,7 +224,7 @@
 
 @media (max-width: 400px) {
   .about_about {
-    font-size: 2.5rem;
+    font-size: 2rem;
   } 
   .about_box {
     height: 132rem;

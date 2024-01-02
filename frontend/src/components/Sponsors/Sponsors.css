@@ -4,13 +4,46 @@
     position: relative;
     overflow-y: none;
 }
+
 .splinemodel{
     width: 100%;
     height: 100%;
     /* position: absolute; */
     z-index: -1;
 }
+
 .splines{
-    width: 100wh;
+    width: 100vh;
     height: 100vh;
 }
+
+@media (min-width: 641px) and (max-width: 750px) {
+    .main {
+      height: 100vh;
+      width: 100vw;
+    }
+    .splinemodel {
+        width: 70%;
+        height: 80%;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .main {
+        /* height: 400vh;
+        width: 100vw; */
+        margin-left: 10rem;
+        margin-right: 0;
+    }
+    .splinemodel {
+        /* width: 200%;
+        height: 700%; */
+        margin-left: 10rem;
+        margin-right: 0;
+    }
+    .splines{
+        /* width: 00vh;
+        height: 100vh; */
+        margin-right: 5rem;
+    }    
+  }
