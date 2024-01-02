@@ -1,22 +1,26 @@
+.t {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-22%, 70%);
+}
+
 .countdown-wrapper {
     width: 40%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    /* margin: 0 -8px 0 -8px; */
-    margin-left: 28vw;
-    margin-top: 28vh;
-    /* margin-right: 100vw; */
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    padding: 10px;
+    backdrop-filter: blur(1rem); /* Assuming base font size is 16px */
+    -webkit-backdrop-filter: blur(1rem);
+    padding: 1rem;
     border: 1px solid rgb(49, 241, 49);
-    transition: all .5s ease;
-    border-radius: 20px;
+    transition: all 0.5s ease;
+    border-radius: 1.25rem; 
+    margin-top: 2rem;
 }
 
 .time-section {
-    padding: 0px 8px;
+    padding: 0px 0.5rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -26,43 +30,81 @@
 
 .time {
     margin: 0;
-    font-size: 60px !important;
+    font-size: 3rem ;
     font-weight: 800 !important;
 }
 
 .small {
     font-size: 18px !important;
 }
+@media (max-width:1080px){
 
-@media (max-width:450px) and (min-width:320px) {
+    .t{
+        transform: translate(-24%, 70%);
+    }
+
     .countdown-wrapper{
-        width: 73%;
-        margin-left: 9.5vw;
+        width: 45%;
     }
-    .time {
-        margin: 0;
-        font-size: 15px !important;
-        font-weight: 600 !important;
-    }
-    .small {
-        font-size: 10px !important;
+    .time{
+        font-size: 2.5rem;
     }
 }
+@media (max-width:800px){
 
-@media (max-width:319px) {
+    .t{
+        transform: translate(-27%, 190%);
+    }
+
     .countdown-wrapper{
-        width: 73%;
-        margin-left: 5vw;
+        width: 50%;
     }
-    .time {
-        margin: 0;
-        font-size: 10px !important;
-        font-weight: 600 !important;
+    .time{
+        font-size: 2.5rem;
     }
-    .small {
-        font-size: 6px !important;
+}
+@media (max-width:650px){
+
+    .t{
+        transform: translate(-32%, 190%);
     }
-    .time-section {
-        padding: 0 4px;
+
+    .countdown-wrapper{
+        width: 60%;
     }
+  
+}
+@media (max-width:600px){
+
+    .t{
+        transform: translate(-32%, 250%);
+    }
+    .time{
+        font-size: 2rem;
+    }
+
+}
+@media (max-width:500px){
+
+    .t{
+        transform: translate(-38%, 350%);
+    }
+    .countdown-wrapper{
+        width: 70%;
+    }
+    .time{
+        font-size: 1.5rem;
+    }
+
+}
+@media (max-width:400px) and (min-width:320px) {
+
+    .t{
+        transform: translate(-50%, 250%);
+    }
+    .countdown-wrapper{
+        width: 90%;
+    }
+  
+   
 }
