@@ -5,61 +5,62 @@ import './Competitions.css';
 import Spline from '@splinetool/react-spline';
 
 import Card from './Card/card';
-import ash from "../images/ashneer.png";
+import expo from "../images/STARTUP_ EXPO1.png";
+import shark from "../images/shark tank.png";
+import ideathon from "../images/Post3.png";
+import wolf from "../images/THE WOLF OF DALAL STREET.png";
+import quiz from "../images/BIZ QUIZ.png";
 const Competitions = () => {
   const competitionsData = [
     {
-      imageUrl: ash,
+      imageUrl: expo,
       title: "ASHNEER GROVER TALK",
+      description:"DESCRIPTION",
       time: "TIME-6PM",
       venue: "VENUE-OAT",
     },
     {
-      imageUrl: ash,
+      imageUrl: shark,
       title: "ASHNEER GROVER TALK",
+      description:"DESCRIPTION",
       time: "TIME-6PM",
       venue: "VENUE-OAT",
     },
     {
-      imageUrl: ash,
+      imageUrl: ideathon,
       title: "ASHNEER GROVER TALK",
+      description:"DESCRIPTION",
       time: "TIME-6PM",
       venue: "VENUE-OAT",
     },
     {
-      imageUrl: ash,
+      imageUrl: wolf,
       title: "ASHNEER GROVER TALK",
+      description:"DESCRIPTION",
       time: "TIME-6PM",
       venue: "VENUE-OAT",
     },
     {
-      imageUrl: ash,
+      imageUrl: quiz,
       title: "ASHNEER GROVER TALK",
-      time: "TIME-6PM",
-      venue: "VENUE-OAT",
-    },
-    {
-      imageUrl: ash,
-      title: "ASHNEER GROVER TALK",
+      description:"DESCRIPTION",
       time: "TIME-6PM",
       venue: "VENUE-OAT",
     }
   ];
+  const competitionText = window.innerWidth < 640 ? 'COMPETITIONS' : window.innerWidth > 745 ? 'COMPET\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0ITIONS' : 'COMPET\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0ITIONS';
 
   return (
     <div className='main'>
      <div className='splinemodel'>
-      <div className='overlay-text0'>
-      <h1> 'COMPETITIONS'</h1>
-      </div>
       <div className='overlay-text1'>
-      {/* <h1> 'COMPET\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0ITIONS'</h1> */}
+      <h1>{ window.innerWidth > 745 ? 'COMPET\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0ITIONS' : 'COMPET\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0ITIONS'}</h1>
       </div>
       <div className='overlay-text2'>
-      {/* <h1> 'COMPET\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0ITIONS'</h1> */}
+  <h1>{competitionText}</h1>
 </div>
       <div className='overlay-text3'>
-      {/* <h1> 'COMPET\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0ITIONS'</h1> */}
+      <h1>{window.innerWidth > 745 ? 'COMPET\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0ITIONS' : 'COMPET\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0ITIONS'}</h1>
       </div>
       <Spline className='splines' scene="https://prod.spline.design/5d1cMbEhisQ1tPpS/scene.splinecode" />
     </div>
@@ -70,6 +71,7 @@ const Competitions = () => {
             key={index}
             imageUrl={competition.imageUrl}
             title={competition.title}
+            description={competition.description}
             time={competition.time}
             venue={competition.venue}
           />
