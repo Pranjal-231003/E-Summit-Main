@@ -11,10 +11,7 @@ class LandingPage extends React.Component {
       <>
         <div id="Page_container">
           <div className="rectangle"></div>
-          <nav className="navbar">
-            <img src={logo} className="logo" alt="" />
-            <img src={navbar} className="onclick" alt="" srcset="" />
-          </nav>
+          
           <div className="logo_container"></div>
           <h1 className="text-element">
             <span className="text_s">E-SUMMIT</span>
