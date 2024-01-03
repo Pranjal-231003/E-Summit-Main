@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Ourteam.css';
 import Team_Card from './TeamCard/Team_Card';
-import { IconName } from "react-icons/hi2";
+// import { IconName } from "react-icons/hi2";
 import { HiArrowDown } from "react-icons/hi2";
 import { HiArrowUp } from "react-icons/hi2";
 import { FaArrowDownLong, FaArrowUpLong } from 'react-icons/fa6';
