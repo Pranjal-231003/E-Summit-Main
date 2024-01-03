@@ -11,6 +11,7 @@ import CompetitionsLoader from "./components/Competitions/Preloader/preloader";
 import Footer from "./components/Footer/footer";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useRef } from "react";
+import OurTeam from '../src/components/OurTeam/OurTeam';
 import "./App.css"
 function App() {
   const AboutRef = useRef(null);
@@ -71,7 +72,9 @@ function App() {
               ) : (
                 <Sponsors />
               )} />
+               <Route path="/team" element={<OurTeam />} />
         </Routes>
+       
       </Router>
     </>
   );
