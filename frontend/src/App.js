@@ -13,6 +13,11 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useRef } from "react";
 import OurTeam from '../src/components/OurTeam/OurTeam';
 import "./App.css"
+
+import ResponsiveNav from "./components/ResponsiveNav/ResponsiveNav";
+import "./App.css";
+
+
 function App() {
   const AboutRef = useRef(null);
   const [loader, setLoader] = useState(true);
@@ -38,7 +43,7 @@ function App() {
   return (
     <>
       <Router>
-        {!loader && <Navbar Aboutref={AboutRef}/>}
+        {!loader && <><ResponsiveNav /> <Navbar Aboutref={AboutRef}/></>}
         <Routes>
           <Route
             path="/"
@@ -57,9 +62,7 @@ function App() {
             }
           />
 
-          <Route
-            path="/Competitions"
-            element={
+          <Route path="/Competitions" element={
               competitionsLoader ? (
                 <CompetitionsLoader />
               ) : (

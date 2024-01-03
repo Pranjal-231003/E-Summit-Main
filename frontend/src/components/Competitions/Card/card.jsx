@@ -4,7 +4,7 @@ import './card.css';
 import VanillaTilt from 'vanilla-tilt';
 import { MdArrowOutward } from 'react-icons/md';
 
-const Card = ({ imageUrl, title, time, venue }) => {
+const Card = ({ imageUrl, title, description,time, venue,register }) => {
   useEffect(() => {
     const tiltOptions = {
       glare: true,
@@ -19,8 +19,9 @@ const Card = ({ imageUrl, title, time, venue }) => {
       <img alt="" className="card-image" src={imageUrl} />
       <div className="card-text">
         <h2>{title}</h2>
+        <h3>{description}</h3>
         <p className="desc">{time} <br /><br /> {venue}</p>
-        <a href="" className="register">
+        <a href={register} className="register" target="_blank" rel="noopener noreferrer">
           Register &nbsp;
           <MdArrowOutward className="arrow"/>
         </a>

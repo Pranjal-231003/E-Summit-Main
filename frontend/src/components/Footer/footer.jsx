@@ -13,8 +13,8 @@ const Footer = () => (
         <div className="footer-content">
             <div className="quick-links">
                 <h3>QUICK LINK</h3>
-                <a href="#">About</a>
-                <a href="#">Contact us</a>
+                <a href="#about_container">About</a>
+                <a href="#Contact_container">Contact us</a>
             </div>
             <div className="logo-and-icons">
                 <img src={logo} className='elogo' alt="E-SUMMIT logo" />
