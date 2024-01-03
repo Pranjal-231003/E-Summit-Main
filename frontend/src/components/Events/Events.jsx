@@ -41,19 +41,7 @@ function Events() {
         description1: "TIME-6PM",
         description2: "VENUE-OAT",
       }
-      ,
-      {
-        imageUrl: ash,
-        title: "ASHNEER GROVER TALK",
-        description1: "TIME-6PM",
-        description2: "VENUE-OAT",
-      },
-      {
-        imageUrl: ash,
-        title: "ASHNEER GROVER TALK",
-        description1: "TIME-6PM",
-        description2: "VENUE-OAT",
-      }
+      
   ];
 
   return (

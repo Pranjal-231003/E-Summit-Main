@@ -31,11 +31,7 @@
   src: url("./NicoMoji-Regular.ttf");
 }
 
-.navbar {
-  height: 12vh;
-  display: flex;
-  justify-content: space-between;
-}
+
 
 .option {
   display: flex;
@@ -67,11 +63,7 @@
   font-size: 18px;
 }
 
-.navbar {
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-}
+
 .logo {
   margin: 20px;
   margin-left: 10px;
@@ -203,10 +195,7 @@
   .menu {
     display: none;
   }
-  .navbar {
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.105);
-  }
+  
 }
 @media (max-width: 800px) {
   #Page_container h1 {
@@ -235,10 +224,7 @@
     align-items: center;
     
   }
-  .navbar {
-    height: 5rem;
-    width: 100%;
-  }
+  
   .logo {
     width: 30%;
     height: 40%;
