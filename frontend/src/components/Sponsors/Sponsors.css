@@ -1,3 +1,7 @@
+*{
+    background-color: black;
+}
+
 .main{
     width: 100vw;
     height: 100vh;
@@ -17,33 +21,17 @@
     height: 100vh;
 }
 
-@media (min-width: 641px) and (max-width: 750px) {
-    .main {
-      height: 100vh;
-      width: 100vw;
-    }
-    .splinemodel {
-        width: 70%;
-        height: 80%;
-    }
-  }
 
-  @media (max-width: 640px) {
-    .main {
-        /* height: 400vh;
-        width: 100vw; */
-        margin-left: 10rem;
-        margin-right: 0;
-    }
-    .splinemodel {
-        /* width: 200%;
-        height: 700%; */
-        margin-left: 10rem;
-        margin-right: 0;
-    }
-    .splines{
-        /* width: 00vh;
-        height: 100vh; */
-        margin-right: 5rem;
-    }    
+@media (max-width: 640px) {
+  .main {
+      margin-left: 60rem;
   }
+  .splinemodel {
+      margin-left: 40rem;
+      margin-right: 0;
+  }
+  .splines{
+      margin-right: 2rem;
+      margin-bottom: 2rem;
+  }    
+}
