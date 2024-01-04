@@ -12,7 +12,7 @@ class LandingPage extends React.Component {
         <div id="Page_container">
           <div className="rectangle"></div>
           
-          <div className="logo_container"></div>
+          <div className="logo_container"><img className="logo logoc" src={logo}></img></div>
           <h1 className="text-element">
             <span className="text_s">E-SUMMIT</span>
           </h1>

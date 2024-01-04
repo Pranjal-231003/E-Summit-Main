@@ -10,36 +10,42 @@ function Events() {
       title: "ASHNEER GROVER TALK",
       description1: "TIME-6PM",
       description2: "VENUE-OAT",
+      one: " Voluptatum quis facere consequatur cumque quaerat culpa aperiam deleniti, nulla, sint rem non!"
     },
     {
         imageUrl: ash,
         title: "ASHNEER GROVER TALK",
         description1: "TIME-6PM",
         description2: "VENUE-OAT",
+        one: " Voluptatum quis facere consequatur cumque quaerat culpa aperiam deleniti, nulla, sint rem non!"
       },
       {
         imageUrl: ash,
         title: "ASHNEER GROVER TALK",
         description1: "TIME-6PM",
         description2: "VENUE-OAT",
+        one: " Voluptatum quis facere consequatur cumque quaerat culpa aperiam deleniti, nulla, sint rem non!"
       },
       {
         imageUrl: ash,
         title: "ASHNEER GROVER TALK",
         description1: "TIME-6PM",
         description2: "VENUE-OAT",
+        one: " Voluptatum quis facere consequatur cumque quaerat culpa aperiam deleniti, nulla, sint rem non!"
       },
       {
         imageUrl: ash,
         title: "ASHNEER GROVER TALK",
         description1: "TIME-6PM",
         description2: "VENUE-OAT",
+        one: " Voluptatum quis facere consequatur cumque quaerat culpa aperiam deleniti, nulla, sint rem non!"
       },
       {
         imageUrl: ash,
         title: "ASHNEER GROVER TALK",
         description1: "TIME-6PM",
         description2: "VENUE-OAT",
+        one: " Voluptatum quis facere consequatur cumque quaerat culpa aperiam deleniti, nulla, sint rem non!"
       }
       
   ];
@@ -59,6 +65,7 @@ function Events() {
           title={event.title}
           description1={event.description1}
           description2={event.description2}
+          one={event.one}
         />
       ))}
   </div>

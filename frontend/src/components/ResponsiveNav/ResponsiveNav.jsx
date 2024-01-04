@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
-
 import { FaBars, FaTimes } from 'react-icons/fa';
-import './Responsivenav.css'
-
-
+import './Responsivenav.css';
+import img from "../images/logo.png"
 
 const ResponsiveNav = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -31,50 +29,47 @@ const ResponsiveNav = () => {
       smooth: 'easeInOutQuart',
     });
     setShowESummit(false);
+    closeNav(); // Close the navigation after scrolling to a section
   };
 
   return (
     <header>
-        <div className='navdis'>
-      <nav className="navbar">
-        <Link to='/'>
-        
-          <img className="logo" alt="Logo" />
-        
-        </Link>
-        <div className={`nav-links ${isNavOpen ? 'show-nav' : 'hide-nav'}`}>
-          <ScrollLink to="about_container" smooth={true} duration={800} onClick={() => scrollToSection("about_container")}>
-            <Link to='/'>
-            About
-            </Link>
-          </ScrollLink>
-          <Link to='/Competitions'>
-  Competitions
-</Link>
-          <ScrollLink to="Events_container" smooth={true} duration={800} onClick={() => scrollToSection("Events_container")}>
+      <div className='navdis'>
+        <nav className="navbar">
           <Link to='/'>
-            Events
-            </Link>
-          </ScrollLink>
-          <ScrollLink to="Contact_Container" smooth={true} duration={800} onClick={() => scrollToSection("Contact_Container")}>
-          <Link to='/'>
-            Contact Us
-            </Link>
-          </ScrollLink>
-          <Link to="/Sponsors">
-            Sponsors
+            <img src={img} className="logo" alt="Logo" />
           </Link>
-          
-          <Link to='/team'>
-            Our Team
+          <div className={`nav-links ${isNavOpen ? 'show-nav' : 'hide-nav'}`}>
+            <ScrollLink to="about_container" smooth={true} duration={800} onClick={() => scrollToSection("about_container")}>
+              <Link to='/' onClick={closeNav}>
+                About
+              </Link>
+            </ScrollLink>
+            <Link to='/Competitions' onClick={closeNav}>
+              Competitions
             </Link>
-         
-        </div>
-        <div className={`nav-icon`} onClick={handleNavClick}>
-          {isNavOpen ? <FaTimes /> : <FaBars />}
-        </div>
-        {isNavOpen && <div className="overlay" onClick={closeNav}></div>}
-      </nav>
+            <ScrollLink to="Events_container" smooth={true} duration={800} onClick={() => scrollToSection("Events_container")}>
+              <Link to='/' onClick={closeNav}>
+                Events
+              </Link>
+            </ScrollLink>
+            <ScrollLink to="Contact_Container" smooth={true} duration={800} onClick={() => scrollToSection("Contact_Container")}>
+              <Link to='/' onClick={closeNav}>
+                Contact Us
+              </Link>
+            </ScrollLink>
+            <Link to="/Sponsors" onClick={closeNav}>
+              Sponsors
+            </Link>
+            <Link to='/team' onClick={closeNav}>
+              Our Team
+            </Link>
+          </div>
+          <div className={`nav-icon`} onClick={handleNavClick}>
+            {isNavOpen ? <FaTimes /> : <FaBars />}
+          </div>
+          {isNavOpen && <div className="overlay" onClick={closeNav}></div>}
+        </nav>
       </div>
     </header>
   );

@@ -202,6 +202,9 @@
   font-size: 8rem;
   top: 25%;
   }
+  .logoc {
+    display: none;
+  }
 }
 @media (max-width: 600px) {
   #Page_container h1 {
