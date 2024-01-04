@@ -1,39 +1,29 @@
-import React, { useEffect, useState } from 'react';
-import Text from './Text';
+import React, { useEffect, useState } from "react";
+import Text from "./Text";
 
 function Navbar() {
   const items = [
-    { name: 'Contact us', container: '#Contact_Container', another: 0 },
-    { name: 'Competition', container: 'Competitions', another: 1 },
-    { name: 'Sponsors', container: 'Sponsors', another: 2 },
-  
-    { name: 'Home', container: '', another: 5 },
-    { name: 'About', container: '#about_container', another: 0 },
-    { name: 'Figures', container: '#figures_container', another: 0 },
-    { name: 'Events', container: '#Events_container', another: 0 },
-    { name: 'Team', container: '#Events_container', another: 0 },
-    
+    { name: "Contact us", container: "#Contact_Container", another: 0 },
+    { name: "Competition", container: "Competitions", another: 1 },
+    { name: "Sponsors", container: "Sponsors", another: 2 },
+    { name: "Home", container: "", another: 5 },
+    { name: "About", container: "#about_container", another: 0 },
+    { name: "Figures", container: "#figures_container", another: 0 },
+    { name: "Events", container: "#Events_container", another: 0 },
+    { name: "Team", container: "team", another: 6 },
   ];
 
   const middleIndex = 3;
   const [rotatedValues, setRotatedValues] = useState(items);
   const [Items, setItems] = useState(items);
-  
+
   const [rotationOccurred, setRotationOccurred] = useState(false);
- 
+
   const handleonclick = (value) => {
-
-
-      if(rotatedValues[3].another===0 ||rotatedValues[3].another===5){
+    if (rotatedValues[3].another === 0 || rotatedValues[3].another === 5) {
       setRotatedValues(rotateArrayToTarget(items, value));
-    
-      }
-     
-    
-
+    }
   };
-
-
 
   const rotateArrayToTarget = (arr, target) => {
     const targetIndex = arr.findIndex((item) => item.name === target);
@@ -46,109 +36,87 @@ function Navbar() {
     setRotationOccurred(true);
     return rotatedArray;
   };
-  const [page,SetPage]=useState(false);
+  const [page, SetPage] = useState(false);
   useEffect(() => {
-    if(rotatedValues[3].another===1 || rotatedValues[3].another===2){
-
+    if (rotatedValues[3].another === 1 || rotatedValues[3].another === 2 || rotatedValues[3].another === 6) {
       SetPage(true);
-
-    }
-    else{
-      SetPage(false)
-      
-     
-      
-     
+    } else {
+      SetPage(false);
     }
 
+    const arr = [];
+    if (items[3].another != 2 && items[3].another != 1 && items[3].another!=6)
+      if (rotatedValues[3].another === 0 || rotatedValues[3].another === 5) {
+        let j = 0;
+        for (let i = 0; i < 7; i++) {
+          if (Items[i].another === 0) {
+            const about = document.getElementById(
+              items[i].container.replace(/^#/, "")
+            );
+            const a = about.offsetTop;
+            arr[j] = a;
+            j++;
+          }
+        }
 
-    const arr=[];
-    if(items[3].another!=2 && items[3].another!=1)
-    if(rotatedValues[3].another===0 || rotatedValues[3].another===5){
-    
-    let j=0;
-    for(let i =0 ; i<7;i++){
-      
-      if(Items[i].another===0){
-      
-        const about = document.getElementById(items[i].container.replace(/^#/, ''));
-        const a=about.offsetTop;
-        arr[j]=a;
-        j++
+        console.log(arr);
       }
-     
-    }
-  
-   
-    console.log(arr);
-    
-    }
     const Arr = arr.map((element) => element - 300);
     const handleScroll = () => {
-      
       const scrollY = window.scrollY;
 
-     
-      if(scrollY<Arr[1]){
-        if(rotatedValues[3].another===0||rotatedValues[3].another===5){
-          setRotatedValues(rotateArrayToTarget(items, 'Home'));
-          
+      if (scrollY < Arr[1]) {
+        if (rotatedValues[3].another === 0 || rotatedValues[3].another === 5) {
+          setRotatedValues(rotateArrayToTarget(items, "Home"));
         }
       }
-      if(scrollY>Arr[1] && scrollY<Arr[2] ){
-        if(rotatedValues[3].another===0||rotatedValues[3].another===5){
-          setRotatedValues(rotateArrayToTarget(items, 'About'));
-          
+      if (scrollY > Arr[1] && scrollY < Arr[2]) {
+        if (rotatedValues[3].another === 0 || rotatedValues[3].another === 5) {
+          setRotatedValues(rotateArrayToTarget(items, "About"));
         }
       }
-      if(scrollY>Arr[2] && scrollY<Arr[3] ){
-        if(rotatedValues[3].another===0||rotatedValues[3].another===5){
-          setRotatedValues(rotateArrayToTarget(items, 'Figures'));
-          
-        }
-
-      }
-      if(scrollY>Arr[3]&& scrollY<Arr[0] ){
-        if(rotatedValues[3].another===0||rotatedValues[3].another===5){
-          setRotatedValues(rotateArrayToTarget(items, 'Events'));
-        
+      if (scrollY > Arr[2] && scrollY < Arr[3]) {
+        if (rotatedValues[3].another === 0 || rotatedValues[3].another === 5) {
+          setRotatedValues(rotateArrayToTarget(items, "Figures"));
         }
       }
-      if(scrollY>Arr[0]  ){
-        if(rotatedValues[3].another===0||rotatedValues[3].another===5){
-          setRotatedValues(rotateArrayToTarget(items, 'Contact us'));
-          
+      if (scrollY > Arr[3] && scrollY < Arr[0]) {
+        if (rotatedValues[3].another === 0 || rotatedValues[3].another === 5) {
+          setRotatedValues(rotateArrayToTarget(items, "Events"));
+        }
+      }
+      if (scrollY > Arr[0]) {
+        if (rotatedValues[3].another === 0 || rotatedValues[3].another === 5) {
+          setRotatedValues(rotateArrayToTarget(items, "Contact us"));
         }
       }
 
       // Check if the user has scrolled to the top of the page
-
     };
 
     const handlePopstate = () => {
       // Reset to initial state
       setRotatedValues(items);
-    
+
       // Use a setTimeout to ensure that the state is updated before handling the scroll
       setTimeout(() => {
         handleScroll();
         setRotationOccurred(false);
       }, 0);
     };
-    
 
-    window.addEventListener('scroll', handleScroll);
-    window.addEventListener('popstate', handlePopstate);
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("popstate", handlePopstate);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('popstate', handlePopstate);
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("popstate", handlePopstate);
     };
-  }, [items ]);
-  
+  }, [items]);
+
   return (
     <>
-      <div className={`menu ${rotationOccurred ? 'rotate-container' : ''}`}>
+      <div className={`menu ${rotationOccurred ? "rotate-container" : ""}`}>
         <div className="line"></div>
         {rotatedValues.slice(0, middleIndex).map((value, index) => (
           <Text
@@ -156,9 +124,8 @@ function Navbar() {
             value={value.name}
             container={value.container}
             page={page}
-            onClick={() => handleonclick(value.name) }
+            onClick={() => handleonclick(value.name)}
             style={{ fontSize: `${12 + index * 3}px` }}
-           
           />
         ))}
         <div className="eclipse_container">
@@ -166,7 +133,10 @@ function Navbar() {
           <div className="eclipse1"></div>
         </div>
         <div className="text hf">
-          <Text container={rotatedValues[3].container} value={rotatedValues[3].name} ></Text>
+          <Text
+            container={rotatedValues[3].container}
+            value={rotatedValues[3].name}
+          ></Text>
         </div>
         <div className="eclipse_container">
           <div className="eclipse1"></div>
@@ -177,10 +147,8 @@ function Navbar() {
             key={index}
             value={value.name}
             container={value.container}
-            
             onClick={() => handleonclick(value.name)}
             style={{ fontSize: `${17 - index * 3}px` }}
-        
           />
         ))}
         <div className="line"></div>

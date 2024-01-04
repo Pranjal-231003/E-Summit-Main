@@ -11,12 +11,11 @@ import CompetitionsLoader from "./components/Competitions/Preloader/preloader";
 import Footer from "./components/Footer/footer";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useRef } from "react";
-import OurTeam from '../src/components/OurTeam/OurTeam';
-import "./App.css"
+import OurTeam from "../src/components/OurTeam/OurTeam";
+import "./App.css";
 
 import ResponsiveNav from "./components/ResponsiveNav/ResponsiveNav";
 import "./App.css";
-
 
 function App() {
   const AboutRef = useRef(null);
@@ -43,7 +42,11 @@ function App() {
   return (
     <>
       <Router>
-        {!loader && <><ResponsiveNav /> <Navbar Aboutref={AboutRef}/></>}
+        {!loader && (
+          <>
+            <ResponsiveNav /> 
+          </>
+        )}
         <Routes>
           <Route
             path="/"
@@ -62,22 +65,18 @@ function App() {
             }
           />
 
-          <Route path="/Competitions" element={
-              competitionsLoader ? (
-                <CompetitionsLoader />
-              ) : (
-                <Competitions />
-              )
+          <Route
+            path="/Competitions"
+            element={
+              competitionsLoader ? <CompetitionsLoader /> : <Competitions />
             }
           />
-          <Route path="/Sponsors" element={competitionsLoader ? (
-                <CompetitionsLoader />
-              ) : (
-                <Sponsors />
-              )} />
-               <Route path="/team" element={<OurTeam />} />
+          <Route
+            path="/Sponsors"
+            element={competitionsLoader ? <CompetitionsLoader /> : <Sponsors />}
+          />
+          <Route path="/team" element={<OurTeam />} />
         </Routes>
-       
       </Router>
     </>
   );
