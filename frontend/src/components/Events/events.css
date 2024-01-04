@@ -16,6 +16,8 @@
     position: relative;
     transition: all 0.5s ease;
     mix-blend-mode: lighten;
+    object-fit: cover;
+    width: 100%;
   }
   .title,
   .card p {
