@@ -1,6 +1,7 @@
 // ContactForm.js
 import React, { useEffect } from 'react';
 import "./Contact.css"
+import withCursor from '../Cursor/Cursor';
 
 const ContactForm = () => {
   useEffect(() => {
@@ -19,4 +20,4 @@ const ContactForm = () => {
   );
 };
 
-export default ContactForm;
+export default withCursor(ContactForm);

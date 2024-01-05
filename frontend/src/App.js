@@ -44,6 +44,7 @@ function App() {
       <Router>
         {!loader && (
           <>
+            <Navbar />
             <ResponsiveNav /> 
           </>
         )}
