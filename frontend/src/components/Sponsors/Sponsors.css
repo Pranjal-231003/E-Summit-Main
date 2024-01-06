@@ -1,39 +1,58 @@
-/* Sponsors.css */
 
 .main {
-    width: 100vw;
-    height: 100vh;
-    position: relative;
-    overflow-y: none;
+    width: 0vw;
+    /* position: relative; */
+    overflow: hidden;
+    background-color: rgba(1,22,32,255) !important;
+
 }
 
 .splinemodel {
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.splines {
-    width: 100vh;
+    width: 100vw;
     height: 100vh;
+    z-index: 1; 
 }
 
-@media (min-width: 641px) and (max-width: 750px) {
-    .splinemodel {
-        width: 70%;
-        height: 70vh;
-        margin-left: 15%; /* Adjusted margin for centering */
-    }
+canvas{
+    width: 100vw !important;
+    height: 100vh !important;
+   transform: translateX(-40%);
 }
 
-/* Adjustments for small screens */
-@media (max-width: 640px) {
+@media screen and (max-width:950px) {
+    canvas{
+        transform: translateX(-45%);
+     }
+}
+@media screen and (max-width:755px) {
     .splinemodel {
-        width: 80%;
-        height: 50vh;
-        margin-left: 10%; /* Adjusted margin for centering */
+        width: 90vw;
+        height: 100vh;
+        z-index: 1; 
     }
+    canvas{
+   transform: translateX(-28%);
+}
+}
+@media screen and (max-width:655px) {
+
+    .splinemodel {
+        width: 70vw;
+        height: 100vh;
+        z-index: 1;
+        top: 0; 
+        left: 0;
+    }
+    canvas{
+        /* width: 70vw !important; */
+   transform: translate(11.5%,-20%);
+}
+}
+@media screen and (max-width:455px) {
+
+   
+    canvas{
+        width: 100vw !important;
+   transform: translate(11%,-20%);
+}
 }
