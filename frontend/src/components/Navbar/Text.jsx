@@ -17,9 +17,6 @@ function Text(props) {
       }
     }
 
-    if (props.onClick) {
-      props.onClick();
-    }
 
     if (props.value === 'Competition' || props.value === 'Sponsors' || props.value === 'Teams') {
       if (typeof props.setS === 'function') {

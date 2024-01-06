@@ -37,7 +37,6 @@ function Navbar() {
   const middleIndex = 3;
   const [rotatedValues, setRotatedValues] = useState(items);
 
-  const [rotationOccurred, setRotationOccurred] = useState(false);
 
   const [page, SetPage] = useState(false);
 
@@ -106,7 +105,7 @@ function Navbar() {
       // Use a setTimeout to ensure that the state is updated before handling the scroll
       setTimeout(() => {
         handleScroll();
-        setRotationOccurred(false);
+    
       }, 0);
     };
 
@@ -121,15 +120,13 @@ function Navbar() {
 
   const handleonclick = (value) => {
     
-        
-        setRotatedValues(rotateArrayToTarget(items, value));
-         // Set page based on the clicked item
+        if(rotatedValues[3].another!==0 ||rotatedValues[3].another!==5  )
+        setRotatedValues(rotateArrayToTarget(rotatedValues , value)); 
+
+        console.log(rotatedValues);
       
-    if(rotatedValues[3].another === 1 || rotatedValues[3].another === 2||rotatedValues[3].another === 6 ){
-        SetPage(true);
-        
-        console.log(page);
-    }
+      
+
     
     
   };
@@ -143,13 +140,13 @@ function Navbar() {
 
     // Rotate the array
     const rotatedArray = [...arr.slice(rotations), ...arr.slice(0, rotations)];
-    setRotationOccurred(true);
+
     return rotatedArray;
   };
 
   return (
     <>
-      <div className={`menu ${rotationOccurred ? "rotate-container" : ""}`}>
+      <div className="menu">
         <div className="line"></div>
         {rotatedValues.slice(0, middleIndex).map((value, index) => (
           <Text
