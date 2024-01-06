@@ -21,8 +21,6 @@
     height: 100vh;
 }
 
-<<<<<<< HEAD
-/* Adjustments for medium-sized screens */
 @media (min-width: 641px) and (max-width: 750px) {
     .splinemodel {
         width: 70%;
@@ -39,19 +37,3 @@
         margin-left: 10%; /* Adjusted margin for centering */
     }
 }
-=======
-
-@media (max-width: 640px) {
-  .main {
-      margin-left: 60rem;
-  }
-  .splinemodel {
-      margin-left: 40rem;
-      margin-right: 0;
-  }
-  .splines{
-      margin-right: 2rem;
-      margin-bottom: 2rem;
-  }    
-}
->>>>>>> d1fc6bb7f157aa69a3180d818eb279d3057def13
