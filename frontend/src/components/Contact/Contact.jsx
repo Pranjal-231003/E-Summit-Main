@@ -1,6 +1,7 @@
 import React from 'react'
 import  './Contact.css';
 import ContactForm from './ContactForm';
+import withCursor from '../Cursor/Cursor';
 
 const Contact = () => {
   return (
@@ -15,4 +16,4 @@ const Contact = () => {
   )
 }
 
-export default Contact
+export default withCursor(Contact);

@@ -16,7 +16,7 @@
     border: 1px solid rgb(49, 241, 49);
     transition: all 0.5s ease;
     border-radius: 1.25rem; 
-    margin-top: 2rem;
+    margin-top: 9rem;
 }
 
 .time-section {
@@ -103,6 +103,7 @@
         transform: translate(-50%, 150%);
     }
     .countdown-wrapper{
+        margin-top: 3rem;
         width: 90%;
     }
   
