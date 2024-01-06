@@ -75,6 +75,7 @@ function Navbar() {
       const scrollY = window.scrollY;
 
       let targetPage;
+      if(set===false){
       if (scrollY < Arr[1]) {
         targetPage = "Home";
       } else if (scrollY > Arr[1] && scrollY < Arr[2]) {
@@ -96,7 +97,7 @@ function Navbar() {
       ) {
         setRotatedValues(rotateArrayToTarget(items, targetPage));
       }
-    };
+    }};
 
     const handlePopstate = () => {
       // Reset to initial state
@@ -118,18 +119,7 @@ function Navbar() {
     };
   }, [items, rotatedValues, Arr]);
 
-  const handleonclick = (value) => {
-    
-        if(rotatedValues[3].another!==0 ||rotatedValues[3].another!==5  )
-        setRotatedValues(rotateArrayToTarget(rotatedValues , value)); 
 
-        console.log(rotatedValues);
-      
-      
-
-    
-    
-  };
   
 
   const rotateArrayToTarget = (arr, target) => {
@@ -154,8 +144,11 @@ function Navbar() {
             value={value.name}
             container={value.container}
             page={page}
-            setS={setS} set={set} 
-            onClick={() => handleonclick(value.name)}
+            rotatedValues={rotatedValues}
+            setRotatedValues={setRotatedValues}
+            rotateArrayToTarget={rotateArrayToTarget}
+                        setS={setS} set={set} 
+          
             style={{ fontSize: `${12 + index * 3}px` }}
           />
         ))}
@@ -179,7 +172,10 @@ function Navbar() {
             value={value.name}
             container={value.container}
             setS={setS} set={set} 
-            onClick={() => handleonclick(value.name)}
+            rotatedValues={rotatedValues}
+            setRotatedValues={setRotatedValues}
+            rotateArrayToTarget={rotateArrayToTarget}
+           
             style={{ fontSize: `${17 - index * 3}px` }}
           />
         ))}

@@ -16,7 +16,11 @@ function Text(props) {
         event.preventDefault();
       }
     }
+       
+    
+    props.setRotatedValues(props.rotateArrayToTarget(props.rotatedValues , props.value)); 
 
+    console.log(props.rotatedValues);
 
     if (props.value === 'Competition' || props.value === 'Sponsors' || props.value === 'Teams') {
       if (typeof props.setS === 'function') {
@@ -27,6 +31,7 @@ function Text(props) {
         props.setS(false);
       }
     }
+
   };
 
   useEffect(() => {
