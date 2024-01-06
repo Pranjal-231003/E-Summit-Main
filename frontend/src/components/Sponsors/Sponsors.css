@@ -1,49 +1,40 @@
-.main{
+/* Sponsors.css */
+
+.main {
     width: 100vw;
     height: 100vh;
     position: relative;
     overflow-y: none;
 }
 
-.splinemodel{
+.splinemodel {
     width: 100%;
     height: 100%;
-    /* position: absolute; */
     z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.splines{
+.splines {
     width: 100vh;
     height: 100vh;
 }
 
+/* Adjustments for medium-sized screens */
 @media (min-width: 641px) and (max-width: 750px) {
-    .main {
-      height: 100vh;
-      width: 100vw;
-    }
     .splinemodel {
         width: 70%;
-        height: 80%;
+        height: 70vh;
+        margin-left: 15%; /* Adjusted margin for centering */
     }
-  }
+}
 
-  @media (max-width: 640px) {
-    .main {
-        /* height: 400vh;
-        width: 100vw; */
-        margin-left: 10rem;
-        margin-right: 0;
-    }
+/* Adjustments for small screens */
+@media (max-width: 640px) {
     .splinemodel {
-        /* width: 200%;
-        height: 700%; */
-        margin-left: 10rem;
-        margin-right: 0;
+        width: 80%;
+        height: 50vh;
+        margin-left: 10%; /* Adjusted margin for centering */
     }
-    .splines{
-        /* width: 00vh;
-        height: 100vh; */
-        margin-right: 5rem;
-    }    
-  }
+}
