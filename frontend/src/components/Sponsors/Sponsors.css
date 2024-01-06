@@ -1,9 +1,9 @@
 
 .main {
     width: 0vw;
-    /* position: relative; */
+    /* position: relative;
     overflow: hidden;
-    background-color: rgba(1,22,32,255) !important;
+    background-color: rgba(1,22,32,255); */
 
 }
 
@@ -13,14 +13,14 @@
     z-index: 1; 
 }
 
-canvas{
+.spline{
     width: 100vw !important;
     height: 100vh !important;
    transform: translateX(-40%);
 }
 
 @media screen and (max-width:950px) {
-    canvas{
+    .spline{
         transform: translateX(-45%);
      }
 }
@@ -30,7 +30,7 @@ canvas{
         height: 100vh;
         z-index: 1; 
     }
-    canvas{
+    .spline{
    transform: translateX(-28%);
 }
 }
@@ -43,7 +43,7 @@ canvas{
         top: 0; 
         left: 0;
     }
-    canvas{
+    .spline{
         /* width: 70vw !important; */
    transform: translate(11.5%,-20%);
 }
@@ -51,7 +51,7 @@ canvas{
 @media screen and (max-width:455px) {
 
    
-    canvas{
+    .spline{
         width: 100vw !important;
    transform: translate(11%,-20%);
 }
