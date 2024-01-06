@@ -60,6 +60,15 @@
         font-size: 3rem;
         letter-spacing: 0.15rem;
     }
+    .overlay-text1 {
+      top: 27%; 
+    }
+    .overlay-text2 {
+      top: 41%; 
+    }
+    .overlay-text3 {
+      top: 55%; 
+    }
 }
   @media screen and (max-width: 1130px) {
     .overlay-text1,
@@ -105,52 +114,67 @@
   @media screen and (max-width: 870px) {
     .splinemodel{
       width: 20%;
-      left: 45%;
+      left: 44.5%;
      
   }
     .overlay-text1,
     .overlay-text2,
     .overlay-text3 {
-        font-size: 2.32rem;
-        top: 24%;
+        font-size: 2.4rem;
+        top: 28%;
         left: 29%;
+        letter-spacing: 0.25rem;
     }
     .overlay-text2{
-      top: 35%;
+      top: 40%;
     }
     .overlay-text3{
-      top: 46%;
+      top: 54%;
     }
 }
   
   @media screen and (max-width: 810px) {
     .splinemodel{
-      width: 21%;
+      width: 20%;
       left: 44%;  
   }
+    .overlay-text1,
+    .overlay-text2,
+    .overlay-text3 {
+        font-size: 2.3rem;
+        letter-spacing: 0.2rem;
+
+    }
+    .overlay-text2{
+      top: 41%;
+    }
+}
+  @media screen and (max-width: 775px) {
+ 
     .overlay-text1,
     .overlay-text2,
     .overlay-text3 {
         font-size: 2.2rem;
-
-    }
-}
-  @media screen and (max-width: 775px) {
-    .splinemodel{
-      width: 21%;
-      left: 44%;  
-  }
-    .overlay-text1,
-    .overlay-text2,
-    .overlay-text3 {
-        font-size: 2.1rem;
-        letter-spacing: 0.19rem;
+        letter-spacing: 0.23rem;
 
     }
 }
 
   
-@media screen and (max-width: 745px) {
+@media screen and (max-width: 750px) {
+  .splinemodel{
+    width: 20%;
+    left: 29%;  
+}
+  .overlay-text1,
+  .overlay-text2,
+  .overlay-text3 {
+      font-size: 2rem;
+      letter-spacing: 0.3rem;
+      left: 30%;
+  }
+}
+@media screen and (max-width: 710px) {
   .splinemodel{
     width: 20%;
     left: 29%;  
@@ -159,11 +183,11 @@
   .overlay-text2,
   .overlay-text3 {
       font-size: 1.9rem;
-      letter-spacing: 0.2rem;
+      letter-spacing: 0.28rem;
       left: 30%;
   }
 }
-@media screen and (max-width: 685px) {
+@media screen and (max-width: 675px) {
   .splinemodel{
     width: 21%;
     left: 27.5%;
@@ -171,9 +195,9 @@
   .overlay-text1,
   .overlay-text2,
   .overlay-text3 {
-      font-size: 1.7rem;
-      letter-spacing: 0.3rem;
-      left: 34%;
+      font-size: 1.8rem;
+      letter-spacing: 0.29rem;
+      left: 35%;
   }
 }
 @media screen and (max-width: 640px) {
@@ -183,7 +207,7 @@
   .splinemodel{
     position: relative;
     width: 100%;
-    top: 15%;
+    top: 25%;
     left: -11.3%;
     height: 50%;
 }
@@ -196,7 +220,7 @@
       display: none;
   }
   .competition-container{
-    margin-top: 10rem;
+    margin-top: 15rem;
   }
 }
 
@@ -212,17 +236,22 @@
 }
 
 @media screen and (max-width: 460px) {
- 
+  .splinemodel{
+top: 20%;
+ }
 .overlay-text2{
-  top: -30%;
+  top: -20%;
   left: 51%;
   font-size: 1rem;
+}
+.competition-container{
+  margin-top: 10rem;
 }
 }
 @media screen and (max-width: 355px) {
 
 .overlay-text2{
-  top: -30%;
+  top: -15%;
   left: 51%;
   font-size: 0.8rem;
 }
