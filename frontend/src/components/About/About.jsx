@@ -32,7 +32,7 @@ const About =forwardRef( (props,ref) => {
   return (
     <>
       <div id="about_container" ref={ref}>
-        <div className='about_about'>ABOUT E-SUMMIT</div>
+        <div className='about_about'><span className="text_s">ABOUT E-SUMMIT</span></div>
 
         <div className='about_box'>
           <div className='about_boxes'>
@@ -42,7 +42,7 @@ const About =forwardRef( (props,ref) => {
             </div>
           </div>
           <div id="figures_container">
-        <div className='about_about about_fig'>FIGURES</div>
+        <div className='about_about about_fig'><span className="text_s">FIGURES</span></div>
       
           <div className="figures">
             <div className="clips">

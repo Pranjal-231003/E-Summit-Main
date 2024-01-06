@@ -63,7 +63,7 @@ h1{
     height: 50%;
     border-radius: 30px;
     object-fit: cover;
-    max-height: 265px;
+    max-height: 205px;
     width: 100%;
     transition: filter 0.3s ease-in-out;
   }
@@ -89,14 +89,20 @@ h1{
   .team_icons{
     display: flex;
     background:  linear-gradient(180deg, rgba(0, 95, 89, 0.6) 0%, rgba(0, 178, 168, 0) 48.44%, rgba(0, 115, 108, 0.6) 98.44%);
-    margin-top: 4px;
+    margin-top: 8px;
     border-radius: 20px;
     
-    padding: 10px;
+    padding: 7px;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
+  }
+
+  .team_icons :hover{
+    cursor: pointer;
+    scale: 1.02;
+
   }
 
   .toggle-button {
@@ -114,7 +120,7 @@ h1{
     margin-top: -10px;
     margin-bottom: 20px;
   }
- 
+
   .section-line {
     width: 80%; 
     margin-bottom: 40px;

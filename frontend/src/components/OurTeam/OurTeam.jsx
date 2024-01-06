@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Ourteam.css";
 import Team_Card from "./TeamCard/Team_Card";
 // import { IconName } from "react-icons/hi2";
@@ -7,6 +7,9 @@ import { HiArrowUp } from "react-icons/hi2";
 import { FaArrowDownLong, FaArrowUpLong } from "react-icons/fa6";
 import { summitMembers } from "./Members";
 import { motion, AnimatePresence } from "framer-motion";
+import { useEffect, useMemo, useState } from "react";
+import Particles, { initParticlesEngine } from "@tsparticles/react";
+import { loadSlim } from "@tsparticles/slim";
 import ourTeam from "./Images/generate-a-blue-colour-scheme-background-image-for--our-team--page-heading-of-a-website 1.png";
 
 const sections = [
@@ -56,6 +59,97 @@ const sections = [
 const OurTeam = () => {
   const [showSection, setShowSection] = useState({});
 
+  const [init, setInit] = useState(false);
+
+  useEffect(() => {
+    initParticlesEngine(async (engine) => {
+
+      await loadSlim(engine);
+      //await loadBasic(engine);
+    }).then(() => {
+      setInit(true);
+    });
+  }, []);
+
+  const particlesLoaded = (container) => {
+    console.log(container);
+  };
+
+  const options = useMemo(
+    () => ({
+      background: {
+        color: {
+          value: "black",
+        },
+      },
+      fpsLimit: 120,
+      interactivity: {
+        events: {
+          onClick: {
+            enable: false,
+            mode: "push",
+          },
+          onHover: {
+            enable: true,
+            mode: "none",
+          },
+        },
+        modes: {
+          push: {
+            quantity: 1.1,
+          },
+          repulse: {
+            distance: 200,
+            duration: 0.9,
+          },
+        },
+      },
+      particles: {
+        color: {
+          value: "ffffff",
+        },
+        links: {
+          color: "#ffffff",
+          distance: 200,
+          enable: true,
+          opacity: 0.3,
+          width: 1,
+        },
+        move: {
+          direction: "none",
+          enable: true,
+          outModes: {
+            default: "bounce",
+          },
+          random: false,
+          speed: 0.3,
+          straight: false,
+        },
+        number: {
+          density: {
+            enable: true,
+          },
+          value: 40,
+          max: 150,
+        },
+        opacity: {
+          value: 0.3,
+        },
+        shape: {
+          type: "circle",
+        },
+        size: {
+          value: { min: 2, max: 5 },
+        },
+        zIndex : {
+          value: -1,
+        },
+      },
+      detectRetina: true,
+    }),
+    [],
+  );
+
   const handleToggleSection = (sectionId) => {
     setShowSection((prevState) => ({
       ...prevState,
@@ -65,12 +159,21 @@ const OurTeam = () => {
 
   return (
     <div className="ourteam-container">
+
+      <Particles
+              id="tsparticles"
+              particlesLoaded={particlesLoaded}
+              options={options}
+            />
       <div className="ourteam-img">
+
         <img src={ourTeam} alt="" />
       </div>
 
       {sections.map(({ title, members, lead, team, id }) => (
+        
         <div key={id}>
+
           <h1 className="text-head">{title}</h1>
           <div className="tagline">
             <h1>THE ONE WHO RULES</h1>
@@ -112,7 +215,9 @@ const OurTeam = () => {
             <div
               className="toggle-button"
               onClick={() => handleToggleSection(id)}
+              
             >
+               
               {showSection[id] ? (
                 <HiArrowUp style={{ fontSize: "1.5rem" }} />
               ) : (
@@ -120,11 +225,14 @@ const OurTeam = () => {
               )}
             </div>
           )}
-
           <hr className="section-line" />
         </div>
+        
       ))}
+
+
     </div>
+    
   );
 };
 
