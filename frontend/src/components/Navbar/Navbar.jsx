@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useMemo,useEffect, useState } from "react";
 import Text from "./Text";
 
 function Navbar() {
-  const items = [
+  const items =useMemo(() => [
     { name: "Contact us", container: "#Contact_Container", another: 0 },
     { name: "Competition", container: "Competitions", another: 1 },
     { name: "Sponsors", container: "Sponsors", another: 2 },
@@ -11,7 +11,27 @@ function Navbar() {
     { name: "Figures", container: "#figures_container", another: 0 },
     { name: "Events", container: "#Events_container", another: 0 },
     { name: "Team", container: "team", another: 6 },
-  ];
+  ],[]);
+  const [set, setS] = useState(false);
+  useEffect(() => {
+    // Function to handle popstate event
+    const handlePopstate = () => {
+      // Your logic to update the state based on the navigation
+      // For example, setS(false) to reset the state
+      setS(false);
+    };
+
+    // Attach the event listener
+    window.addEventListener('popstate', handlePopstate);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener('popstate', handlePopstate);
+    };
+  }, []);
+  useEffect(() => {
+    console.log(set);
+  }, [set]);
   
 
   const middleIndex = 3;
@@ -22,32 +42,35 @@ function Navbar() {
   const [page, SetPage] = useState(false);
 
   const [Arr, setArr] = useState([]);
-
   useEffect(() => {
-    if (rotatedValues[3].another === 1 || rotatedValues[3].another === 2 || rotatedValues[3].another === 6) {
-      SetPage(true);
-    } else {
-      SetPage(false);
-    }
-
-    const arr = [];
-    if (items[3].another !== 2 && items[3].another !== 1 && items[3].another !== 6) {
+    if (
+      items[3].another !== 2 &&
+      items[3].another !== 1 &&
+      items[3].another !== 6
+    ) {
       if (rotatedValues[3].another === 0 || rotatedValues[3].another === 5) {
         let j = 0;
+        const updatedArr = [];
+  
         for (let i = 0; i < 7; i++) {
           if (items[i].another === 0) {
             const about = document.getElementById(
               items[i].container.replace(/^#/, "")
             );
             const a = about ? about.offsetTop : 0;
-            arr[j] = a;
+            updatedArr[j] = a;
             j++;
           }
         }
-        console.log(arr);
-        setArr(arr.map((element) => element - 300));
+  
+        setArr(updatedArr.map((element) => element - 300));
       }
     }
+  }, [items, rotatedValues]);
+  
+
+  useEffect(() => {
+
 
     const handleScroll = () => {
       const scrollY = window.scrollY;
@@ -97,22 +120,18 @@ function Navbar() {
   }, [items, rotatedValues, Arr]);
 
   const handleonclick = (value) => {
-    if (rotatedValues[3].another === 0 || rotatedValues[3].another === 5) {
-      if (value !== "Home" && value !== "Contact us") {
-        // Move all items with another as 0 to Home position
-        const updatedValues = rotatedValues.map((item) => {
-          if (item.another === 0) {
-            return { ...item, another: 5 };
-          }
-          return item;
-        });
-        setRotatedValues(rotateArrayToTarget(updatedValues, "Home"));
-        SetPage(false); // Set page to false when non-Home item is clicked
-      } else {
+    
+        
         setRotatedValues(rotateArrayToTarget(items, value));
-        SetPage(value !== "Contact us"); // Set page based on the clicked item
-      }
+         // Set page based on the clicked item
+      
+    if(rotatedValues[3].another === 1 || rotatedValues[3].another === 2||rotatedValues[3].another === 6 ){
+        SetPage(true);
+        
+        console.log(page);
     }
+    
+    
   };
   
 
@@ -138,6 +157,7 @@ function Navbar() {
             value={value.name}
             container={value.container}
             page={page}
+            setS={setS} set={set} 
             onClick={() => handleonclick(value.name)}
             style={{ fontSize: `${12 + index * 3}px` }}
           />
@@ -161,6 +181,7 @@ function Navbar() {
             key={index}
             value={value.name}
             container={value.container}
+            setS={setS} set={set} 
             onClick={() => handleonclick(value.name)}
             style={{ fontSize: `${17 - index * 3}px` }}
           />

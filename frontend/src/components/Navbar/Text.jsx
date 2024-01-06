@@ -1,8 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 function Text(props) {
-  const [set, setS] = useState(false);
+  const [index, setIndex] = useState(false);
+
+  useEffect(() => {
+    console.log(props.set);
+  }, [props.set]);
 
   const handleClick = (event) => {
     if (props.container) {
@@ -16,15 +20,30 @@ function Text(props) {
     if (props.onClick) {
       props.onClick();
     }
-    console.log(props.page);
-    if (props.page && props.value !== 'Competition' && props.value !== 'Sponsors') {
-      setS(true);
+
+    if (props.value === 'Competition' || props.value === 'Sponsors' || props.value === 'Teams') {
+      if (typeof props.setS === 'function') {
+        props.setS((prevSet) => !prevSet);
+      }
+    } else {
+      if (typeof props.setS === 'function') {
+        props.setS(false);
+      }
     }
   };
 
+  useEffect(() => {
+    setIndex(props.container);
+    if (props.set) {
+      setIndex("");
+    } else {
+      setIndex(props.container);
+    }
+  }, [props.container, props.set]);
+
   return (
-    <div style={props.style} className={`option ${props.page ? 'inactive-link' : ''}`} onClick={handleClick}>
-      <Link to={props.container}>{props.value}</Link>
+    <div style={props.style} className="option" onClick={handleClick}>
+      <Link to={index}>{props.value}</Link>
     </div>
   );
 }
