@@ -2,7 +2,7 @@
     position: relative;
     width: 15%;
     height: 100vh;
-    left: 40%;
+    left: 43%;
     z-index: 1;
 }
 .overlay-text1, .overlay-text2, .overlay-text3 {
@@ -130,7 +130,7 @@
     .overlay-text1,
     .overlay-text2,
     .overlay-text3 {
-        font-size: 2.36rem;
+        font-size: 2.3rem;
         top: 32%;
         left: 29%;
         letter-spacing: 0.24rem;
@@ -146,12 +146,12 @@
   @media screen and (max-width: 815px) {
     .splinemodel{
       width: 20%;
-      left: 44%;  
+      left: 44.5%;  
   }
     .overlay-text1,
     .overlay-text2,
     .overlay-text3 {
-        font-size: 2.3rem;
+        font-size: 2.2rem;
         letter-spacing: 0.2rem;
 
     }
@@ -170,7 +170,7 @@
     .overlay-text1,
     .overlay-text2,
     .overlay-text3 {
-        font-size: 2.2rem;
+        font-size: 2.1rem;
         letter-spacing: 0.23rem;
 
     }
@@ -189,12 +189,12 @@
 @media screen and (max-width: 750px) {
   .splinemodel{
     width: 20%;
-    left: 29%;  
+    left: 44.5%;  
 }
   .overlay-text1,
   .overlay-text2,
   .overlay-text3 {
-      font-size: 2rem;
+      font-size: 1.9rem;
       letter-spacing: 0.3rem;
       left: 30%;
   }
@@ -202,12 +202,12 @@
 @media screen and (max-width: 710px) {
   .splinemodel{
     width: 20%;
-    left: 29%;  
+    left: 44.5%;  
 }
   .overlay-text1,
   .overlay-text2,
   .overlay-text3 {
-      font-size: 1.9rem;
+      font-size: 1.8rem;
       letter-spacing: 0.28rem;
       left: 30%;
   }
@@ -215,13 +215,13 @@
 @media screen and (max-width: 675px) {
   .splinemodel{
     width: 21%;
-    left: 27.5%;
+    left: 43%;
 }
   .overlay-text1,
   .overlay-text2,
   .overlay-text3 {
-      font-size: 1.8rem;
-      letter-spacing: 0.29rem;
+      font-size: 1.7rem;
+      letter-spacing: 0.27rem;
       left: 35%;
   }
 }
@@ -233,7 +233,7 @@
     position: relative;
     width: 100%;
     top: 25%;
-    left: -11.3%;
+    left: 0%;
     height: 50%;
 }
 .overlay-text2{
@@ -251,7 +251,7 @@
 
 @media screen and (max-width: 530px) {
 .splinemodel{
-  left: -11%;
+  left: 0%;
 }
 .overlay-text2{
   top: -30%;
@@ -262,6 +262,7 @@
 
 @media screen and (max-width: 460px) {
   .splinemodel{
+    left: 0%;
 top: 20%;
  }
 .overlay-text2{
