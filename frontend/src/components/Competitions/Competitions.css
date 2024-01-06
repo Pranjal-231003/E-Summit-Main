@@ -7,7 +7,7 @@
 }
 .overlay-text1, .overlay-text2, .overlay-text3 {
   position: absolute;
-  top: 17%;
+  top: 27%;
   left: 26%;
   z-index: -1;
   transform: translateX(-50%);
@@ -27,17 +27,18 @@
 
 
   .overlay-text2 {
-    top: 30%;  
+    top: 40%;  
     opacity: 1; 
       color: #00E0FF;
 
 }
   .overlay-text3 {
-    top: 43%;   
+    top: 53%;   
 }
   
 .main{
     height: 100vh;
+    width: 100%;
     position: relative;
     background: black;
 }
@@ -61,10 +62,10 @@
         letter-spacing: 0.15rem;
     }
     .overlay-text1 {
-      top: 27%; 
+      top: 33%; 
     }
     .overlay-text2 {
-      top: 41%; 
+      top: 44%; 
     }
     .overlay-text3 {
       top: 55%; 
@@ -75,6 +76,15 @@
     .overlay-text2,
     .overlay-text3 {
         font-size: 2.75rem;
+    }
+    .overlay-text1 {
+      top: 33%; 
+    }
+    .overlay-text2 {
+      top: 44%; 
+    }
+    .overlay-text3 {
+      top: 55%; 
     }
 }
   @media screen and (max-width: 1060px) {
@@ -120,20 +130,20 @@
     .overlay-text1,
     .overlay-text2,
     .overlay-text3 {
-        font-size: 2.4rem;
-        top: 28%;
+        font-size: 2.36rem;
+        top: 32%;
         left: 29%;
-        letter-spacing: 0.25rem;
+        letter-spacing: 0.24rem;
     }
     .overlay-text2{
-      top: 40%;
+      top: 43%;
     }
     .overlay-text3{
       top: 54%;
     }
 }
   
-  @media screen and (max-width: 810px) {
+  @media screen and (max-width: 815px) {
     .splinemodel{
       width: 20%;
       left: 44%;  
@@ -145,8 +155,14 @@
         letter-spacing: 0.2rem;
 
     }
-    .overlay-text2{
-      top: 41%;
+    .overlay-text1 {
+      top: 33%; 
+    }
+    .overlay-text2 {
+      top: 44%; 
+    }
+    .overlay-text3 {
+      top: 55%; 
     }
 }
   @media screen and (max-width: 775px) {
@@ -157,6 +173,15 @@
         font-size: 2.2rem;
         letter-spacing: 0.23rem;
 
+    }
+    .overlay-text1 {
+      top: 34%; 
+    }
+    .overlay-text2 {
+      top: 44%; 
+    }
+    .overlay-text3 {
+      top: 54%; 
     }
 }
 
