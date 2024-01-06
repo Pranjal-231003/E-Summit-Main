@@ -43,7 +43,7 @@
 }
 
 .competition-container {
-  overflow-x: none;
+  overflow-x: hidden;
     display: flex;
     justify-content: space-around;
     align-items: center;
