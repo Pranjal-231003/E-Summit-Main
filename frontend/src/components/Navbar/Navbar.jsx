@@ -100,13 +100,16 @@ function Navbar() {
     }};
 
     const handlePopstate = () => {
-      // Reset to initial state
-      setRotatedValues(items);
+      const savedRotatedValues = JSON.parse(localStorage.getItem("rotatedValues"));
 
-      // Use a setTimeout to ensure that the state is updated before handling the scroll
+      if (savedRotatedValues) {
+        setRotatedValues(savedRotatedValues);
+      } else {
+        setRotatedValues(items);
+      }
+
       setTimeout(() => {
         handleScroll();
-    
       }, 0);
     };
 
@@ -120,7 +123,10 @@ function Navbar() {
   }, [items, rotatedValues, Arr]);
 
 
-  
+  useEffect(() => {
+    // Saving rotatedValues to local storage
+    localStorage.setItem("rotatedValues", JSON.stringify(rotatedValues));
+  }, [rotatedValues]);
 
   const rotateArrayToTarget = (arr, target) => {
     const targetIndex = arr.findIndex((item) => item.name === target);

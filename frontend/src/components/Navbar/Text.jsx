@@ -36,7 +36,7 @@ function Text(props) {
 
   useEffect(() => {
     setIndex(props.container);
-    if (props.set) {
+    if (props.set && props.value!=="Sponsors" && props.value !== 'Competition' &&  props.value !== 'Teams' ) {
       setIndex("");
     } else {
       setIndex(props.container);
