@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Ourteam.css";
 import Team_Card from "./TeamCard/Team_Card";
-// import { IconName } from "react-icons/hi2";
 import { HiArrowDown } from "react-icons/hi2";
 import { HiArrowUp } from "react-icons/hi2";
 import { FaArrowDownLong, FaArrowUpLong } from "react-icons/fa6";
 import { summitMembers } from "./Members";
 import { motion, AnimatePresence } from "framer-motion";
+import { useEffect, useMemo, useState } from "react";
+import Particles, { initParticlesEngine } from "@tsparticles/react";
+import { loadSlim } from "@tsparticles/slim";
 import ourTeam from "./Images/generate-a-blue-colour-scheme-background-image-for--our-team--page-heading-of-a-website 1.png";
 
 const sections = [
@@ -24,19 +26,18 @@ const sections = [
   {
     title: "TECH TEAM",
     lead: summitMembers.slice(4, 5),
-    team: summitMembers.slice(5, 11),
+    team: summitMembers.slice(6, 11),
     id: "tech",
   },
   {
     title: "SPONSORSHIP TEAM",
     lead: summitMembers.slice(11, 12),
-    team: summitMembers.slice(12, 18),
-    id: "sponsor",
+    team: [...summitMembers.slice(12, 18), summitMembers.find(member => member.id === 38)],    id: "sponsor",
   },
   {
     title: "CREATIVE TEAM",
     lead: summitMembers.slice(18, 20),
-    team: summitMembers.slice(20, 21),
+    team: [ summitMembers.find(member => member.id===6),...summitMembers.slice(20, 21)],
     id: "creative",
   },
   {
@@ -55,6 +56,94 @@ const sections = [
 
 const OurTeam = () => {
   const [showSection, setShowSection] = useState({});
+  const [init, setInit] = useState(false);
+
+  useEffect(() => {
+    initParticlesEngine(async (engine) => {
+      await loadSlim(engine);
+    }).then(() => {
+      setInit(true);
+    });
+  }, []);
+
+  const particlesLoaded = (container) => {
+    console.log(container);
+  };
+
+  const options = useMemo(
+    () => ({
+      background: {
+        color: {
+          value: "black",
+        },
+      },
+      fpsLimit: 120,
+      interactivity: {
+        events: {
+          onClick: {
+            enable: false,
+            mode: "push",
+          },
+          onHover: {
+            enable: true,
+            mode: "none",
+          },
+        },
+        modes: {
+          push: {
+            quantity: 1.1,
+          },
+          repulse: {
+            distance: 200,
+            duration: 0.9,
+          },
+        },
+      },
+      particles: {
+        color: {
+          value: "ffffff",
+        },
+        links: {
+          color: "#ffffff",
+          distance: 200,
+          enable: true,
+          opacity: 0.3,
+          width: 1,
+        },
+        move: {
+          direction: "none",
+          enable: true,
+          outModes: {
+            default: "bounce",
+          },
+          random: false,
+          speed: 0.3,
+          straight: false,
+        },
+        number: {
+          density: {
+            enable: true,
+          },
+          value: 40,
+          max: 150,
+        },
+        opacity: {
+          value: 0.3,
+        },
+        shape: {
+          type: "circle",
+        },
+        size: {
+          value: { min: 2, max: 5 },
+        },
+        zIndex: {
+          value: -1,
+        },
+      },
+      detectRetina: true,
+    }),
+    [],
+  );
 
   const handleToggleSection = (sectionId) => {
     setShowSection((prevState) => ({
@@ -64,66 +153,82 @@ const OurTeam = () => {
   };
 
   return (
-    <div className="ourteam-container">
+    <div id="team1" className="ourteam-container">
+      <Particles
+        id="tsparticles"
+        particlesLoaded={particlesLoaded}
+        options={options}
+      />
       <div className="ourteam-img">
         <img src={ourTeam} alt="" />
       </div>
 
-      {sections.map(({ title, members, lead, team, id }) => (
-        <div key={id}>
-          <h1 className="text-head">{title}</h1>
-          <div className="tagline">
-            <h1>THE ONE WHO RULES</h1>
-          </div>
+      {sections.map(({ title, members, lead, team, id }) => {
+        const words = title.split(' ');
 
-          <div className="team-row">
-            {members &&
-              members.map((member) => (
-                <Team_Card key={member.id} {...member} />
+        return (
+          <div key={id}>
+            <h1 className="text-head">
+              {words.map((word, index) => (
+                <span key={index} style={{ color: index === 1 ? '#50C8FE' : 'inherit' }}>
+                  {word}
+                  {index < words.length - 1 && ' '}
+                </span>
               ))}
-          </div>
+            </h1>
 
-          {lead && (
+            <div className="tagline">
+              <h1>THE ONE WHO RULES</h1>
+            </div>
+
             <div className="team-row">
-              {lead.map((member) => (
-                <Team_Card key={member.id} {...member} />
-              ))}
+              {members &&
+                members.map((member) => (
+                  <Team_Card key={member.id} {...member} />
+                ))}
             </div>
-          )}
 
-          <AnimatePresence>
-            {showSection[id] && (
-              <motion.div
-                className="team-row"
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: "auto" }}
-                exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.4 }}
-              >
-                {team &&
-                  team.map((member) => (
-                    <Team_Card key={member.id} {...member} />
-                  ))}
-              </motion.div>
+            {lead && (
+              <div className="team-row">
+                {lead.map((member) => (
+                  <Team_Card key={member.id} {...member} />
+                ))}
+              </div>
             )}
-          </AnimatePresence>
 
-          {lead && team && (
-            <div
-              className="toggle-button"
-              onClick={() => handleToggleSection(id)}
-            >
-              {showSection[id] ? (
-                <HiArrowUp style={{ fontSize: "1.5rem" }} />
-              ) : (
-                <HiArrowDown />
+            <AnimatePresence>
+              {showSection[id] && (
+                <motion.div
+                  className="team-row"
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.4 }}
+                >
+                  {team &&
+                    team.map((member) => (
+                      <Team_Card key={member.id} {...member} />
+                    ))}
+                </motion.div>
               )}
-            </div>
-          )}
+            </AnimatePresence>
 
-          <hr className="section-line" />
-        </div>
-      ))}
+            {lead && team && (
+              <div
+                className="toggle-button"
+                onClick={() => handleToggleSection(id)}
+              >
+                {showSection[id] ? (
+                  <HiArrowUp style={{ fontSize: "1.5rem" }} />
+                ) : (
+                  <HiArrowDown />
+                )}
+              </div>
+            )}
+            <hr className="section-line" />
+          </div>
+        );
+      })}
     </div>
   );
 };

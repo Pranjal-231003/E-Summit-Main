@@ -3,8 +3,8 @@
   cursor: none;
 }
 .about_about {
-  position: relative;
 
+  text-align: center;
   font-family: Nico Moji;
   font-size: 3.5rem;
   font-weight: 400;
@@ -15,7 +15,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; */
   background: linear-gradient(90deg, #002358 0.02%, #000 98.61%);
-  display: flex;
+  
   justify-content: center;
   padding: 1.3rem;
 }

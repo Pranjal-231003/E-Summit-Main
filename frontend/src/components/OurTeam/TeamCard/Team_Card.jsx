@@ -2,11 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { SiGmail } from "react-icons/si";
 import { FaLinkedin } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
-const Team_Card = ({ name, title, photo, gmail, linkedin }) => {
+const Team_Card = ({ name, title, photo, gmail, linkedin, instagram }) => {
 
   
   const [gmailClicked, setGmailClicked] = useState(false);
   const [linkedinClicked, setLinkedinClicked] = useState(false);
+  const [instagramClicked, setInstagramClicked] = useState(false);
 
   useEffect(() => {
     if (gmailClicked) {
@@ -22,6 +23,14 @@ const Team_Card = ({ name, title, photo, gmail, linkedin }) => {
       setLinkedinClicked(true); // Reset the state
     }
   };
+
+  const openInstagramProfile = () => {
+    if (!instagramClicked) {
+      const url = `https://www.instagram.com/${instagram}/`;
+      window.open(url, '_blank');
+      setInstagramClicked(true);
+    }
+  };
   
 
   return (
@@ -32,7 +41,7 @@ const Team_Card = ({ name, title, photo, gmail, linkedin }) => {
       <div className="gmail" onClick={() => setGmailClicked(true)}>
       <SiGmail style={{ fontSize: "1.6em" }} />
       </div>
-      <div className="instagram" >
+      <div className="instagram" onClick={openInstagramProfile}>
       <FaInstagram  style={{ fontSize: "1.6em" }} />
       </div>
       <div className="linkedin" onClick={openLinkedInProfile}>

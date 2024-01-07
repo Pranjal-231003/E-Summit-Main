@@ -117,8 +117,7 @@
   .evh {
     text-align: center;
     padding: 1.3rem;
-    background: linear-gradient(180deg, rgb(0, 35.4, 88.5) 0%, rgb(0, 0, 0) 100%);
-    color: #ffffff;
+    background: linear-gradient(90deg, #002358 0.02%, #000 98.61%);    color: #ffffff;
     margin: 0;
     font-family: Nico Moji;
     font-size: 3.5rem;

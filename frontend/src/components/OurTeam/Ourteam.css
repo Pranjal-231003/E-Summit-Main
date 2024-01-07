@@ -1,4 +1,16 @@
+@font-face {
+  font-family: power;
+  src: url('./Font/PowerGrotesk-Regular.ttf');
+}
+@font-face {
+  font-family: title;
+  src: url('./Font/static/Montserrat-Regular.ttf');
+}
+#team1{
+  overflow-x: none;
+}
 .ourteam-container{
+  z-index: 1;
     background-color: black;
     display: flex;
     color: white;
@@ -7,15 +19,21 @@
     align-items: center ; 
     text-align: center; 
     overflow-x: none;
+    
 }
+
 h1{
     margin: 0;
+}
+.ourteam-img{
+  z-index: 1;
 }
 .ourteam-img img{
     object-fit: cover;
     height: 110vh;
     margin-bottom: 100px;
     width: 100%;
+   
     
 }
 .ourteam-container h1{
@@ -50,6 +68,7 @@ h1{
     transition: opacity 0.5s ease-in-out; 
   }
   .team_card {
+    
     position: relative;
     border-radius: 2px;
     margin: 1px 40px;
@@ -63,7 +82,7 @@ h1{
     height: 50%;
     border-radius: 30px;
     object-fit: cover;
-    max-height: 265px;
+    max-height: 205px;
     width: 100%;
     transition: filter 0.3s ease-in-out;
   }
@@ -73,12 +92,14 @@ h1{
   }
   
   .team_name {
+    font-family: power;
     color: white;
     font-size: 30px;
-    margin: -10px 27px -8px 20px ;
+    margin: -10px 50px -8px 20px ;
     transition: color 0.3s ease-in-out; 
   }
   .team_title {
+    font-family: title;
     font-size: 17px;
     margin-bottom: 20px;
     margin-top: 15px;
@@ -89,14 +110,23 @@ h1{
   .team_icons{
     display: flex;
     background:  linear-gradient(180deg, rgba(0, 95, 89, 0.6) 0%, rgba(0, 178, 168, 0) 48.44%, rgba(0, 115, 108, 0.6) 98.44%);
-    margin-top: 4px;
+    margin-top: 8px;
     border-radius: 20px;
     
-    padding: 10px;
+    padding: 7px;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
+  }
+  .text_team{
+    color: #50C8FE;
+  }
+
+  .team_icons :hover{
+    cursor: pointer;
+    scale: 1.02;
+
   }
 
   .toggle-button {
@@ -114,7 +144,7 @@ h1{
     margin-top: -10px;
     margin-bottom: 20px;
   }
- 
+
   .section-line {
     width: 80%; 
     margin-bottom: 40px;

@@ -4,9 +4,9 @@ import Spline from '@splinetool/react-spline';
 
 const Sponsors = () => {
   return (
-    <div className='main'>
+    <div id='sponsor' className='main'>
         <div className='splinemodel'>
-            <Spline scene="https://prod.spline.design/nnzeUzYoO22aP0An/scene.splinecode" />
+            <Spline className='spline' scene="https://prod.spline.design/nnzeUzYoO22aP0An/scene.splinecode" />
           {/* https://prod.spline.design/nnzeUzYoO22aP0An/scene.splinecode */}
         </div>
     </div>
