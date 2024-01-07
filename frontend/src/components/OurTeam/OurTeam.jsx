@@ -1,7 +1,6 @@
 import React from "react";
 import "./Ourteam.css";
 import Team_Card from "./TeamCard/Team_Card";
-// import { IconName } from "react-icons/hi2";
 import { HiArrowDown } from "react-icons/hi2";
 import { HiArrowUp } from "react-icons/hi2";
 import { FaArrowDownLong, FaArrowUpLong } from "react-icons/fa6";
@@ -27,19 +26,18 @@ const sections = [
   {
     title: "TECH TEAM",
     lead: summitMembers.slice(4, 5),
-    team: summitMembers.slice(5, 11),
+    team: summitMembers.slice(6, 11),
     id: "tech",
   },
   {
     title: "SPONSORSHIP TEAM",
     lead: summitMembers.slice(11, 12),
-    team: summitMembers.slice(12, 18),
-    id: "sponsor",
+    team: [...summitMembers.slice(12, 18), summitMembers.find(member => member.id === 38)],    id: "sponsor",
   },
   {
     title: "CREATIVE TEAM",
     lead: summitMembers.slice(18, 20),
-    team: summitMembers.slice(20, 21),
+    team: [ summitMembers.find(member => member.id===6),...summitMembers.slice(20, 21)],
     id: "creative",
   },
   {
@@ -58,14 +56,11 @@ const sections = [
 
 const OurTeam = () => {
   const [showSection, setShowSection] = useState({});
-
   const [init, setInit] = useState(false);
 
   useEffect(() => {
     initParticlesEngine(async (engine) => {
-
       await loadSlim(engine);
-      //await loadBasic(engine);
     }).then(() => {
       setInit(true);
     });
@@ -141,7 +136,7 @@ const OurTeam = () => {
         size: {
           value: { min: 2, max: 5 },
         },
-        zIndex : {
+        zIndex: {
           value: -1,
         },
       },
@@ -159,80 +154,82 @@ const OurTeam = () => {
 
   return (
     <div className="ourteam-container">
-
       <Particles
-              id="tsparticles"
-              particlesLoaded={particlesLoaded}
-              options={options}
-            />
+        id="tsparticles"
+        particlesLoaded={particlesLoaded}
+        options={options}
+      />
       <div className="ourteam-img">
-
         <img src={ourTeam} alt="" />
       </div>
 
-      {sections.map(({ title, members, lead, team, id }) => (
-        
-        <div key={id}>
+      {sections.map(({ title, members, lead, team, id }) => {
+        const words = title.split(' ');
 
-          <h1 className="text-head">{title}</h1>
-          <div className="tagline">
-            <h1>THE ONE WHO RULES</h1>
-          </div>
-
-          <div className="team-row">
-            {members &&
-              members.map((member) => (
-                <Team_Card key={member.id} {...member} />
+        return (
+          <div key={id}>
+            <h1 className="text-head">
+              {words.map((word, index) => (
+                <span key={index} style={{ color: index === 1 ? '#50C8FE' : 'inherit' }}>
+                  {word}
+                  {index < words.length - 1 && ' '}
+                </span>
               ))}
-          </div>
+            </h1>
 
-          {lead && (
+            <div className="tagline">
+              <h1>THE ONE WHO RULES</h1>
+            </div>
+
             <div className="team-row">
-              {lead.map((member) => (
-                <Team_Card key={member.id} {...member} />
-              ))}
+              {members &&
+                members.map((member) => (
+                  <Team_Card key={member.id} {...member} />
+                ))}
             </div>
-          )}
 
-          <AnimatePresence>
-            {showSection[id] && (
-              <motion.div
-                className="team-row"
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: "auto" }}
-                exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.4 }}
-              >
-                {team &&
-                  team.map((member) => (
-                    <Team_Card key={member.id} {...member} />
-                  ))}
-              </motion.div>
+            {lead && (
+              <div className="team-row">
+                {lead.map((member) => (
+                  <Team_Card key={member.id} {...member} />
+                ))}
+              </div>
             )}
-          </AnimatePresence>
 
-          {lead && team && (
-            <div
-              className="toggle-button"
-              onClick={() => handleToggleSection(id)}
-              
-            >
-               
-              {showSection[id] ? (
-                <HiArrowUp style={{ fontSize: "1.5rem" }} />
-              ) : (
-                <HiArrowDown />
+            <AnimatePresence>
+              {showSection[id] && (
+                <motion.div
+                  className="team-row"
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.4 }}
+                >
+                  {team &&
+                    team.map((member) => (
+                      <Team_Card key={member.id} {...member} />
+                    ))}
+                </motion.div>
               )}
-            </div>
-          )}
-          <hr className="section-line" />
-        </div>
-        
-      ))}
+            </AnimatePresence>
 
-
+            {lead && team && (
+              <div
+                className="toggle-button"
+                onClick={() => handleToggleSection(id)}
+              >
+                {showSection[id] ? (
+                  <HiArrowUp style={{ fontSize: "1.5rem" }} />
+                ) : (
+                  <HiArrowDown />
+                )}
+              </div>
+            )}
+            <hr className="section-line" />
+          </div>
+        );
+      })}
     </div>
-    
   );
 };
 

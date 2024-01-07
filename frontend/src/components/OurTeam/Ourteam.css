@@ -1,4 +1,14 @@
+@font-face {
+  font-family: power;
+  src: url('./Font/PowerGrotesk-Regular.ttf');
+}
+@font-face {
+  font-family: title;
+  src: url('./Font/static/Montserrat-Regular.ttf');
+}
+
 .ourteam-container{
+  z-index: 1;
     background-color: black;
     display: flex;
     color: white;
@@ -7,15 +17,21 @@
     align-items: center ; 
     text-align: center; 
     overflow-x: none;
+    
 }
+
 h1{
     margin: 0;
+}
+.ourteam-img{
+  z-index: 1;
 }
 .ourteam-img img{
     object-fit: cover;
     height: 110vh;
     margin-bottom: 100px;
     width: 100%;
+   
     
 }
 .ourteam-container h1{
@@ -50,6 +66,7 @@ h1{
     transition: opacity 0.5s ease-in-out; 
   }
   .team_card {
+    
     position: relative;
     border-radius: 2px;
     margin: 1px 40px;
@@ -73,12 +90,14 @@ h1{
   }
   
   .team_name {
+    font-family: power;
     color: white;
     font-size: 30px;
-    margin: -10px 27px -8px 20px ;
+    margin: -10px 50px -8px 20px ;
     transition: color 0.3s ease-in-out; 
   }
   .team_title {
+    font-family: title;
     font-size: 17px;
     margin-bottom: 20px;
     margin-top: 15px;
@@ -97,6 +116,9 @@ h1{
     justify-content: space-around;
     align-items: center;
     gap: 8px;
+  }
+  .text_team{
+    color: #50C8FE;
   }
 
   .team_icons :hover{
