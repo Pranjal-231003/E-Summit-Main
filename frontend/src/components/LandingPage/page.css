@@ -65,11 +65,13 @@
 
 
 .logo {
-  margin: 20px;
-  margin-left: 10px;
+  margin: 10px;
+  margin-left: 20px;
   padding: 2px;
   /* width: 50%; */
-  scale: 80%;
+  scale: 110%;
+  width: 6rem;
+
 }
 .onclick {
   height: 75%;
@@ -233,7 +235,7 @@
     height: 40%;
   }
   .logo_container {
-    height: 40vh;
+    height: 45vh;
     width: 80%;
     background-image: url("../images/logo2.png");
     background-size: contain;
