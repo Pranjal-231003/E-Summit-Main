@@ -18,10 +18,13 @@ function Navbar() {
     const handlePopstate = () => {
       // Your logic to update the state based on the navigation
       // For example, setS(false) to reset the state
+      if(rotatedValues[3].another===0 ||rotatedValues[3].another===5 )
       setS(false);
+      
     };
 
     // Attach the event listener
+    
     window.addEventListener('popstate', handlePopstate);
 
     // Clean up the event listener on component unmount
@@ -100,14 +103,14 @@ function Navbar() {
     }};
 
     const handlePopstate = () => {
-      const savedRotatedValues = JSON.parse(localStorage.getItem("rotatedValues"));
 
-      if (savedRotatedValues) {
-        setRotatedValues(savedRotatedValues);
-      } else {
-        setRotatedValues(items);
-      }
+      const currentUrl = window.location.href;
 
+// Get the path after the domain
+    const pathAfterDomain = window.location.pathname;
+    const pathWithoutLeadingSlash = pathAfterDomain.slice(1);
+      console.log(pathWithoutLeadingSlash);
+      setRotatedValues(rotateArrayTocontainer(items,pathWithoutLeadingSlash))
       setTimeout(() => {
         handleScroll();
       }, 0);
@@ -130,6 +133,17 @@ function Navbar() {
 
   const rotateArrayToTarget = (arr, target) => {
     const targetIndex = arr.findIndex((item) => item.name === target);
+
+    // Calculate the number of rotations needed to bring the target to the 4th position
+    const rotations = (targetIndex - 3 + arr.length) % arr.length;
+
+    // Rotate the array
+    const rotatedArray = [...arr.slice(rotations), ...arr.slice(0, rotations)];
+
+    return rotatedArray;
+  };
+  const rotateArrayTocontainer = (arr, target) => {
+    const targetIndex = arr.findIndex((item) => item.container === target);
 
     // Calculate the number of rotations needed to bring the target to the 4th position
     const rotations = (targetIndex - 3 + arr.length) % arr.length;

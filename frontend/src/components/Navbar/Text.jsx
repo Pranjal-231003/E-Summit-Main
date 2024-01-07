@@ -22,21 +22,18 @@ function Text(props) {
 
     console.log(props.rotatedValues);
 
-    if (props.value === 'Competition' || props.value === 'Sponsors' || props.value === 'Teams') {
-      if (typeof props.setS === 'function') {
-        props.setS((prevSet) => !prevSet);
-      }
-    } else {
-      if (typeof props.setS === 'function') {
-        props.setS(false);
-      }
+    if (['Competition', 'Sponsors', 'Team'].includes(props.value) && typeof props.setS === 'function') {
+      props.setS(true);
+    } else if (typeof props.setS === 'function') {
+      props.setS(false);
     }
-
-  };
+    
+    
+  };  
 
   useEffect(() => {
     setIndex(props.container);
-    if (props.set && props.value!=="Sponsors" && props.value !== 'Competition' &&  props.value !== 'Teams' ) {
+    if (props.set && props.value!=="Sponsors" && props.value !== 'Competition' &&  props.value !== 'Team' ) {
       setIndex("");
     } else {
       setIndex(props.container);
