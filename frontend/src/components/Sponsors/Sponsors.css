@@ -1,6 +1,11 @@
+#sponsor{
+    overflow-x: hidden;
+    background-color: #000912;
+}
 
 .main {
     width: 0vw;
+    /* overflow-x: none; */
     /* position: relative;
     overflow: hidden;
     background-color: rgba(1,22,32,255); */
@@ -8,6 +13,9 @@
 }
 
 .splinemodel {
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
     width: 100vw;
     height: 100vh;
     z-index: 1; 
