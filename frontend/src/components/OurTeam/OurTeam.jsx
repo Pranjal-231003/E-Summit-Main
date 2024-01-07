@@ -153,7 +153,7 @@ const OurTeam = () => {
   };
 
   return (
-    <div className="ourteam-container">
+    <div id="team1" className="ourteam-container">
       <Particles
         id="tsparticles"
         particlesLoaded={particlesLoaded}

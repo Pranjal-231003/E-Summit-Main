@@ -6,7 +6,9 @@
   font-family: title;
   src: url('./Font/static/Montserrat-Regular.ttf');
 }
-
+#team1{
+  overflow-x: none;
+}
 .ourteam-container{
   z-index: 1;
     background-color: black;
