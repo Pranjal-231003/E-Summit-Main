@@ -5,11 +5,14 @@ import Spline from '@splinetool/react-spline';
 const Sponsors = () => {
   return (
     <div id='sponsor' className='main'>
-        <div className='splinemodel'>
-            <Spline className='spline' scene="https://prod.spline.design/nnzeUzYoO22aP0An/scene.splinecode" />
+      {/* <div className='mains'> */}
+
+        <div className='splimod'>
+            <Spline className='spli'  scene="https://prod.spline.design/nnzeUzYoO22aP0An/scene.splinecode" />
           {/* https://prod.spline.design/nnzeUzYoO22aP0An/scene.splinecode */}
         </div>
-    </div>
+      </div>
+    // </div>
   );
 };
 

@@ -220,6 +220,9 @@ h1{
     align-items: center;
     gap: 5px;
   }
+  .tagline h1{
+    font-size: 20px;
+    margin: 0 10px;
 
-
+}
   }

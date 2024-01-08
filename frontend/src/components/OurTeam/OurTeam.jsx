@@ -12,45 +12,55 @@ import { loadSlim } from "@tsparticles/slim";
 import ourTeam from "./Images/generate-a-blue-colour-scheme-background-image-for--our-team--page-heading-of-a-website 1.png";
 
 const sections = [
-  { title: "OUR HEAD", members: summitMembers.slice(0, 1), id: "head" },
+  { title: "OUR HEAD", members: summitMembers.slice(0, 1), id: "head",
+     tagline: "The one who reigns supreme, no crown needed." },
   {
     title: "OUR COORDINATOR",
     members: summitMembers.slice(1, 2),
     id: "coordinator",
+    tagline: "The one who orchestrates chaos into harmony.",
   },
   {
     title: "FINANCE CONVENOR",
     members: summitMembers.slice(2, 3),
     id: "finance",
+    tagline: "The one who juggles numbers like a mathemagician.",
   },
   {
     title: "TECH TEAM",
     lead: summitMembers.slice(4, 5),
-    team: summitMembers.slice(6, 11),
+    team: summitMembers.slice(5, 11),
     id: "tech",
+    tagline: "The one who speaks in bytes and troubleshoots in dreams.",
   },
   {
     title: "SPONSORSHIP TEAM",
     lead: summitMembers.slice(11, 12),
     team: [...summitMembers.slice(12, 18), summitMembers.find(member => member.id === 38)],    id: "sponsor",
+    tagline: "The one who turns connections into currency.",
+
+
   },
   {
     title: "CREATIVE TEAM",
     lead: summitMembers.slice(18, 20),
     team: [ summitMembers.find(member => member.id===6),...summitMembers.slice(20, 21)],
     id: "creative",
+    tagline: "The one who paints outside the lines and calls it a masterpiece." ,
   },
   {
     title: "PR TEAM",
     lead: summitMembers.slice(21, 23),
     team: summitMembers.slice(23, 30),
     id: "pr",
+    tagline: "The one who weaves tales with words mightier than the sword." ,
   },
   {
     title: "CONTENT TEAM",
     lead: summitMembers.slice(30, 31),
     team: summitMembers.slice(31, 37),
     id: "content",
+    tagline: "The one who weaves tales with words mightier than the sword.",
   },
 ];
 
@@ -163,7 +173,7 @@ const OurTeam = () => {
         <img src={ourTeam} alt="" />
       </div>
 
-      {sections.map(({ title, members, lead, team, id }) => {
+      {sections.map(({ title, members, lead, team, id,tagline }) => {
         const words = title.split(' ');
 
         return (
@@ -178,7 +188,7 @@ const OurTeam = () => {
             </h1>
 
             <div className="tagline">
-              <h1>THE ONE WHO RULES</h1>
+              <h1>{tagline.toUpperCase()}</h1>
             </div>
 
             <div className="team-row">
