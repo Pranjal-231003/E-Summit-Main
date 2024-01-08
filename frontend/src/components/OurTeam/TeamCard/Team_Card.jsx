@@ -20,15 +20,21 @@ const Team_Card = ({ name, title, photo, gmail, linkedin, instagram }) => {
     if (!linkedinClicked) {
       const url = `${linkedin}`;
       window.open(url, '_blank');
-      setLinkedinClicked(true); // Reset the state
+      setLinkedinClicked(true); 
+      setTimeout(() => {
+        setLinkedinClicked(false);
+      }, 1000);
     }
   };
-
+  
   const openInstagramProfile = () => {
     if (!instagramClicked) {
-      const url = `https://www.instagram.com/${instagram}/`;
+      const url = `${instagram}`;
       window.open(url, '_blank');
-      setInstagramClicked(true);
+      setInstagramClicked(true); 
+      setTimeout(() => {
+        setInstagramClicked(false);
+      }, 1000);
     }
   };
   
