@@ -15,42 +15,42 @@ function Events() {
       title: "Speaker 1",
       description1: "TIME-6PM",
       description2: "VENUE-OAT",
-      one: " Voluptatum quis facere consequatur cumque quaerat culpa aperiam deleniti, nulla, sint rem non!"
+      one: "Unlocking the Entrepreneurial Spirit: Insights to Navigate Business Frontiers."
     },
     {
         imageUrl: 'https://res.cloudinary.com/dqcrzyxnt/image/upload/q_auto/f_auto/v1704745247/esummit/R_f15abz.png',
         title: "Speaker 2",
         description1: "TIME-6PM",
         description2: "VENUE-OAT",
-        one: " Voluptatum quis facere consequatur cumque quaerat culpa aperiam deleniti, nulla, sint rem non!"
+        one: "From Vision to Victory: Lessons in Entrepreneurial Leadership and Innovation."
       },
       {
         imageUrl: 'https://res.cloudinary.com/dqcrzyxnt/image/upload/q_auto/f_auto/v1704745247/esummit/R_f15abz.png',
         title: "Speaker 3",
         description1: "TIME-6PM",
         description2: "VENUE-OAT",
-        one: " Voluptatum quis facere consequatur cumque quaerat culpa aperiam deleniti, nulla, sint rem non!"
+        one: "The Art of Disruption: Leveraging Entrepreneurial Insights for Growth and Impact."
       },
       {
         imageUrl: 'https://res.cloudinary.com/dqcrzyxnt/image/upload/q_auto/f_auto/v1704745249/esummit/talkshow_jaonpf.png',
         title: "ASHNEER GROVER TALK",
         description1: "TIME-6PM",
         description2: "VENUE-OAT",
-        one: " Voluptatum quis facere consequatur cumque quaerat culpa aperiam deleniti, nulla, sint rem non!"
+        one: "Startup building by experienced veterans"
       },
       {
         imageUrl: 'https://res.cloudinary.com/dqcrzyxnt/image/upload/q_auto/f_auto/v1704745251/esummit/workshop2_joyqmx.jpg',
         title: "ASHNEER GROVER TALK",
         description1: "TIME-6PM",
         description2: "VENUE-OAT",
-        one: " Voluptatum quis facere consequatur cumque quaerat culpa aperiam deleniti, nulla, sint rem non!"
+        one: "Practical knowledge by experienced entrepreneurs of real world"
       },
       {
         imageUrl: 'https://res.cloudinary.com/dqcrzyxnt/image/upload/q_auto/f_auto/v1704745251/esummit/workshop1_tqbgek.jpg',
         title: "ASHNEER GROVER TALK",
         description1: "TIME-6PM",
         description2: "VENUE-OAT",
-        one: " Voluptatum quis facere consequatur cumque quaerat culpa aperiam deleniti, nulla, sint rem non!"
+        one: "Let the beats ignite your spirit at an electrifying EDM night!"
       }
       
   ];
