@@ -11,42 +11,42 @@ import r from "../images/R.png"
 function Events() {
   const eventsData = [
     {
-      imageUrl: r,
+      imageUrl: 'https://res.cloudinary.com/dqcrzyxnt/image/upload/q_auto/f_auto/v1704745247/esummit/R_f15abz.png',
       title: "Speaker 1",
       description1: "TIME-6PM",
       description2: "VENUE-OAT",
       one: " Voluptatum quis facere consequatur cumque quaerat culpa aperiam deleniti, nulla, sint rem non!"
     },
     {
-        imageUrl: r,
+        imageUrl: 'https://res.cloudinary.com/dqcrzyxnt/image/upload/q_auto/f_auto/v1704745247/esummit/R_f15abz.png',
         title: "Speaker 2",
         description1: "TIME-6PM",
         description2: "VENUE-OAT",
         one: " Voluptatum quis facere consequatur cumque quaerat culpa aperiam deleniti, nulla, sint rem non!"
       },
       {
-        imageUrl: r,
+        imageUrl: 'https://res.cloudinary.com/dqcrzyxnt/image/upload/q_auto/f_auto/v1704745247/esummit/R_f15abz.png',
         title: "Speaker 3",
         description1: "TIME-6PM",
         description2: "VENUE-OAT",
         one: " Voluptatum quis facere consequatur cumque quaerat culpa aperiam deleniti, nulla, sint rem non!"
       },
       {
-        imageUrl: talk,
+        imageUrl: 'https://res.cloudinary.com/dqcrzyxnt/image/upload/q_auto/f_auto/v1704745249/esummit/talkshow_jaonpf.png',
         title: "ASHNEER GROVER TALK",
         description1: "TIME-6PM",
         description2: "VENUE-OAT",
         one: " Voluptatum quis facere consequatur cumque quaerat culpa aperiam deleniti, nulla, sint rem non!"
       },
       {
-        imageUrl: w1,
+        imageUrl: 'https://res.cloudinary.com/dqcrzyxnt/image/upload/q_auto/f_auto/v1704745251/esummit/workshop2_joyqmx.jpg',
         title: "ASHNEER GROVER TALK",
         description1: "TIME-6PM",
         description2: "VENUE-OAT",
         one: " Voluptatum quis facere consequatur cumque quaerat culpa aperiam deleniti, nulla, sint rem non!"
       },
       {
-        imageUrl: w2,
+        imageUrl: 'https://res.cloudinary.com/dqcrzyxnt/image/upload/q_auto/f_auto/v1704745251/esummit/workshop1_tqbgek.jpg',
         title: "ASHNEER GROVER TALK",
         description1: "TIME-6PM",
         description2: "VENUE-OAT",

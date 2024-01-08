@@ -13,7 +13,7 @@ import quiz from "../images/BIZ QUIZ.png";
 const Competitions = () => {
   const competitionsData = [
     {
-      imageUrl: expo,
+      imageUrl: 'https://res.cloudinary.com/dqcrzyxnt/image/upload/q_auto/f_auto/v1704745249/esummit/STARTUP__EXPO1_qfpsnt.png',
       title: "Start-Up Expo",
       description:
         "LNMIIT Startup Expo: Igniting sparks of ideas, propelling innovations to greater heights!",
@@ -23,7 +23,7 @@ const Competitions = () => {
         "https://unstop.com/conferences/startup-expo-e-summit-lnm-institute-of-information-technology-lnmiit-jaipur-849058",
     },
     {
-      imageUrl: shark,
+      imageUrl: 'https://res.cloudinary.com/dqcrzyxnt/image/upload/q_auto/f_auto/v1704745250/esummit/shark_tank_pbvfqv.png',
       title: "Shark Tank",
       description:
         "Dive into innovation with Shark Tank  at E-Summit, where ideas surface and pitches make a splash!",
@@ -33,7 +33,7 @@ const Competitions = () => {
         "https://unstop.com/competitions/shark-tank-e-summit-lnm-institute-of-information-technology-lnmiit-jaipur-849015",
     },
     {
-      imageUrl: ideathon,
+      imageUrl: 'https://res.cloudinary.com/dqcrzyxnt/image/upload/q_auto/f_auto/v1704745252/esummit/Post3_lsrena.png',
       title: "Ideathon",
       description:
         "Ideas ignite, innovation excites: Fueling the future at E-Summit LNMIIT's Kickstart Ideathon",
@@ -43,7 +43,7 @@ const Competitions = () => {
         "https://unstop.com/competitions/ideathon-e-summit-lnm-institute-of-information-technology-lnmiit-jaipur-847782",
     },
     {
-      imageUrl: wolf,
+      imageUrl: 'https://res.cloudinary.com/dqcrzyxnt/image/upload/q_auto/f_auto/v1704745251/esummit/THE_WOLF_OF_DALAL_STREET_ulgode.png',
       title: "The Wolf of Dalal Street",
       description:
         "Master the Wall Street Bull: Dive into stock market investing with savvy decision-making!",
@@ -52,7 +52,7 @@ const Competitions = () => {
       register: "",
     },
     {
-      imageUrl: quiz,
+      imageUrl: 'https://res.cloudinary.com/dqcrzyxnt/image/upload/q_auto/f_auto/v1704745244/esummit/BIZ_QUIZ_lbz9eu.png',
       title: "Biz Quiz",
       description:
         "Exciting Quiz testing your entrepreneurial brilliance and business intelligence",

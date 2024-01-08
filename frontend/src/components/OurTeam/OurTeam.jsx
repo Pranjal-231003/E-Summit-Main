@@ -170,7 +170,7 @@ const OurTeam = () => {
         options={options}
       />
       <div className="ourteam-img">
-        <img src={ourTeam} alt="" />
+        <img src='https://res.cloudinary.com/dqcrzyxnt/image/upload/q_auto/f_auto/v1704747008/esummit/generate-a-blue-colour-scheme-background-image-for--our-team--page-heading-of-a-website_1_fqefxx.png' alt="" />
       </div>
 
       {sections.map(({ title, members, lead, team, id,tagline }) => {
