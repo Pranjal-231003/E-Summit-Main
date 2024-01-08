@@ -7,26 +7,26 @@ import edm from "../images/edmnight.png";
 import talk from "../images/talkshow.png";
 import w1 from "../images/workshop1.jpg";
 import w2 from "../images/workshop2.jpg";
-
+import r from "../images/R.png"
 function Events() {
   const eventsData = [
     {
-      imageUrl: ash,
-      title: "ASHNEER GROVER TALK",
+      imageUrl: r,
+      title: "Speaker 1",
       description1: "TIME-6PM",
       description2: "VENUE-OAT",
       one: " Voluptatum quis facere consequatur cumque quaerat culpa aperiam deleniti, nulla, sint rem non!"
     },
     {
-        imageUrl: amit,
-        title: "ASHNEER GROVER TALK",
+        imageUrl: r,
+        title: "Speaker 2",
         description1: "TIME-6PM",
         description2: "VENUE-OAT",
         one: " Voluptatum quis facere consequatur cumque quaerat culpa aperiam deleniti, nulla, sint rem non!"
       },
       {
-        imageUrl: edm,
-        title: "ASHNEER GROVER TALK",
+        imageUrl: r,
+        title: "Speaker 3",
         description1: "TIME-6PM",
         description2: "VENUE-OAT",
         one: " Voluptatum quis facere consequatur cumque quaerat culpa aperiam deleniti, nulla, sint rem non!"
