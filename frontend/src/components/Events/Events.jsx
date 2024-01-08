@@ -15,42 +15,42 @@ function Events() {
       title: "Speaker 1",
       description1: "TIME-6PM",
       description2: "VENUE-OAT",
-      one: " Voluptatum quis facere consequatur cumque quaerat culpa aperiam deleniti, nulla, sint rem non!"
+      one: "Unlocking the Entrepreneurial Spirit: Insights to Navigate Business Frontiers."
     },
     {
         imageUrl: r,
         title: "Speaker 2",
         description1: "TIME-6PM",
         description2: "VENUE-OAT",
-        one: " Voluptatum quis facere consequatur cumque quaerat culpa aperiam deleniti, nulla, sint rem non!"
+        one: "From Vision to Victory: Lessons in Entrepreneurial Leadership and Innovation."
       },
       {
         imageUrl: r,
         title: "Speaker 3",
         description1: "TIME-6PM",
         description2: "VENUE-OAT",
-        one: " Voluptatum quis facere consequatur cumque quaerat culpa aperiam deleniti, nulla, sint rem non!"
+        one: "The Art of Disruption: Leveraging Entrepreneurial Insights for Growth and Impact."
       },
       {
         imageUrl: talk,
         title: "ASHNEER GROVER TALK",
         description1: "TIME-6PM",
         description2: "VENUE-OAT",
-        one: " Voluptatum quis facere consequatur cumque quaerat culpa aperiam deleniti, nulla, sint rem non!"
+        one: "Startup building by experienced veterans"
       },
       {
         imageUrl: w1,
         title: "ASHNEER GROVER TALK",
         description1: "TIME-6PM",
         description2: "VENUE-OAT",
-        one: " Voluptatum quis facere consequatur cumque quaerat culpa aperiam deleniti, nulla, sint rem non!"
+        one: "Practical knowledge by experienced entrepreneurs of real world"
       },
       {
-        imageUrl: w2,
-        title: "ASHNEER GROVER TALK",
+        imageUrl: edm,
+        title: "EDM NIGHT",
         description1: "TIME-6PM",
         description2: "VENUE-OAT",
-        one: " Voluptatum quis facere consequatur cumque quaerat culpa aperiam deleniti, nulla, sint rem non!"
+        one: "Let the beats ignite your spirit at an electrifying EDM night!"
       }
       
   ];

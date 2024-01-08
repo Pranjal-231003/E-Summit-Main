@@ -29,7 +29,7 @@
     background-color: #00000099;
     padding: 15px 0;
     color: #00ffff;
-    font-family: "New Rocker-Regular", Helvetica;
+    font-family: "New Rocker-Regular" Helvetica;
     font-size: 30px;
     font-weight: 400;
     left: 0;
@@ -51,7 +51,7 @@
   }
   .desc {
     color: #ffffff;
-    font-family: "Scope One-Regular", Helvetica;
+    font-family: "Scope One-Regular" Helvetica;
     font-size: 25px;
     font-weight: 400;
     left: 0;
