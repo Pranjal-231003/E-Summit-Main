@@ -61,3 +61,13 @@
       padding: 20px 0;
     }
   }
+
+  @media(max-width: 600px) {
+    .cursor {
+      display: none;
+    }
+  
+    .text-element:hover .cursor {
+      display: none;
+    }
+  }
