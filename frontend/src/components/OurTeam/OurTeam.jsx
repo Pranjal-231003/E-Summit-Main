@@ -29,7 +29,7 @@ const sections = [
   {
     title: "TECH TEAM",
     lead: summitMembers.slice(4, 5),
-    team: summitMembers.slice(6, 11),
+    team: summitMembers.slice(5, 11),
     id: "tech",
     tagline: "The one who speaks in bytes and troubleshoots in dreams.",
   },
