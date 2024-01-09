@@ -53,7 +53,7 @@ const sections = [
     lead: summitMembers.slice(21, 23),
     team: summitMembers.slice(23, 30),
     id: "pr",
-    tagline: "The one who weaves tales with words mightier than the sword." ,
+    tagline: "The one who elevate connections." ,
   },
   {
     title: "CONTENT TEAM",
