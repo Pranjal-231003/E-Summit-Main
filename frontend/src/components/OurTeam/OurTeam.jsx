@@ -15,7 +15,7 @@ const sections = [
   { title: "OUR HEAD", members: summitMembers.slice(0, 1), id: "head",
      tagline: "The one who reigns supreme, no crown needed." },
   {
-    title: "OUR COORDINATOR",
+    title: "EVENT COORDINATOR",
     members: summitMembers.slice(1, 2),
     id: "coordinator",
     tagline: "The one who orchestrates chaos into harmony.",
@@ -53,7 +53,7 @@ const sections = [
     lead: summitMembers.slice(21, 23),
     team: summitMembers.slice(23, 30),
     id: "pr",
-    tagline: "The one who weaves tales with words mightier than the sword." ,
+    tagline: "The one who elevate connections." ,
   },
   {
     title: "CONTENT TEAM",
