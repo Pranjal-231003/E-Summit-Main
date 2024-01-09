@@ -56,9 +56,12 @@
   }
 
   @media(max-width: 900px) {
+    #home{
+      overflow-x: none;
+    }
     .hover-this {
       width: 100%;
-      padding: 20px 0;
+      padding: 5px 0;
     }
   }
 
