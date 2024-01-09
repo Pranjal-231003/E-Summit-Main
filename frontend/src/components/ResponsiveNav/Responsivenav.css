@@ -45,61 +45,10 @@
     color: white;
   }
   
-  @media only screen and (max-width: 780px) {
-    .nav-links {
-      position: fixed;
-      top: 0;
-      left: -30%;
-      z-index: 100;
-      height: 100vh;
-      width: 100%;
-      background-color: rgb(0, 0, 0);
-      flex-direction: column;
-      justify-content: center;
-      transform: translateX(-100%);
-      transition: transform 0.3s ease-in;
-    }
-    .navdis {
-        display: flex !important;
-    }
   
-    .show-nav {
-      transform: translateX(0);
-    }
   
-    .hide-nav {
-      transform: translateX(-100%);
-    }
-    .navbar {
-        width: 100% !important;
-    }
-  
-    .nav-icon {
-      display: block;
-      font-size: 1.5rem;
-      z-index: 1000;
-      margin-right: 1.8rem;
-      cursor: pointer;
 
-    }
-  
-    .overlay {
-      background: fixed;
-      overflow: hidden;
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 100vh;
-      width: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      
-    }
-  
-    .nav-links a {
-     z-index: 100;
-      color: rgb(255, 255, 255);
-    }
-  }
+
   .navdis {
     display: none;
   }
@@ -222,12 +171,11 @@
   
   
   
-  
   @media only screen and (max-width: 780px) {
     .nav-links {
       position: fixed;
       top: 0;
-      left: 0;
+      left: -30%;
       z-index: 100;
       height: 100vh;
       width: 100%;
@@ -236,21 +184,30 @@
       justify-content: center;
       transform: translateX(-100%);
       transition: transform 0.3s ease-in;
+    } 
+    
+    .navdis {
+        display: flex !important;
     }
   
     .show-nav {
       transform: translateX(0);
-      
     }
   
     .hide-nav {
       transform: translateX(-100%);
+    }
+    .navbar {
+        width: 100% !important;
     }
   
     .nav-icon {
       display: block;
       font-size: 1.5rem;
       z-index: 1000;
+      margin-right: 1.8rem;
+      cursor: pointer;
+
     }
   
     .overlay {
@@ -265,7 +222,6 @@
       background-color: rgba(0, 0, 0, 0.5);
       
     }
-  
     .nav-links a {
      z-index: 100;
       color: rgb(255, 255, 255);
