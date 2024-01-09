@@ -188,23 +188,28 @@
 }
 
 @media (max-width: 950px) {
+  #Page_container h1 {
+    font-size: 8rem;
+    top: 25%;
+    }
   .onclick {
     display: block;
   }
   .logo {
     width: 14%;
   }
-  .menu {
-    display: none;
-  }
+
   
 }
-@media (max-width: 800px) {
+@media (max-width: 780px) {
   #Page_container h1 {
   font-size: 8rem;
   top: 25%;
   }
   .logoc {
+    display: none;
+  }
+  .menu {
     display: none;
   }
 }
