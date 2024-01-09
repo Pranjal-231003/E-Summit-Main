@@ -13,7 +13,7 @@ export default function Card({ imageUrl, title, description1, description2, one 
       <div className="card-text">
         <h1 className="title">{title}</h1>
         <p className="desc">{one}</p>
-        <p className="desc">{description1} <br /> {description2}</p>
+        <p className="desc1">{description1} <br /> {description2}</p>
       </div>
     </div>
   );

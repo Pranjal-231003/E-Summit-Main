@@ -13,46 +13,45 @@ function Events() {
     {
       imageUrl: 'https://res.cloudinary.com/dqcrzyxnt/image/upload/q_auto/f_auto/v1704745247/esummit/R_f15abz.png',
       title: "Speaker 1",
-      description1: "TIME-6PM",
-      description2: "VENUE-OAT",
+      description1: "TIME-TBD",
+      description2: "VENUE-TBD",
       one: "Unlocking the Entrepreneurial Spirit: Insights to Navigate Business Frontiers."
     },
     {
         imageUrl: 'https://res.cloudinary.com/dqcrzyxnt/image/upload/q_auto/f_auto/v1704745247/esummit/R_f15abz.png',
         title: "Speaker 2",
-        description1: "TIME-6PM",
-        description2: "VENUE-OAT",
+        description1: "TIME-TBD",
+        description2: "VENUE-TBD",
         one: "From Vision to Victory: Lessons in Entrepreneurial Leadership and Innovation."
       },
       {
         imageUrl: 'https://res.cloudinary.com/dqcrzyxnt/image/upload/q_auto/f_auto/v1704745247/esummit/R_f15abz.png',
         title: "Speaker 3",
-        description1: "TIME-6PM",
-        description2: "VENUE-OAT",
+        description1: "TIME-TBD",
+        description2: "VENUE-TBD",
         one: "The Art of Disruption: Leveraging Entrepreneurial Insights for Growth and Impact."
       },
       {
-        imageUrl: 'https://res.cloudinary.com/dqcrzyxnt/image/upload/q_auto/f_auto/v1704745249/esummit/talkshow_jaonpf.png',
-        title: "ASHNEER GROVER TALK",
-        description1: "TIME-6PM",
-        description2: "VENUE-OAT",
+        imageUrl: 'https://res.cloudinary.com/dqcrzyxnt/image/upload/q_auto/f_auto/v1704745251/esummit/workshop1_tqbgek.jpg',
+        title: "Workshop - 1",
+        description1: "TIME-TBD",
+        description2: "VENUE-TBD",
         one: "Startup building by experienced veterans"
       },
       {
         imageUrl: 'https://res.cloudinary.com/dqcrzyxnt/image/upload/q_auto/f_auto/v1704745251/esummit/workshop2_joyqmx.jpg',
-        title: "ASHNEER GROVER TALK",
-        description1: "TIME-6PM",
-        description2: "VENUE-OAT",
+        title: "Workshop - 2",
+        description1: "TIME-TBD",
+        description2: "VENUE-TBD",
         one: "Practical knowledge by experienced entrepreneurs of real world"
       },
       {
-        imageUrl: 'https://res.cloudinary.com/dqcrzyxnt/image/upload/q_auto/f_auto/v1704745251/esummit/workshop1_tqbgek.jpg',
-        title: "ASHNEER GROVER TALK",
-        description1: "TIME-6PM",
-        description2: "VENUE-OAT",
+        imageUrl: edm,
+        title: "Pronite",
+        description1: "TIME-TBD",
+        description2: "VENUE-TBD",
         one: "Let the beats ignite your spirit at an electrifying EDM night!"
       }
-      
   ];
 
   return (
