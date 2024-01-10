@@ -21,7 +21,7 @@ const Card = ({ imageUrl, title, description,time, venue,register }) => {
         <h2>{title}</h2>
         <h3>{description}</h3>
         <p className="desc">{time} <br /><br /> {venue}</p>
-        <a href={register} className="register" rel="noopener noreferrer">
+        <a href={register} className="register" target='_blank' rel="noopener noreferrer">
           Register &nbsp;
           <MdArrowOutward className="arrow"/>
         </a>
