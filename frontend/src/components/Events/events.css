@@ -29,7 +29,7 @@
     background-color: #00000099;
     padding: 15px 0;
     color: #00ffff;
-    font-family: "New Rocker-Regular", Helvetica;
+    font-family: "New Rocker-Regular";
     font-size: 30px;
     font-weight: 400;
     left: 0;
@@ -49,17 +49,16 @@
     text-align: center;
     width: 100%;
   }
-  .desc {
+  p.desc {
     color: #ffffff;
-    font-family: "Scope One-Regular", Helvetica;
-    font-size: 25px;
+    font-family: "Scope One-Regular" ;
+    font-size: 1.5em;
     font-weight: 400;
-    left: 0;
-    letter-spacing: 7.5px;
+    letter-spacing: 0.15rem;
     line-height: normal;
     opacity: 0.8;
     text-align: center;
-    top: 0;
+    padding: 0 0.1rem;
   }
   
   .corner-image {
@@ -101,7 +100,7 @@
   }
   .events-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 5rem;
     margin: 3% 5%;
 
@@ -131,46 +130,28 @@
     cursor: none;
     
   }
-  @media (max-width: 1000px) {
-    .events-grid {
-      width: 80%;
 
-      grid-template-columns: repeat(2, 1fr);
-      gap: 5rem;
-    }
-    
-  }
 
-  @media (max-width: 720px) {
+  @media (max-width: 756px) {
     .events-grid {
-      grid-template-columns: repeat(2, 1fr);
       gap: 3rem;
     }
-    .events-container{
-transform: translateX(-2%);
-    }
+  
   }
-  @media (max-width: 660px) {
+  @media (max-width: 720px) {
+    p.desc{
+      font-size: 1.2em;
+    }
     .events-grid {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 2rem;
     }
-    .events-container{
-transform: translateX(-3%);
-    }
-  }
-  @media (max-width: 620px) {
-    .events-grid {
-      gap: 2rem;
-    }
-    .events-container{
-transform: translateX(-5%);
-    }
+   
   }
 
   @media (max-width: 600px) {
     .events-grid {
       width: 70%;
-      grid-template-columns: repeat(1, 1fr);
       gap: 5rem;
     }
  

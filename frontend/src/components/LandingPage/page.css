@@ -1,10 +1,10 @@
 #Page_container {
-  height: 100vh;
+  height: 110vh;
   width: 100%;
-  background: url("../images/landingpage.png");
+  background: url("https://res.cloudinary.com/dqcrzyxnt/image/upload/q_auto/f_auto/v1704745252/esummit/landingpage_ba7hix.png");
   background-repeat: no-repeat;
   object-fit: fill;
-  background-size: 100% 100vh;
+  background-size: 100% 110vh;
   overflow: hidden;
   cursor: none;
 }
@@ -188,23 +188,29 @@
 }
 
 @media (max-width: 950px) {
+  #Page_container h1 {
+    font-size: 8rem;
+    top: 25%;
+    }
+  
   .onclick {
     display: block;
   }
   .logo {
     width: 14%;
   }
-  .menu {
-    display: none;
-  }
+
   
 }
-@media (max-width: 800px) {
+@media (max-width: 780px) {
   #Page_container h1 {
   font-size: 8rem;
   top: 25%;
   }
   .logoc {
+    display: none;
+  }
+  .menu {
     display: none;
   }
 }

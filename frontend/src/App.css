@@ -10,8 +10,8 @@
 
 
 /* Track on hover */
-::-webkit-scrollbar-track:hover {
-  background-color: transparent; /* Set a different color for the track on hover if desired */
+::-webkit-scrollbar-track {
+  background-color: #212121; /* Set a different color for the track on hover if desired */
 }
 
 /* Handle on active */
@@ -19,10 +19,6 @@
   background-color: #555; /* Set a different color when the scroller is clicked */
 }
 
-/* Track on active */
-::-webkit-scrollbar-track:active {
-  background-color: transparent; /* Set a different color for the track when the scroller is clicked */
-}
 
 /* Corner */
 ::-webkit-scrollbar-corner {
@@ -60,8 +56,21 @@
   }
 
   @media(max-width: 900px) {
+    #home{
+      overflow-x: none;
+    }
     .hover-this {
       width: 100%;
-      padding: 20px 0;
+      padding: 5px 0;
+    }
+  }
+
+  @media(max-width: 600px) {
+    .cursor {
+      display: none;
+    }
+  
+    .text-element:hover .cursor {
+      display: none;
     }
   }

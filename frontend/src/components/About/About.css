@@ -3,7 +3,6 @@
   cursor: none;
 }
 .about_about {
-
   text-align: center;
   font-family: Nico Moji;
   font-size: 3.5rem;
@@ -55,8 +54,8 @@
   color: #FFF;
   font-family: 'Poppins', sans-serif;
   font-size: 1.5rem;
-  padding: 8rem;
-  margin-top: 5rem;
+  padding: 1rem;
+  margin-top: 13rem;
   align-content: center;
 }
 
@@ -65,7 +64,7 @@
   /* border-radius: 2rem; */
   opacity: 0.6;
   background: linear-gradient(90deg, #002F46 0.17%, #000 99.82%);
-  box-shadow: 30px 6px 4px 0px rgba(0, 0, 0, 0.50);
+  /* box-shadow: 30px 6px 4px 0px rgba(0, 0, 0, 0.50); */
   display: flex;
   padding: 2rem;
   justify-content: space-evenly; 
@@ -175,10 +174,29 @@
   .about_text {
     margin-top: 0rem;
     padding-top: 0  ;
+    transform: translateX(-1%);
+    width: 90%;
   }
   .figures_box {
+    flex-direction: column;
+    background: 0;
     box-shadow: none;
   }
+  .figures_line{
+    height: 0.2rem;
+    width: 23rem;
+  }
+  .clips {
+    animation: none;
+    height: 0;
+    width: 0;
+  }
+  .about_fig {
+    margin-bottom: 5rem;
+  }  
+  .about_box {
+    height: 115rem;
+  } 
 }
 
 @media (min-width: 401px) and (max-width: 520px) {
@@ -199,15 +217,14 @@
     text-align: center;
     margin-top: 1rem;
     padding: 1rem;
-    right: 8rem;
+    right: 10rem;
     margin-bottom: 2rem;
-    font-size: 1rem;
+    width: 140%;
   }
   
   .figures_box {
     flex-direction: column;
     background: 0;
-    box-shadow: 0;
     box-shadow: none;
   }
   .figures_line{
@@ -229,6 +246,7 @@
     font-size: 2rem;
   } 
   .about_box {
+    width: 100%;
     height: 132rem;
   } 
   .about_img {
@@ -245,7 +263,7 @@
     right: 10rem;
     margin-bottom: 2rem;
     font-size: 1.5rem;
-    width: 20rem;
+    width: 18rem;
   }
   
   .figures_box {
