@@ -27,18 +27,18 @@ const sections = [
     //   tagline: "The one who juggles numbers like a mathemagician.",
     // },
   {
-    title: "PR HEADS",
-    lead: summitMembers.slice(21, 23),
-    // team: summitMembers.slice(23, 30),
-    id: "pr",
-    tagline: "The one who elevate connections." ,
-  },
-  {
     title: "TECH TEAM",
     lead: summitMembers.slice(4, 5),
     team: summitMembers.slice(5, 11),
     id: "tech",
-    tagline: "The one who speaks in bytes and troubleshoots in dreams.",
+    tagline: "The ones who speaks in bytes and troubleshoots in dreams.",
+  },
+  {
+    title: "CONTACT US",
+    lead: summitMembers.slice(21, 23),
+    // team: summitMembers.slice(23, 30),
+    id: "pr",
+    tagline: "The one who elevate connections." ,
   },
   // {
   //   title: "SPONSORSHIP TEAM",
