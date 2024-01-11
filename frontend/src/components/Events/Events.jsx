@@ -11,21 +11,22 @@ import r from "../images/R.png"
 function Events() {
   const eventsData = [
     {
-      imageUrl: 'https://res.cloudinary.com/dqcrzyxnt/image/upload/q_auto/f_auto/v1704745247/esummit/R_f15abz.png',
+      imageUrl: 'https://res.cloudinary.com/dr0b2iifb/image/upload/v1704993566/REV4_klv16m.png',
       title: "Speaker 1",
       description1: "TIME-TBD",
       description2: "VENUE-TBD",
       one: "Unlocking the Entrepreneurial Spirit: Insights to Navigate Business Frontiers."
     },
+    // https://res.cloudinary.com/dr0b2iifb/image/upload/v1704993566/REV4_klv16m.png
     {
-        imageUrl: 'https://res.cloudinary.com/dqcrzyxnt/image/upload/q_auto/f_auto/v1704745247/esummit/R_f15abz.png',
+        imageUrl: 'https://res.cloudinary.com/dr0b2iifb/image/upload/v1704993566/REV4_klv16m.png',
         title: "Speaker 2",
         description1: "TIME-TBD",
         description2: "VENUE-TBD",
         one: "From Vision to Victory: Lessons in Entrepreneurial Leadership and Innovation."
       },
       {
-        imageUrl: 'https://res.cloudinary.com/dqcrzyxnt/image/upload/q_auto/f_auto/v1704745247/esummit/R_f15abz.png',
+        imageUrl: 'https://res.cloudinary.com/dr0b2iifb/image/upload/v1704993566/REV4_klv16m.png',
         title: "Speaker 3",
         description1: "TIME-TBD",
         description2: "VENUE-TBD",
