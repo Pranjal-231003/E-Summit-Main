@@ -24,7 +24,7 @@ const Footer = () => (
             </div>
             <div className="address">
                 <FaLocationDot />
-                <p>The LMN Institute of
+                <p>The LNM Institute of
                     <br /> Information Technology
                     <br />     Jaipur, Rajasthan
                     <br />(302031)</p>
