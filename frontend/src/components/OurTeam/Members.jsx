@@ -67,7 +67,7 @@ const newData = data.map((item, index) => {
   return { ...item, gmail: emails[index] };
 });
 
-console.log(newData);
+// console.log(newData);
 
 export const summitMembers = [
     { id: 1, name: 'Yash Gautam', title: 'Head', photo: 'https://res.cloudinary.com/dqcrzyxnt/image/upload/q_auto/v1703008272/WhatsApp_Image_2023-11-28_at_10.17.34_PM_uuxjz9.jpg' ,gmail: '21ucs235@lnmiit.ac.in',linkedin:'https://www.linkedin.com/in/yash-gautam-108555229/',instagram: '' },
