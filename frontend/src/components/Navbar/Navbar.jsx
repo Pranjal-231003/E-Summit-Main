@@ -33,7 +33,7 @@ function Navbar() {
     };
   }, []);
   useEffect(() => {
-    console.log(set);
+    // console.log(set);
   }, [set]);
   
 

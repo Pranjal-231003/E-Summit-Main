@@ -5,7 +5,7 @@ function Text(props) {
   const [index, setIndex] = useState(false);
 
   useEffect(() => {
-    console.log(props.set);
+    // console.log(props.set);
   }, [props.set]);
 
   const handleClick = (event) => {
