@@ -58,7 +58,7 @@ const Competitions = () => {
         "Exciting Quiz testing your entrepreneurial brilliance and business intelligence",
       time: "TIME-TBD",
       venue: "VENUE-TBD",
-      register: "",
+      register: "https://unstop.com/quiz/bizquiz-e-summit-lnm-institute-of-information-technology-lnmiit-jaipur-872803",
     },
   ];
 
