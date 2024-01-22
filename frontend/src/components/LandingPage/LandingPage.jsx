@@ -11,16 +11,29 @@ class LandingPage extends React.Component {
       <>
         <div id="Page_container">
           <div className="rectangle"></div>
-          
+
           <div className="logo_container"><img className="logo logoc" src='https://res.cloudinary.com/dqcrzyxnt/image/upload/q_auto/f_auto/v1704745245/esummit/logo_md7cvo.png'></img></div>
           <h1 className="text-element">
             <span className="text_s">E-SUMMIT</span>
           </h1>
+          
           <div className="count">
             <Countdown/>
           </div>
           <div className="design_container">
+            
           </div>
+          <button className="merch">
+           <p> M E R C H</p>
+            <div id="clip">
+              <div id="leftTop" className="corner"></div>
+              <div id="rightBottom" className="corner"></div>
+              <div id="rightTop" className="corner"></div>
+              <div id="leftBottom" className="corner"></div>
+            </div>
+            <span id="rightArrow" className="arrow"></span>
+            <span id="leftArrow" className="arrow"></span>
+          </button>
           {/* Add other text elements as needed */}
           <div className="cursor"></div>
         </div>
