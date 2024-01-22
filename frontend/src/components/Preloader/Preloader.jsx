@@ -21,8 +21,7 @@ function Preloader() {
   return (
     <div className="page">
       <video ref={videoRef} width="100%" height="100%" autoPlay muted>
-        <source src='https://res.cloudinary.com/dempuhcss/video/upload/f_auto:video,q_auto/hg3lgbqhfdbmx2ng1sic' type="video/mp4" />
-        Your browser does not support the video tag.
+        <source src={preloaderVideo} type="video/mp4" />
       </video>
     
     </div>
