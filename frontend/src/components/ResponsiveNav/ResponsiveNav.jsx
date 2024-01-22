@@ -64,6 +64,9 @@ const ResponsiveNav = () => {
             <Link to='/team' onClick={closeNav}>
               Our Team
             </Link>
+            <Link to='https://ybc.social/pages/LNMIIT' target='_blank' onClick={closeNav}>
+              Merchandise
+            </Link>
           </div>
           <div className={`nav-icon`} onClick={handleNavClick}>
             {isNavOpen ? <FaTimes /> : <FaBars />}
