@@ -284,7 +284,7 @@
   color: #888; /* Change text color to indicate it's inactive */
   pointer-events: none; /* Disable pointer events to make it unclickable */
 }
-button {
+.merch {
   position: relative;
   width: 11em;
   height: 4em;
@@ -331,13 +331,13 @@ button {
   
 }
 
-button:hover #rightArrow {
+.merch:hover #rightArrow {
   background-color: #27c39f;
   left: -15%;
   animation: 0.6s ease-in-out both infinite alternate rightArrow8;
 }
 
-button:hover #leftArrow {
+.merch:hover #leftArrow {
   background-color: #27c39f;
   left: 103%;
   animation: 0.6s ease-in-out both infinite alternate leftArrow8;
@@ -373,31 +373,31 @@ button:hover #leftArrow {
   left: 88%;
 }
 
-button:hover #leftTop {
+.merch:hover #leftTop {
   animation: 0.1s ease-in-out 0.05s both changeColor8,
   0.2s linear 0.4s both lightEffect8;
 }
 
-button:hover #rightTop {
+.merch:hover #rightTop {
   animation: 0.1s ease-in-out 0.15s both changeColor8,
   0.2s linear 0.4s both lightEffect8;
 }
 
-button:hover #rightBottom {
+.merch:hover #rightBottom {
   animation: 0.1s ease-in-out 0.25s both changeColor8,
   0.2s linear 0.4s both lightEffect8;
 }
 
-button:hover #leftBottom {
+.merch:hover #leftBottom {
   animation: 0.1s ease-in-out 0.35s both changeColor8,
   0.2s linear 0.4s both lightEffect8;
 }
 
-button:hover .corner {
+.merch:hover .corner {
   transform: scale(1.25) rotate(45deg);
 }
 
-button:hover #clip {
+.merch:hover #clip {
   animation: 0.2s ease-in-out 0.55s both greenLight8;
   --color: #27c39f;
 }
