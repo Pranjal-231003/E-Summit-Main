@@ -23,7 +23,7 @@ const Card = ({ imageUrl, title, description,time, venue,register }) => {
         <p className="desc">{time} <br /><br /> {venue}</p>
         <a href={register} className="register" target='_blank' rel="noopener noreferrer">
           Register &nbsp;
-          {/* <MdArrowOutward className="arrow"/> */}
+          <MdArrowOutward className="arrow"/>
         </a>
       </div>
     </div>
