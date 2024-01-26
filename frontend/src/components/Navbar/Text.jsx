@@ -20,7 +20,7 @@ function Text(props) {
     
     props.setRotatedValues(props.rotateArrayToTarget(props.rotatedValues , props.value)); 
 
-    console.log(props.rotatedValues);
+    // console.log(props.rotatedValues);
 
     if (['Competition', 'Sponsors', 'Team'].includes(props.value) && typeof props.setS === 'function') {
       props.setS(true);

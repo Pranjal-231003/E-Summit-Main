@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
+import { ScrollLink, animateScroll as scroll } from 'react-scroll';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import './Responsivenav.css';
 import img from "../images/logo.png"
@@ -18,7 +18,7 @@ const ResponsiveNav = () => {
   };
 
   const openESummit = () => {
-    console.log("Opening E-Summit");
+    // console.log("Opening E-Summit");
     setShowESummit(true);
   };
 

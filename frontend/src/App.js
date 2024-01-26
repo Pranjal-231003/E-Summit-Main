@@ -57,7 +57,7 @@ function App() {
               ) : (
                 <div id="home">
                   <LandingPage />
-                  <About ref={AboutRef}></About>
+                  <About ref={AboutRef} />
                   <Events />
                   <Contact />
                   <Footer />
@@ -69,8 +69,11 @@ function App() {
           <Route
             path="/Competitions"
             element={
-              competitionsLoader ? <CompetitionsLoader /> : <Competitions />
-            }
+              competitionsLoader ? (
+                <CompetitionsLoader />
+              ) : (
+                <Competitions />
+              )            }
           />
           <Route
             path="/Sponsors"

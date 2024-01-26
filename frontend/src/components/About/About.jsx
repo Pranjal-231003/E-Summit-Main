@@ -70,22 +70,22 @@ const About = forwardRef((props, ref) => {
                 <img
                   src="https://res.cloudinary.com/dqcrzyxnt/image/upload/q_auto/f_auto/v1704745243/esummit/clip_anwcvm.png"
                   alt=""
-                  srcset=""
+                  srcSet=""
                 />
                 <img
                   src="https://res.cloudinary.com/dqcrzyxnt/image/upload/q_auto/f_auto/v1704745243/esummit/clip_anwcvm.png"
                   alt=""
-                  srcset=""
+                  srcSet=""
                 />
                 <img
                   src="https://res.cloudinary.com/dqcrzyxnt/image/upload/q_auto/f_auto/v1704745243/esummit/clip_anwcvm.png"
                   alt=""
-                  srcset=""
+                  srcSet=""
                 />
                 <img
                   src="https://res.cloudinary.com/dqcrzyxnt/image/upload/q_auto/f_auto/v1704745243/esummit/clip_anwcvm.png"
                   alt=""
-                  srcset=""
+                  srcSet=""
                 />
               </div>
               <div className="figures_box">
