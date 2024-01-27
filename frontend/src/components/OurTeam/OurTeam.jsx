@@ -204,7 +204,21 @@ const OurTeam = () => {
               </div>
             )}
 
-            <AnimatePresence>
+{/* {showSection[id] && ( */}
+  <div className="team-row">
+    {team &&
+      team.map((member) => (
+        <Team_Card key={member.id} {...member} />
+      ))}
+  </div>
+{/*  )} */}
+
+{/* {lead && team && (
+  <div className="toggle-button" onClick={() => handleToggleSection(id)}>
+    <HiArrowDown style={{ fontSize: "1.5rem" }} />
+  </div>
+)} */}
+ {/* <AnimatePresence>
               {showSection[id] && (
                 <motion.div
                   className="team-row"
@@ -232,7 +246,9 @@ const OurTeam = () => {
                   <HiArrowDown />
                 )}
               </div>
-            )}
+            )} */}
+
+
             <hr className="section-line" />
           </div>
         );
