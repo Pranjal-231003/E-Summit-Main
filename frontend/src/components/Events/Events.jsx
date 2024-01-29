@@ -7,15 +7,16 @@ import edm from "../images/edmnight.png";
 import talk from "../images/talkshow.png";
 import w1 from "../images/workshop1.jpg";
 import w2 from "../images/workshop2.jpg";
-import r from "../images/R.png"
+import r from "../images/R.png";
+import sandeep from "../images/sandeep.png";
 function Events() {
   const eventsData = [
     {
-      imageUrl: 'https://res.cloudinary.com/dr0b2iifb/image/upload/v1704993566/REV4_klv16m.png',
-      title: "Speaker 1",
-      description1: "TIME-TBD",
+      imageUrl: sandeep,
+      title: "Sandeep Jain",
+      description1: "DATE - 3rd Feb",
       description2: "VENUE-TBD",
-      one: "Unlocking the Entrepreneurial Spirit: Insights to Navigate Business Frontiers."
+      one: "Empowering Minds: GeeksforGeeks Founder, Sandeep Jain."
     },
     // https://res.cloudinary.com/dr0b2iifb/image/upload/v1704993566/REV4_klv16m.png
     {
