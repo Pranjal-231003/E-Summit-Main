@@ -26,7 +26,7 @@ class LandingPage extends React.Component {
             <Countdown />
           </div>
           <div className="design_container"></div>
-          <a href="https://ybc.social/pages/LNMIIT" target="_blank">
+          {/* <a href="https://ybc.social/pages/LNMIIT" target="_blank">
             <button className="merch">
               <p> M E R C H</p>
               <div id="clip">
@@ -38,7 +38,7 @@ class LandingPage extends React.Component {
               <span id="rightArrow" className="arrow"></span>
               <span id="leftArrow" className="arrow"></span>
             </button>
-          </a>
+          </a> */}
           {/* Add other text elements as needed */}
           <div className="cursor"></div>
         </div>

@@ -40,20 +40,20 @@ function Events() {
         description2: "VENUE-TBD",
         one: "Startup building by experienced veterans"
       },
-      {
-        imageUrl: 'https://res.cloudinary.com/dqcrzyxnt/image/upload/q_auto/f_auto/v1704745251/esummit/workshop2_joyqmx.jpg',
-        title: "Workshop - 2",
-        description1: "TIME-TBD",
-        description2: "VENUE-TBD",
-        one: "Practical knowledge by experienced entrepreneurs of real world"
-      },
-      {
-        imageUrl: edm,
-        title: "Pronite",
-        description1: "TIME-TBD",
-        description2: "VENUE-TBD",
-        one: "Let the beats ignite your spirit at an electrifying EDM night!"
-      }
+      // {
+      //   imageUrl: 'https://res.cloudinary.com/dqcrzyxnt/image/upload/q_auto/f_auto/v1704745251/esummit/workshop2_joyqmx.jpg',
+      //   title: "Workshop - 2",
+      //   description1: "TIME-TBD",
+      //   description2: "VENUE-TBD",
+      //   one: "Practical knowledge by experienced entrepreneurs of real world"
+      // },
+      // {
+      //   imageUrl: edm,
+      //   title: "Pronite",
+      //   description1: "TIME-TBD",
+      //   description2: "VENUE-TBD",
+      //   one: "Let the beats ignite your spirit at an electrifying EDM night!"
+      // }
   ];
 
   return (
